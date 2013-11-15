@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:androidbootstrap="http://schemas.android.com/apk/res-auto"
-    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrap="http://schemas.android.com/apk/res/com.smartgps"
     android:id="@+id/start_navigation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <com.beardedhen.bbutton.BootstrapButton
+    <com.beardedhen.androidbootstrap.BootstrapButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        androidbootstrap:icon_left="fa-hand-o-right"
-        androidbootstrap:type="default"
-        android:enabled="false" />
+        android:layout_margin="10dp" 
+        bootstrap:bb_icon_right="fa-hand-o-right"
+        bootstrap:bb_type="default"/>
 
     <TextView
         android:layout_width="wrap_content"

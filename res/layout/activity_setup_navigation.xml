@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:androidbootstrap="http://schemas.android.com/apk/res-auto"
-    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/com.smartgps"
     style="@style/RootLayout" >
 
     <LinearLayout
@@ -46,10 +45,10 @@
             android:id="@+id/gps_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:orientation="horizontal"
-            android:visibility="gone" 
             android:paddingTop="10dp"
-            android:layout_gravity="bottom">
+            android:visibility="gone" >
 
             <EditText
                 android:id="@+id/latitude"
@@ -60,6 +59,7 @@
                 android:background="@drawable/edittext_background_rounded"
                 android:hint="@string/latitude"
                 android:padding="10dp"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
 
             <EditText
@@ -71,8 +71,60 @@
                 android:background="@drawable/edittext_background_rounded"
                 android:hint="@string/longitude"
                 android:padding="10dp"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
         </LinearLayout>
+    </LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/find_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/find_destination"
+        android:visibility="gone"
+        app:bb_roundedCorners="true"
+        app:bb_type="primary" />
+
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/edittext_background_rounded"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:hint="@string/destination"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/regular_navigation"
+            app:bb_roundedCorners="true"
+            app:bb_type="success" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/smartgps_navigation"
+            app:bb_roundedCorners="true"
+            app:bb_type="success" />
     </LinearLayout>
 
 </LinearLayout>

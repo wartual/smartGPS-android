@@ -12,4 +12,13 @@
 	<string name="navigation_type">Navigation type</string>
 	<string name="latitude">Latitude</string>
 	<string name="longitude">Longitude</string>
+	<string name="regular_navigation">Regular navigation</string>
+	<string name="smartgps_navigation">smartGPS navigation</string>
+	<string name="find_destination">Find destination</string>
+	<string name="destination">Destination</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Cancel</string>
+	<string name="destination_cannot_be_obtained">Destination cannot be obtained!</string>
+	 <string name="processing">Processing...</string>
+	<string name="please_wait">Please wait.</string>
 </resources>
