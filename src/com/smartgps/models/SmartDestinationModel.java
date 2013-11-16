@@ -1,7 +1,16 @@
 package com.smartgps.models;
 
-public class SmartDestinationModel {
+import java.io.Serializable;
 
+import android.location.Location;
+
+public class SmartDestinationModel implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private double latitude;
 	private double longitude;
 	private String address;
@@ -42,6 +51,5 @@ public class SmartDestinationModel {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	
 	
 }

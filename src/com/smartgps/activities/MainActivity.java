@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
 import com.smartgps.R;
+import com.smartgps.activities.navigation.SetupNavigationActivity;
 import com.smartgps.adapters.ViewPagerAdapter;
 
 public class MainActivity extends BaseActivity{

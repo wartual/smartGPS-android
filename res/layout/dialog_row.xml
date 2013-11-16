@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/listitem_row_height"
     android:gravity="center_vertical"
+    android:paddingRight="10dp"
     android:orientation="vertical" >
 
     <TextView

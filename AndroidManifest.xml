@@ -8,20 +8,36 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
 
+    <permission
+        android:name="com.smartgps.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.smartgps.MAPS_RECEIVE" />
+
     <application
         android:name="com.smartgps.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/smartGPSThemeNoHome" >
-        
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCEeBcJW12qngWZxfhF-Gg91NkHvX-jFm8" />
         <meta-data
             android:name="AA_DB_NAME"
             android:value="smargGPS.db" />
         <meta-data
             android:name="AA_DB_VERSION"
             android:value="1" />
-        
+
+        <uses-library android:name="com.google.android.maps" />
+
         <activity
             android:name="com.smartgps.activities.MainActivity"
             android:label="@string/app_name" >
@@ -31,13 +47,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
-            android:name="com.smartgps.activities.SetupNavigationActivity"
+            android:name="com.smartgps.activities.navigation.SetupNavigationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
         </activity>
-            
+         <activity
+            android:name="com.smartgps.activities.navigation.NavigationPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.navigation.PreviewMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.navigation.NavigationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
     </application>
 
 </manifest>
