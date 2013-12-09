@@ -9,6 +9,7 @@ public class ProjectConfig {
 	public static int MAP_PADDING = 50;
 	public static Location defaultLocation;
 	public static DecimalFormat decimalFormat;
+	public static int CLIENT_TIMEOUT = 180000;
 
 	public static Location getDefaultLocation() {
 		defaultLocation = new Location("");

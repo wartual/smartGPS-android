@@ -279,8 +279,8 @@ public final class R {
 		public static final int abs__screen_action_bar_overlay = 0x7f030011;
 		public static final int abs__screen_simple = 0x7f030012;
 		public static final int abs__screen_simple_overlay_action_mode = 0x7f030013;
-		public static final int sherlock_spinner_dropdown_item = 0x7f030023;
-		public static final int sherlock_spinner_item = 0x7f030024;
+		public static final int sherlock_spinner_dropdown_item = 0x7f030024;
+		public static final int sherlock_spinner_item = 0x7f030025;
 	}
 	public static final class string {
 		public static final int abs__action_bar_home_description = 0x7f060018;

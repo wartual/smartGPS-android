@@ -79,8 +79,7 @@ public class SetupNavigationActivity extends BaseActivity implements
 
 			@Override
 			public void onClick(View v) {
-				Utilities.showLoadingOverlay(progressDialog,
-						SetupNavigationActivity.this);
+				showLoadingOverlay();
 				getDestinations();
 			}
 		});
@@ -161,7 +160,7 @@ public class SetupNavigationActivity extends BaseActivity implements
 			}
 		}
 
-		Utilities.hideLoadingOverlay(progressDialog);
+		hideLoadingOverlay();
 	}
 
 	@Override

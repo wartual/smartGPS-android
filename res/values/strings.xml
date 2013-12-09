@@ -34,4 +34,9 @@
     <string name="mode">Mode</string>
     <string name="no_internet_connection">Active internet connection is needed!</string>
     <string name="preview_on_map">Preview on map</string>
+    <string name="login_to_smartGps">Login to application using your smartGPS account</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+	<string name="passoword">Password</string>
+	<string name="missing_input_data">Please fill all input forms!</string>
 </resources>

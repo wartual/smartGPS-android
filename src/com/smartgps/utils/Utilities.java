@@ -121,25 +121,7 @@ public class Utilities {
 		final AlertDialog alert = builder.create();
 		alert.show();
 	}
-	
-	public static void showLoadingOverlay(final ProgressDialog pd, Activity activity) {
-		pd.setTitle(activity.getString(R.string.processing));
-		pd.setMessage(activity.getString(R.string.please_wait));
-		pd.setCancelable(false);
-		pd.setIndeterminate(true);
-		
-		activity.runOnUiThread(new Runnable() {
-			
-			@Override
-			public void run() {
-				pd.show();
-			}
-		});
-	}
 
-	public static void hideLoadingOverlay(ProgressDialog pd) {
-		pd.dismiss();
-	}
 	
 	/**
 	 * This method convets dp unit to equivalent device specific value in
