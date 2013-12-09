@@ -1,11 +1,11 @@
 package com.smartgps.activities;
 
+import org.apache.http.conn.ConnectTimeoutException;
 import org.json.JSONObject;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -15,7 +15,9 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.smartgps.R;
 import com.smartgps.models.SmartResponseTypes;
 import com.smartgps.models.api.APIJsonResponseModel;
+import com.smartgps.params.APILoginParams;
 import com.smartgps.utils.APICalls;
+import com.smartgps.utils.SessionManager;
 import com.smartgps.utils.Utilities;
 
 public class LoginActivity extends BaseActivity{
@@ -23,12 +25,18 @@ public class LoginActivity extends BaseActivity{
 	private EditText username;
 	private EditText password;
 	private BootstrapButton login;
+	private BootstrapButton register;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		
+		if(user.get(SessionManager.KEY_SESSION_ID) != null){
+			Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+			startActivity(intent);
+			finish();
+		}
 		
 		initUI();
 	}
@@ -37,12 +45,23 @@ public class LoginActivity extends BaseActivity{
 		username = (EditText) findViewById(R.id.username);
 		password = (EditText) findViewById(R.id.password);
 		login = (BootstrapButton) findViewById(R.id.login);
+		register = (BootstrapButton) findViewById(R.id.register);
 	
 		login.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				loginUser();
+			}
+		});
+		
+		register.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+				startActivity(intent);
+				finish();
 			}
 		});
 	}
@@ -52,9 +71,21 @@ public class LoginActivity extends BaseActivity{
 			Utilities.buildOkDialog(getString(R.string.missing_input_data), LoginActivity.this, false);
 		}
 		else{
-			url = APICalls.getLoginUrl(username.getText().toString(), password.getText().toString());
 			showLoadingOverlay();
-			client.get(url, new JsonHttpResponseHandler(){
+
+			url = APICalls.getLoginUrl();
+			APILoginParams loginParams = new APILoginParams();
+			loginParams.setUsername(username.getText().toString());
+			loginParams.setPassword(password.getText().toString());
+			
+			client.put(url, loginParams.getRequestParams() ,new JsonHttpResponseHandler(){
+				
+				@Override
+				public void onFailure(Throwable error, String content) {
+					if(error.getCause() instanceof ConnectTimeoutException){
+						Utilities.buildOkDialog(getString(R.string.connection_timeout_has_occured), LoginActivity.this, false);
+					}
+				}
 
 				@Override
 				public void onSuccess(JSONObject json) {

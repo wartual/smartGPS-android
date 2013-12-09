@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <permission
@@ -40,23 +40,24 @@
 
         <activity
             android:name="com.smartgps.activities.LoginActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/smartGPSHomeTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="com.smartgps.activities.MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.smartgps.activities.navigation.SetupNavigationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
         </activity>
-         <activity
+        <activity
             android:name="com.smartgps.activities.navigation.NavigationPreviewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
@@ -68,6 +69,16 @@
         </activity>
         <activity
             android:name="com.smartgps.activities.navigation.NavigationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+          <activity
+            android:name="com.smartgps.activities.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
         </activity>
