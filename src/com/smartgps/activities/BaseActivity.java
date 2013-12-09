@@ -65,19 +65,16 @@ public class BaseActivity extends SherlockFragmentActivity{
 	}
 	
 	protected void setActionbarTitle(int resId) {
-		getSupportActionBar().setDisplayShowHomeEnabled(false);
-		getSupportActionBar().setDisplayUseLogoEnabled(false);
-		getSupportActionBar().setDisplayOptions(
-				ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_HOME_AS_UP);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 		getSupportActionBar().setTitle(getString(resId));
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	protected void setActionbarTitle(String title) {
-		getSupportActionBar().setDisplayShowHomeEnabled(false);
-		getSupportActionBar().setDisplayUseLogoEnabled(false);
-		getSupportActionBar().setDisplayOptions(
-				ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_HOME_AS_UP);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 		getSupportActionBar().setTitle(title);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setIcon(null);
 	}
 	
 	protected void showLoadingOverlay() {
