@@ -88,16 +88,16 @@ public final class R {
 		public static final int ic_launcher = 0x7f020081;
 	}
 	public static final class id {
-		public static final int action_settings = 0x7f080057;
-		public static final int layout = 0x7f080047;
-		public static final int lblColA = 0x7f080055;
-		public static final int lblColB = 0x7f080056;
-		public static final int lblLeft = 0x7f080048;
-		public static final int lblMiddle = 0x7f080049;
-		public static final int lblRight = 0x7f08004a;
-		public static final int lblSubTitle = 0x7f080054;
-		public static final int lblText = 0x7f08004f;
-		public static final int lblTitle = 0x7f080053;
+		public static final int action_settings = 0x7f080058;
+		public static final int layout = 0x7f080048;
+		public static final int lblColA = 0x7f080056;
+		public static final int lblColB = 0x7f080057;
+		public static final int lblLeft = 0x7f080049;
+		public static final int lblMiddle = 0x7f08004a;
+		public static final int lblRight = 0x7f08004b;
+		public static final int lblSubTitle = 0x7f080055;
+		public static final int lblText = 0x7f080050;
+		public static final int lblTitle = 0x7f080054;
 	}
 	public static final class layout {
 		public static final int bootstrap_button = 0x7f03001c;

@@ -49,4 +49,7 @@
 	<string name="register_new_user">Register new user</string>
 	<string name="password_validation_message">Password must have a minimum length of 8!</string>
 	<string name="connection_timeout_has_occured">Connection timeout, please wait for few seconds and try again. If this error occurs once more, contact us at support@smartGps.com</string>
+	<string name="my_profile">My profile</string>
+	<string name="my_profile_hint">View or update your smartGPS profile</string>
+	
 </resources>

@@ -14,6 +14,7 @@ import com.smartgps.activities.BaseActivity;
 public class SettingsActivity extends BaseActivity{
 	
 	private LinearLayout logout;
+	private LinearLayout profile;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +27,10 @@ public class SettingsActivity extends BaseActivity{
 	
 	private void initUI(){
 		logout = (LinearLayout) findViewById(R.id.logout_layout);
+		profile = (LinearLayout) findViewById(R.id.profile_layout);
 		
 		logout.setOnClickListener(new OnClickListener() {
-			
+				
 			@Override
 			public void onClick(View v) {
 				buildLogoutDialog();
