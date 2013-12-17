@@ -70,8 +70,7 @@ public class NavigationActivity extends BaseActivity implements
 		LocationManager manager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
 	    if (!manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
-	    	Log.d("DISABLED", "DISABLED");
-	        Utilities.buildOkDialog(getString(R.string.gps_not_active), NavigationActivity.this, true);
+	    	buildOkDialog(getString(R.string.gps_not_active), true);
 	    }
 		
 		try {

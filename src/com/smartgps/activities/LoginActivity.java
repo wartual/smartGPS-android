@@ -6,6 +6,7 @@ import org.json.JSONObject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -18,7 +19,6 @@ import com.smartgps.models.api.APIJsonResponseModel;
 import com.smartgps.params.APILoginParams;
 import com.smartgps.utils.APICalls;
 import com.smartgps.utils.SessionManager;
-import com.smartgps.utils.Utilities;
 
 public class LoginActivity extends BaseActivity{
 	
@@ -68,7 +68,8 @@ public class LoginActivity extends BaseActivity{
 	
 	private void loginUser(){
 		if(TextUtils.isEmpty(username.getText()) || TextUtils.isEmpty(password.getText())){
-			Utilities.buildOkDialog(getString(R.string.missing_input_data), LoginActivity.this, false);
+			buildOkDialog(getString(R.string.missing_input_data), false);
+			hideLoadingOverlay();
 		}
 		else{
 			showLoadingOverlay();
@@ -83,12 +84,13 @@ public class LoginActivity extends BaseActivity{
 				@Override
 				public void onFailure(Throwable error, String content) {
 					if(error.getCause() instanceof ConnectTimeoutException){
-						Utilities.buildOkDialog(getString(R.string.connection_timeout_has_occured), LoginActivity.this, false);
+						buildOkDialog(getString(R.string.connection_timeout_has_occured), false);
 					}
 				}
 
 				@Override
 				public void onSuccess(JSONObject json) {
+					Log.d("ON SUCCESS", "ON SUCCESS");
 					reader = json.toString();
 					response = gson.fromJson(reader, APIJsonResponseModel.class);
 					if(response.getStatus().equalsIgnoreCase(SmartResponseTypes.RESPONSE_OK)){
@@ -99,7 +101,7 @@ public class LoginActivity extends BaseActivity{
 						finish();
 					}
 					else{
-						Utilities.buildOkDialog(response.getMessage(), LoginActivity.this, false);
+						buildOkDialog(response.getMessage(), false);
 					}
 					hideLoadingOverlay();
 				}

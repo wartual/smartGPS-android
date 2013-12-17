@@ -3,6 +3,7 @@ package com.smartgps.utils;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -39,10 +40,11 @@ public class Utilities {
 				SmartDestinationModel model = new SmartDestinationModel();
 				String geoAddress = "";
 				for (int i = 0; i < addresses.size(); i++) {
-					for (int j = 0; j < addresses.get(i).getMaxAddressLineIndex(); j++) {
-						Log.d("J", j+"");
+					for (int j = 0; j < addresses.get(i)
+							.getMaxAddressLineIndex(); j++) {
+						Log.d("J", j + "");
 						geoAddress += addresses.get(i).getAddressLine(j);
-						if (j != addresses.get(i).getMaxAddressLineIndex()-1)
+						if (j != addresses.get(i).getMaxAddressLineIndex() - 1)
 							geoAddress = geoAddress + ", ";
 					}
 					model.setAddress(geoAddress);
@@ -66,10 +68,11 @@ public class Utilities {
 
 	public static SmartDestinationModel getDestinationFromGpsCoordinates(
 			Context context, double latitude, double longitude) {
-		
-		if(latitude < -90 || latitude > 90 || longitude < -90 || longitude > 90)
+
+		if (latitude < -90 || latitude > 90 || longitude < -90
+				|| longitude > 90)
 			return null;
-		
+
 		Geocoder geoCoder = new Geocoder(context, Locale.getDefault());
 		List<Address> addresses;
 		SmartDestinationModel model = new SmartDestinationModel();
@@ -80,9 +83,10 @@ public class Utilities {
 			if (addresses.size() > 0) {
 				String geoAddress = "";
 				for (int i = 0; i < addresses.size(); i++) {
-					for (int j = 0; j < addresses.get(i).getMaxAddressLineIndex(); j++) {
+					for (int j = 0; j < addresses.get(i)
+							.getMaxAddressLineIndex(); j++) {
 						geoAddress += addresses.get(i).getAddressLine(j);
-						if (j != addresses.get(i).getMaxAddressLineIndex()-1)
+						if (j != addresses.get(i).getMaxAddressLineIndex() - 1)
 							geoAddress = geoAddress + ", ";
 					}
 					model.setAddress(geoAddress);
@@ -101,28 +105,7 @@ public class Utilities {
 
 		return model;
 	}
-	
-	public static void buildOkDialog(String message, final Activity activity,
-			final boolean finishActivity) {
-		final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
-		builder.setTitle(activity.getString(R.string.app_name)).setMessage(message)
-				.setCancelable(false)
-				.setPositiveButton(activity.getString(R.string.ok), new DialogInterface.OnClickListener() {
-					@Override
-					public void onClick(final DialogInterface dialog,
-							final int id) {
-						dialog.cancel();
-						if (finishActivity) {
-							activity.finish();
-						}
-					}
-				});
-		final AlertDialog alert = builder.create();
-		alert.show();
-	}
-
-	
 	/**
 	 * This method convets dp unit to equivalent device specific value in
 	 * pixels.
@@ -138,66 +121,60 @@ public class Utilities {
 				ctx.getResources().getDisplayMetrics());
 		return Math.round(px);
 	}
-	
-	public static double getDistance(Location firstLocation, Location secondLocation){
+
+	public static double getDistance(Location firstLocation,
+			Location secondLocation) {
 		return firstLocation.distanceTo(secondLocation);
 	}
-	
-	public static String formatDistance(double distance){
+
+	public static String formatDistance(double distance) {
 		String output = "";
-		if(distance > 1000){
-			distance = distance/1000;
+		if (distance > 1000) {
+			distance = distance / 1000;
 			DecimalFormat df = ProjectConfig.getDecimalFormat();
 			output = df.format(distance) + " km";
-		}
-		else{
+		} else {
 			output = distance + " m";
 		}
-		
+
 		return output;
 	}
-	
-	
-	public static String formatDuration(String duration){
-		try{
-			double value = Double.parseDouble(duration);	
+
+	public static String formatDuration(String duration) {
+		try {
+			double value = Double.parseDouble(duration);
 			return formatDistance(duration);
-		}
-		catch (NumberFormatException e){
+		} catch (NumberFormatException e) {
 			return "";
 		}
 	}
-	
-	public static String formatDuration(double duration){
+
+	public static String formatDuration(double duration) {
 		String output = "";
-		if(duration > 3600){
-			duration = duration/3600;
+		if (duration > 3600) {
+			duration = duration / 3600;
 			DecimalFormat df = ProjectConfig.getDecimalFormat();
 			output = df.format(duration) + " h";
-		}
-		else if(duration > 60){
-			duration = duration/60;
+		} else if (duration > 60) {
+			duration = duration / 60;
 			DecimalFormat df = ProjectConfig.getDecimalFormat();
 			output = df.format(duration) + " min";
-		}
-		else{
+		} else {
 			output = duration + " sec";
 		}
-		
+
 		return output;
 	}
-	
-	
-	public static String formatDistance(String distance){
-		try{
-			double value = Double.parseDouble(distance);	
+
+	public static String formatDistance(String distance) {
+		try {
+			double value = Double.parseDouble(distance);
 			return formatDistance(distance);
-		}
-		catch (NumberFormatException e){
+		} catch (NumberFormatException e) {
 			return "";
 		}
 	}
-	
+
 	public static boolean checkInternetConnection(Activity activity) {
 		ConnectivityManager cm = (ConnectivityManager) activity
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -207,7 +184,7 @@ public class Utilities {
 		} else
 			return true;
 	}
-	
+
 	public static String firstLetterUpercase(String input) {
 		input = input.toLowerCase();
 		String[] arr = input.split(" ");
@@ -217,5 +194,14 @@ public class Utilities {
 					.append(arr[i].substring(1)).append(" ");
 		}
 		return sb.toString().trim();
+	}
+
+	public static boolean validateDate(Date date) {
+		Date now = new Date();
+		if (date.after(now)) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 }

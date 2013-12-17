@@ -67,6 +67,7 @@
         <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
         <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/background_holo</item>
     </style>
 
     <style name="TitleText">
