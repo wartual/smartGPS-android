@@ -12,11 +12,17 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Bitmap.Config;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
 
@@ -203,5 +209,53 @@ public class Utilities {
 		} else {
 			return true;
 		}
+	}
+	
+	public static Bitmap drawableToBitmap (Drawable drawable) {
+	    if (drawable instanceof BitmapDrawable) {
+	        return ((BitmapDrawable)drawable).getBitmap();
+	    }
+
+	    Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Config.ARGB_8888);
+	    Canvas canvas = new Canvas(bitmap); 
+	    drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+	    drawable.draw(canvas);
+
+	    return bitmap;
+	}
+	
+	public static Drawable resize(Bitmap d , Activity activity) {
+		Bitmap bitmapOrig = null;
+		DisplayMetrics metrics = new DisplayMetrics();
+		activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		int bound = 20;
+		
+		switch (metrics.densityDpi) {
+		case DisplayMetrics.DENSITY_LOW:
+			bitmapOrig = Bitmap.createScaledBitmap(d, 20, 20, true);
+			bound = 20;
+			break;
+		case DisplayMetrics.DENSITY_MEDIUM:
+			bitmapOrig = Bitmap.createScaledBitmap(d, 40, 40, true);
+			bound = 25;
+			break;
+		case DisplayMetrics.DENSITY_HIGH:
+			bitmapOrig = Bitmap.createScaledBitmap(d, 60, 60, true);
+			bound = 30;
+			break;
+		case 320:
+			bitmapOrig = Bitmap.createScaledBitmap(d, 100, 100, true);
+			bound = 35;
+			break;
+		default:
+			bitmapOrig = Bitmap.createScaledBitmap(d, 40, 40, true);
+			bound = 25;
+			break;
+
+		}
+		Drawable scaled = new BitmapDrawable(bitmapOrig);
+		scaled.setBounds(-bound, -bound, bound, bound);
+		return scaled;
+
 	}
 }

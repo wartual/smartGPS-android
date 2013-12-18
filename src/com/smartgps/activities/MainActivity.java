@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.smartgps.R;
+import com.smartgps.activities.events.SearchPlacesActivity;
 import com.smartgps.activities.navigation.SetupNavigationActivity;
 import com.smartgps.activities.settings.SettingsActivity;
 import com.smartgps.adapters.ViewPagerAdapter;
@@ -24,7 +25,7 @@ public class MainActivity extends BaseActivity {
 	private ViewPagerAdapter adapter;
 	private LinearLayout inflatedLayout;
 	private int currentContentPage;
-	private LinearLayout startNavigation;
+	private LinearLayout rootLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -86,10 +87,10 @@ public class MainActivity extends BaseActivity {
 		inflatedLayout = (LinearLayout) getLayoutInflater().inflate(
 				R.layout.main_first_page, null);
 
-		startNavigation = (LinearLayout) inflatedLayout
+		rootLayout = (LinearLayout) inflatedLayout
 				.findViewById(R.id.start_navigation);
 
-		startNavigation.setOnClickListener(new OnClickListener() {
+		rootLayout.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(MainActivity.this,
@@ -126,17 +127,17 @@ public class MainActivity extends BaseActivity {
 		inflatedLayout = (LinearLayout) getLayoutInflater().inflate(
 				R.layout.main_third_page, null);
 
-//		startNavigation = (LinearLayout) inflatedLayout
-//				.findViewById(R.id.start_navigation);
-//
-//		startNavigation.setOnClickListener(new OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				Intent intent = new Intent(MainActivity.this,
-//						SetupNavigationActivity.class);
-//				startActivity(intent);
-//			}
-//		});
+		rootLayout = (LinearLayout) inflatedLayout
+				.findViewById(R.id.search_events);
+
+		rootLayout.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this,
+						SearchPlacesActivity.class);
+				startActivity(intent);
+			}
+		});
 
 		currentContentPage = 3;
 		return inflatedLayout;

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/RootLayout" >
+    style="@style/RootLayout" 
+    android:padding="0dp">
     
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapview"

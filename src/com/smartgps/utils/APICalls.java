@@ -8,6 +8,7 @@ public class APICalls {
 	public static String REGISTER = "api/user/registerUser";
 	public static String GET_PROFILE = "api/user/getUser";
 	public static String UPDATE_PROFILE = "api/user/updateProfile";
+	public static String GET_EVENTS = "api/events/getEvents";
 	
 	public static String getLoginUrl(){
 		return SERVER_URL + LOGIN;
@@ -23,5 +24,9 @@ public class APICalls {
 	
 	public static String getUpadateProfileUrl(){
 		return SERVER_URL + UPDATE_PROFILE;
+	}
+	
+	public static String getEventsUrl(String userId, double latitude, double longitude, int num){
+		return SERVER_URL + GET_EVENTS + "?userId=" + userId + "&latitude=" + latitude + "&longitude=" + longitude + "&num=" + num;
 	}
 }

@@ -87,6 +87,21 @@
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
         </activity>
+         <activity
+            android:name="com.smartgps.activities.events.SearchPlacesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+         <activity
+            android:name="com.smartgps.activities.events.PlacesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+           <activity
+            android:name="com.smartgps.activities.events.PlaceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
     </application>
 
 </manifest>
