@@ -36,6 +36,15 @@ public class SettingsActivity extends BaseActivity{
 				buildLogoutDialog();
 			}
 		});
+		
+		profile.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(SettingsActivity.this, ProfileActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 	
 	private void buildLogoutDialog() {

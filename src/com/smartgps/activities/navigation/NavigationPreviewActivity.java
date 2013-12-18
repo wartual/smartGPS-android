@@ -95,12 +95,12 @@ public class NavigationPreviewActivity extends BaseActivity implements
 
 	    if (!manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
 	    	Log.d("GPS", "DISABLED");
-	        Utilities.buildOkDialog(getString(R.string.gps_not_active), NavigationPreviewActivity.this, true);
+	        buildOkDialog(getString(R.string.gps_not_active), true);
 	    }
 	    
 	    if(!Utilities.checkInternetConnection(NavigationPreviewActivity.this)){
 	    	Log.d("INTERNET", "DISABLED");
-	        Utilities.buildOkDialog(getString(R.string.no_internet_connection), NavigationPreviewActivity.this, true);
+	        buildOkDialog(getString(R.string.no_internet_connection), true);
 	    }
 	}
 

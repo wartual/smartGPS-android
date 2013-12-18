@@ -76,7 +76,8 @@ public class MainActivity extends BaseActivity {
 	private void setupPager() {
 		adapter = new ViewPagerAdapter();
 		adapter.addTab("a", getFirstPage());
-
+		adapter.addTab("b", getSecondPage());
+		adapter.addTab("b", getThirdPage());
 		pager.setAdapter(adapter);
 
 	}
@@ -98,6 +99,46 @@ public class MainActivity extends BaseActivity {
 		});
 
 		currentContentPage = 1;
+		return inflatedLayout;
+	}
+	
+	private LinearLayout getSecondPage() {
+		inflatedLayout = (LinearLayout) getLayoutInflater().inflate(
+				R.layout.main_second_page, null);
+
+//		startNavigation = (LinearLayout) inflatedLayout
+//				.findViewById(R.id.start_navigation);
+//
+//		startNavigation.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				Intent intent = new Intent(MainActivity.this,
+//						SetupNavigationActivity.class);
+//				startActivity(intent);
+//			}
+//		});
+
+		currentContentPage = 2;
+		return inflatedLayout;
+	}
+	
+	private LinearLayout getThirdPage() {
+		inflatedLayout = (LinearLayout) getLayoutInflater().inflate(
+				R.layout.main_third_page, null);
+
+//		startNavigation = (LinearLayout) inflatedLayout
+//				.findViewById(R.id.start_navigation);
+//
+//		startNavigation.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				Intent intent = new Intent(MainActivity.this,
+//						SetupNavigationActivity.class);
+//				startActivity(intent);
+//			}
+//		});
+
+		currentContentPage = 3;
 		return inflatedLayout;
 	}
 }

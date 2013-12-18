@@ -3,8 +3,13 @@ package com.smartgps.activities;
 import java.util.HashMap;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -93,7 +98,34 @@ public class BaseActivity extends SherlockFragmentActivity{
 		});
 	}
 
-	public void hideLoadingOverlay() {
+	protected void hideLoadingOverlay() {
 		progressDialog.dismiss();
+	}
+	
+	protected void buildOkDialog(String message,
+			final boolean finishActivity) {
+		final AlertDialog.Builder builder = new AlertDialog.Builder(BaseActivity.this);
+
+		builder.setTitle(getString(R.string.app_name)).setMessage(message)
+				.setCancelable(false)
+				.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(final DialogInterface dialog,
+							final int id) {
+						dialog.cancel();
+						if (finishActivity) {
+							finish();
+						}
+					}
+				});
+		final AlertDialog alert = builder.create();
+		alert.show();
+	}
+
+	protected View createTabView(String string) {
+		View view = LayoutInflater.from(this).inflate(R.layout.tabs_bg, null);
+		TextView tv = (TextView) view.findViewById(R.id.tabsText);
+		tv.setText(string);
+		return view;
 	}
 }

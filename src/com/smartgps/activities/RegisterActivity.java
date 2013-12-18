@@ -26,6 +26,7 @@ public class RegisterActivity extends BaseActivity{
 
 	private EditText username;
 	private EditText password;
+	private EditText confirmPassword;
 	private EditText name;
 	private EditText surname;
 	private BootstrapButton register;
@@ -42,6 +43,7 @@ public class RegisterActivity extends BaseActivity{
 	private void initUI(){
 		username = (EditText) findViewById(R.id.username);
 		password = (EditText) findViewById(R.id.password);
+		confirmPassword = (EditText) findViewById(R.id.confirm_password);
 		name = (EditText) findViewById(R.id.name);
 		surname = (EditText) findViewById(R.id.surname);
 		register = (BootstrapButton) findViewById(R.id.register);
@@ -78,10 +80,13 @@ public class RegisterActivity extends BaseActivity{
 				|| TextUtils.isEmpty(password.getText().toString())
 				|| TextUtils.isEmpty(name.getText().toString())
 				|| TextUtils.isEmpty(surname.getText().toString())){
-			Utilities.buildOkDialog(getString(R.string.missing_input_data), RegisterActivity.this, false);
+			buildOkDialog(getString(R.string.missing_input_data), false);
 		}
 		else if(password.getText().length() < 8){
-			Utilities.buildOkDialog(getString(R.string.password_validation_message), RegisterActivity.this, false);
+			buildOkDialog(getString(R.string.password_validation_message), false);
+		}
+		else if(!password.getText().toString().equals(confirmPassword.getText().toString())){
+			buildOkDialog(getString(R.string.passwords_dont_match), false);		
 		}
 		else{
 			showLoadingOverlay();
@@ -98,7 +103,7 @@ public class RegisterActivity extends BaseActivity{
 				@Override
 				public void onFailure(Throwable error, String content) {
 					if(error.getCause() instanceof ConnectTimeoutException){
-						Utilities.buildOkDialog(getString(R.string.connection_timeout_has_occured), RegisterActivity.this, false);
+						buildOkDialog(getString(R.string.connection_timeout_has_occured), false);
 					}
 				}
 
@@ -114,7 +119,7 @@ public class RegisterActivity extends BaseActivity{
 						finish();
 					}
 					else{
-						Utilities.buildOkDialog(response.getMessage(), RegisterActivity.this, false);
+						buildOkDialog(response.getMessage(), false);
 					}
 					hideLoadingOverlay();
 				}

@@ -37,7 +37,7 @@ public class SetupNavigationActivity extends BaseActivity implements
 	private BootstrapButton continueButton;
 	private SmartDestinationModel model;
 	private List<SmartDestinationModel> list;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,7 +64,7 @@ public class SetupNavigationActivity extends BaseActivity implements
 		destination = (TextView) findViewById(R.id.destination);
 		destinationTitle = (TextView) findViewById(R.id.destination_title);
 		continueButton = (BootstrapButton) findViewById(R.id.continue_button);
-		
+
 		navigationTypeTv.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -83,26 +83,30 @@ public class SetupNavigationActivity extends BaseActivity implements
 				getDestinations();
 			}
 		});
-		
+
 		continueButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				if(TextUtils.isEmpty(destination.getText())){
-					Utilities.buildOkDialog(getString(R.string.destination_cannot_be_obtained), SetupNavigationActivity.this, false);
-				}
-				else{
+				if (TextUtils.isEmpty(destination.getText())) {
+					buildOkDialog(
+							getString(R.string.destination_cannot_be_obtained),
+							false);
+				} else {
 					startNavigation();
 				}
 			}
 		});
 	}
-	
-	private void startNavigation(){
-		Intent intent = new Intent(SetupNavigationActivity.this, NavigationPreviewActivity.class);
-		if(navigationTypeTv.getText().toString().equalsIgnoreCase(getString(R.string.address))){
-			for(int i = 0; i< list.size(); i++){
-				if(destination.getText().toString().startsWith(list.get(i).getAddress()))
+
+	private void startNavigation() {
+		Intent intent = new Intent(SetupNavigationActivity.this,
+				NavigationPreviewActivity.class);
+		if (navigationTypeTv.getText().toString()
+				.equalsIgnoreCase(getString(R.string.address))) {
+			for (int i = 0; i < list.size(); i++) {
+				if (destination.getText().toString()
+						.startsWith(list.get(i).getAddress()))
 					model = list.get(i);
 			}
 		}
@@ -113,13 +117,11 @@ public class SetupNavigationActivity extends BaseActivity implements
 
 	private void getDestinations() {
 		if (address.getVisibility() == View.VISIBLE) {
-			list = Utilities
-					.getDestinationsFromAddress(SetupNavigationActivity.this,
-							address.getText().toString());
+			list = Utilities.getDestinationsFromAddress(
+					SetupNavigationActivity.this, address.getText().toString());
 			if (list == null || list.size() == 0) {
-				Utilities.buildOkDialog(
-						getString(R.string.destination_cannot_be_obtained),
-						SetupNavigationActivity.this, false);
+				buildOkDialog(
+						getString(R.string.destination_cannot_be_obtained),false);
 			} else {
 				ArrayList<String> obtainedAddresses = new ArrayList<String>();
 				for (int i = 0; i < list.size(); i++) {
@@ -134,23 +136,18 @@ public class SetupNavigationActivity extends BaseActivity implements
 		} else {
 			if (TextUtils.isEmpty(latitude.getText().toString())
 					|| TextUtils.isEmpty(longitude.getText().toString())) {
-				Utilities.buildOkDialog(
-						getString(R.string.destination_cannot_be_obtained),
-						SetupNavigationActivity.this, false);
-			}
-			else {
-				model = Utilities
-						.getDestinationFromGpsCoordinates(
-								SetupNavigationActivity.this, Double
-										.parseDouble(latitude.getText()
-												.toString()), Double
-										.parseDouble(longitude.getText()
-												.toString()));
+				buildOkDialog(
+						getString(R.string.destination_cannot_be_obtained), false);
+			} else {
+				model = Utilities.getDestinationFromGpsCoordinates(
+						SetupNavigationActivity.this,
+						Double.parseDouble(latitude.getText().toString()),
+						Double.parseDouble(longitude.getText().toString()));
 
 				if (model == null) {
-					Utilities.buildOkDialog(
+					buildOkDialog(
 							getString(R.string.destination_cannot_be_obtained),
-							SetupNavigationActivity.this, false);
+							false);
 				} else {
 					destinationTitle.setVisibility(View.VISIBLE);
 					destination.setVisibility(View.VISIBLE);

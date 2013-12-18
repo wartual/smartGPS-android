@@ -1,7 +1,5 @@
 package com.smartgps.models.api;
 
-import android.util.Log;
-
 import com.google.gson.annotations.SerializedName;
 
 public class APIJsonResponseModel {
@@ -11,6 +9,10 @@ public class APIJsonResponseModel {
 	
 	@SerializedName("message")
 	private String message;
+	
+	public APIJsonResponseModel(){
+		
+	}
 
 	public String getStatus() {
 		return status;

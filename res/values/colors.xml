@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
    <color name="background">#1A1A1A</color>
-   <color name="background_holo">#f2f2f2</color>
+   <color name="background_selector">#f2f2f2</color>
+    <color name="background_holo">#FFFFFF</color>
    <color name="title_text_color">#000000</color>
    <color name="settings_title">#e64d0e</color>
    <color name="hint">#878787</color>
+   <color name="tab_inactive">#EEEEEE</color>
    <color name="divider">#f5f5f5</color>
 </resources>
