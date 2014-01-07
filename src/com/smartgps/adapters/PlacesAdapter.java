@@ -12,13 +12,13 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.smartgps.R;
-import com.smartgps.models.api.places.APIPlacesResponseModel;
+import com.smartgps.models.api.places.APIPlacesModel;
 import com.smartgps.utils.Utilities;
 
 public class PlacesAdapter extends BaseAdapter{
 	
 	private Context context;
-	private ArrayList<APIPlacesResponseModel> events;
+	private ArrayList<APIPlacesModel> events;
 	private LayoutInflater inflater;
 	private Location myLocation;
 	
@@ -26,7 +26,7 @@ public class PlacesAdapter extends BaseAdapter{
 	private TextView vicinity;
 	private TextView distance;
 	
-	public PlacesAdapter(Context ctx, ArrayList<APIPlacesResponseModel> places, Location location){
+	public PlacesAdapter(Context ctx, ArrayList<APIPlacesModel> places, Location location){
 		this.context = ctx;
 		this.events = places;
 		this.myLocation = location;

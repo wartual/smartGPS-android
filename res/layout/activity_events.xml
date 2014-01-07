@@ -9,5 +9,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/list"
         android:divider="@color/background"
-        android:dividerHeight="1px"/>
+        android:dividerHeight="2px"/>
 </LinearLayout>

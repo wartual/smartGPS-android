@@ -9,11 +9,13 @@
     <string name="hello_world">Hello world!</string>
     <string name="start_navigation">Travel</string>
     <string name="history">Last travels</string>
+    <string name="search_events">Search events</string>
     <string name="search_places">Search places</string>
     <string name="setup_navigation">Setup navigation</string>
     <string name="events">Events</string>
     <string name="input_destination">Input your desired destination</string>
-    <string name="input_destination">Search for events in...</string>
+    <string name="input_destination_events">Search for events in...</string>
+    <string name="input_destination_places">Search for places in...</string>
     <string name="address">Address</string>
     <string name="gps_coordinates">GPS coordinates</string>
     <string name="navigation_type">Navigation type</string>

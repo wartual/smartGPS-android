@@ -100,11 +100,11 @@ public final class R {
 		public static final int lblTitle = 0x7f040066;
 	}
 	public static final class layout {
-		public static final int bootstrap_button = 0x7f030020;
-		public static final int font_awesome_text = 0x7f030024;
-		public static final int row_title = 0x7f03002d;
-		public static final int row_title_and_subtitle = 0x7f03002e;
-		public static final int row_two_columns = 0x7f03002f;
+		public static final int bootstrap_button = 0x7f030021;
+		public static final int font_awesome_text = 0x7f030025;
+		public static final int row_title = 0x7f03002f;
+		public static final int row_title_and_subtitle = 0x7f030030;
+		public static final int row_two_columns = 0x7f030031;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0c0000;

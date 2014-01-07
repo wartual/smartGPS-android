@@ -38,7 +38,6 @@ public class BaseActivity extends SherlockFragmentActivity{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		getSupportActionBar().setTitle(getString(R.string.app_name));
 		initVars();

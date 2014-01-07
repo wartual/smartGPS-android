@@ -28,6 +28,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
+        
+         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:src="@color/background" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,7 +59,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="2px"
-            android:src="@color/divider" />
+            android:src="@color/background" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,7 +86,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="2px"
-            android:src="@color/divider" />
+            android:src="@color/background" />
 
         <LinearLayout
             android:layout_width="match_parent"

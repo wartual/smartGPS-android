@@ -135,12 +135,13 @@ public class Utilities {
 
 	public static String formatDistance(double distance) {
 		String output = "";
+		DecimalFormat df = ProjectConfig.getDecimalFormat();
+		
 		if (distance > 1000) {
 			distance = distance / 1000;
-			DecimalFormat df = ProjectConfig.getDecimalFormat();
 			output = df.format(distance) + " km";
 		} else {
-			output = distance + " m";
+			output = df.format(distance) + " m";
 		}
 
 		return output;
@@ -191,6 +192,10 @@ public class Utilities {
 			return true;
 	}
 
+	public static String formatText(String text){
+		return text.replace("_", " ");
+	}
+	
 	public static String firstLetterUpercase(String input) {
 		input = input.toLowerCase();
 		String[] arr = input.split(" ");

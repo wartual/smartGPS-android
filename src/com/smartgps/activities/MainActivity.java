@@ -11,8 +11,9 @@ import android.widget.LinearLayout;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.smartgps.R;
-import com.smartgps.activities.events.SearchPlacesActivity;
+import com.smartgps.activities.events.SearchEventsActivity;
 import com.smartgps.activities.navigation.SetupNavigationActivity;
+import com.smartgps.activities.places.SearchPlacesActivity;
 import com.smartgps.activities.settings.SettingsActivity;
 import com.smartgps.adapters.ViewPagerAdapter;
 import com.smartgps.utils.SessionManager;
@@ -78,7 +79,8 @@ public class MainActivity extends BaseActivity {
 		adapter = new ViewPagerAdapter();
 		adapter.addTab("a", getFirstPage());
 		adapter.addTab("b", getSecondPage());
-		adapter.addTab("b", getThirdPage());
+		adapter.addTab("c", getThirdPage());
+		adapter.addTab("d", getFourthPage());
 		pager.setAdapter(adapter);
 
 	}
@@ -140,6 +142,26 @@ public class MainActivity extends BaseActivity {
 		});
 
 		currentContentPage = 3;
+		return inflatedLayout;
+	}
+	
+	private LinearLayout getFourthPage() {
+		inflatedLayout = (LinearLayout) getLayoutInflater().inflate(
+				R.layout.main_fourh_page, null);
+
+		rootLayout = (LinearLayout) inflatedLayout
+				.findViewById(R.id.search_events);
+
+		rootLayout.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this,
+						SearchEventsActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		currentContentPage = 4;
 		return inflatedLayout;
 	}
 }
