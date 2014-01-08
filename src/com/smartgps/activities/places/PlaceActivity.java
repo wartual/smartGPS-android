@@ -1,8 +1,5 @@
 package com.smartgps.activities.places;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
@@ -28,10 +25,9 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 import com.smartgps.R;
 import com.smartgps.activities.BaseActivity;
-import com.smartgps.activities.navigation.NavigationActivity;
-import com.smartgps.activities.navigation.NavigationPreviewActivity;
 import com.smartgps.models.SmartDestinationModel;
 import com.smartgps.models.api.places.APIPlacesModel;
+import com.smartgps.utils.ProjectConfig;
 import com.smartgps.utils.Utilities;
 
 public class PlaceActivity extends BaseActivity implements OnMarkerClickListener{
@@ -39,7 +35,6 @@ public class PlaceActivity extends BaseActivity implements OnMarkerClickListener
 	public static final String PLACE = "place";
 	public static final String MY_LOCATION = "my_location";
 
-	private int ZOOM_LEVEL = 13;
 	private final int MAP_INITIALIZED_CHECK_INTERVAL = 20;
 	private APIPlacesModel model;
 	private MapView mMapView;
@@ -177,7 +172,7 @@ public class PlaceActivity extends BaseActivity implements OnMarkerClickListener
 				.getLongitude());
 
 		CameraPosition cp = new CameraPosition.Builder().target(destination)
-				.zoom(ZOOM_LEVEL).build();
+				.zoom(ProjectConfig.MAP_ZOOM_POI).build();
 		mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cp));
 
 		ImageLoader.getInstance().loadImage(model.getIcon(),
@@ -208,31 +203,7 @@ public class PlaceActivity extends BaseActivity implements OnMarkerClickListener
 		m.setLatitude(model.getGeometry().getLocation().getLatitude());
 		m.setLongitude(model.getGeometry().getLocation().getLongitude());
 		
-		buildStartNavigationDialog(m, model.getName());
+		Utilities.buildStartNavigationDialog(m, model.getName(), PlaceActivity.this);
 		return false;
-	}
-	
-	private void buildStartNavigationDialog(final SmartDestinationModel m, String name) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(PlaceActivity.this);
-		String title = String.format(
-				getString(R.string.start_navigation_to),
-				name);
-
-		builder.setTitle(getString(R.string.app_name));
-		builder.setMessage(title);
-
-		builder.setPositiveButton(R.string.yes,
-				new DialogInterface.OnClickListener() {
-
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						Intent intent = new Intent(PlaceActivity.this,
-								NavigationActivity.class);
-						intent.putExtra(NavigationActivity.DESTINATION, m);
-						startActivity(intent);
-					}
-				});
-		builder.setNegativeButton(R.string.no, null);
-		builder.show();
 	}
 }

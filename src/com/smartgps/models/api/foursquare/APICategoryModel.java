@@ -1,8 +1,15 @@
 package com.smartgps.models.api.foursquare;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class APICategoryModel {
+public class APICategoryModel  implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@SerializedName("id")
 	private String id;
@@ -18,6 +25,9 @@ public class APICategoryModel {
 	
 	@SerializedName("primary")
 	private boolean primary;
+	
+	@SerializedName("icon")
+	private APIIconModel icon;
 	
 	public APICategoryModel(){
 		
@@ -61,6 +71,14 @@ public class APICategoryModel {
 
 	public void setPrimary(boolean primary) {
 		this.primary = primary;
+	}
+
+	public APIIconModel getIcon() {
+		return icon;
+	}
+
+	public void setIcon(APIIconModel icon) {
+		this.icon = icon;
 	}
 	
 	

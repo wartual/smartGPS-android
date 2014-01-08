@@ -6,6 +6,7 @@ import java.util.Arrays;
 import org.apache.http.conn.ConnectTimeoutException;
 import org.json.JSONArray;
 
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +19,6 @@ import com.smartgps.R;
 import com.smartgps.activities.BaseActivity;
 import com.smartgps.adapters.EventsAdapter;
 import com.smartgps.models.SmartDestinationModel;
-import com.smartgps.models.api.foursquare.APIEventsModel;
 import com.smartgps.models.api.foursquare.APIItemsModel;
 import com.smartgps.utils.APICalls;
 import com.smartgps.utils.SessionManager;
@@ -92,10 +92,10 @@ public class EventsActivity extends BaseActivity{
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-//				Intent intent = new Intent(EventsActivity.this, PlaceActivity.class);
-//				intent.putExtra(PlaceActivity.PLACE, events.get(position));
-//				intent.putExtra(PlaceActivity.MY_LOCATION, location);
-//				startActivity(intent);
+				Intent intent = new Intent(EventsActivity.this, EventActivity.class);
+				intent.putExtra(EventActivity.EVENT, events.get(position));
+				intent.putExtra(EventActivity.MY_LOCATION, location);
+				startActivity(intent);
 			}
 		});
 	}

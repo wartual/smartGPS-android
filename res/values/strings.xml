@@ -82,4 +82,6 @@
 	    <item>Male</item>
 	    <item>Female</item>
 	</string-array>
+	<string name="tips">Tips</string>
+	<string name="specials">Specials</string>
 </resources>

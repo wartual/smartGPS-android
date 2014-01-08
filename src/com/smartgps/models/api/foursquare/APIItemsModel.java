@@ -1,10 +1,16 @@
 package com.smartgps.models.api.foursquare;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
-public class APIItemsModel {
+public class APIItemsModel implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@SerializedName("venue")
 	private APIVenueModel venue;

@@ -1,8 +1,15 @@
 package com.smartgps.models.api.foursquare;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class APIIconModel {
+public class APIIconModel  implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@SerializedName("prefix")
 	private String prefix;

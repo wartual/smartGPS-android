@@ -112,6 +112,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
         </activity>
+        <activity
+            android:name="com.smartgps.activities.events.EventActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
     </application>
 
 </manifest>

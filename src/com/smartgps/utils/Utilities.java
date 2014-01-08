@@ -12,6 +12,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Bitmap.Config;
@@ -27,7 +28,10 @@ import android.util.Log;
 import android.util.TypedValue;
 
 import com.smartgps.R;
+import com.smartgps.activities.navigation.NavigationActivity;
+import com.smartgps.activities.places.PlaceActivity;
 import com.smartgps.models.SmartDestinationModel;
+import com.smartgps.models.api.foursquare.APILocationModel;
 
 public class Utilities {
 
@@ -261,6 +265,47 @@ public class Utilities {
 		Drawable scaled = new BitmapDrawable(bitmapOrig);
 		scaled.setBounds(-bound, -bound, bound, bound);
 		return scaled;
-
 	}
+	
+	public static String getAddress(APILocationModel location){
+		String address = "";
+		if(location.getAddress() != null){
+			address = address + location.getAddress();
+		}
+		
+		if(location.getCity() != null){
+			address = address + ", " + location.getCity();
+		}
+		
+		if(location.getCountry() != null){
+			address = address + ", " + location.getCountry();
+		}
+		
+		return address;
+	}
+	
+	public static void buildStartNavigationDialog(final SmartDestinationModel m, String name, final Context ctx) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
+		String title = String.format(
+				ctx.getString(R.string.start_navigation_to),
+				name);
+
+		builder.setTitle(ctx.getString(R.string.app_name));
+		builder.setMessage(title);
+
+		builder.setPositiveButton(R.string.yes,
+				new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						Intent intent = new Intent(ctx,
+								NavigationActivity.class);
+						intent.putExtra(NavigationActivity.DESTINATION, m);
+						ctx.startActivity(intent);
+					}
+				});
+		builder.setNegativeButton(R.string.no, null);
+		builder.show();
+	}
+
 }

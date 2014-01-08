@@ -10,6 +10,7 @@ public class ProjectConfig {
 	public static Location defaultLocation;
 	public static DecimalFormat decimalFormat;
 	public static int CLIENT_TIMEOUT = 10000;
+	public static int MAP_ZOOM_POI = 15;
 
 	public static Location getDefaultLocation() {
 		defaultLocation = new Location("");
