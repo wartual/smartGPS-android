@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.actionbarsherlock.view.Menu;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.smartgps.R;
 import com.smartgps.activities.BaseActivity;
@@ -47,6 +48,14 @@ public class EventsActivity extends BaseActivity{
 	private void initUI() {
 		list = (ListView) findViewById(R.id.list);
 	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getSupportMenuInflater().inflate(R.menu.menu_events, menu);
+		
+		return super.onCreateOptionsMenu(menu);
+	}
+
 	
 	private void getData() {
 		model = (SmartDestinationModel) getIntent().getExtras().get(EVENT);

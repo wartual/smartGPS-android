@@ -511,10 +511,12 @@ int id phone 0x7f04004a
 int id postal_office 0x7f04004d
 int id preview_on_map 0x7f04003f
 int id profile_layout 0x7f040059
+int id refresh 0x7f040074
 int id register 0x7f040035
 int id regular_navigation 0x7f040040
 int id satellite 0x7f040006
 int id search_events 0x7f040069
+int id settings 0x7f040075
 int id showCustom 0x7f040010
 int id showHome 0x7f04000d
 int id showTitle 0x7f04000f
@@ -608,6 +610,7 @@ int layout sherlock_spinner_dropdown_item 0x7f030038
 int layout sherlock_spinner_item 0x7f030039
 int layout tabs_bg 0x7f03003a
 int menu main 0x7f0c0000
+int menu menu_events 0x7f0c0001
 int string abs__action_bar_home_description 0x7f0a0018
 int string abs__action_bar_up_description 0x7f0a0019
 int string abs__action_menu_overflow_description 0x7f0a001a
@@ -695,6 +698,7 @@ int string please_wait 0x7f0a003d
 int string postal_office 0x7f0a005b
 int string preview_on_map 0x7f0a0049
 int string processing 0x7f0a003c
+int string refresh 0x7f0a006c
 int string register 0x7f0a0053
 int string register_new_user 0x7f0a0056
 int string regular_navigation 0x7f0a0034

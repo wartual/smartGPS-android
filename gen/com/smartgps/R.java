@@ -1520,10 +1520,12 @@ containing a value of this type.
         public static final int postal_office=0x7f04004d;
         public static final int preview_on_map=0x7f04003f;
         public static final int profile_layout=0x7f040059;
+        public static final int refresh=0x7f040074;
         public static final int register=0x7f040035;
         public static final int regular_navigation=0x7f040040;
         public static final int satellite=0x7f040006;
         public static final int search_events=0x7f040069;
+        public static final int settings=0x7f040075;
         public static final int showCustom=0x7f040010;
         public static final int showHome=0x7f04000d;
         public static final int showTitle=0x7f04000f;
@@ -1623,6 +1625,7 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
+        public static final int menu_events=0x7f0c0001;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1789,6 +1792,7 @@ containing a value of this type.
         public static final int postal_office=0x7f0a005b;
         public static final int preview_on_map=0x7f0a0049;
         public static final int processing=0x7f0a003c;
+        public static final int refresh=0x7f0a006c;
         public static final int register=0x7f0a0053;
         public static final int register_new_user=0x7f0a0056;
         public static final int regular_navigation=0x7f0a0034;

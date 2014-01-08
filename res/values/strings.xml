@@ -84,4 +84,5 @@
 	</string-array>
 	<string name="tips">Tips</string>
 	<string name="specials">Specials</string>
+	<string name="refresh">Refresh</string>
 </resources>
