@@ -1,5 +1,7 @@
 package com.smartgps.activities.navigation;
 
+import org.apache.http.conn.ConnectTimeoutException;
+import org.json.JSONObject;
 import org.w3c.dom.Document;
 
 import android.content.Intent;
@@ -18,11 +20,18 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.maps.model.LatLng;
+import com.loopj.android.http.JsonHttpResponseHandler;
 import com.smartgps.R;
 import com.smartgps.activities.BaseActivity;
+import com.smartgps.models.APITravelStatusCategories;
 import com.smartgps.models.SmartDestinationModel;
+import com.smartgps.models.api.APIJsonResponseModel;
+import com.smartgps.models.dao.TravelCategoriesDao;
+import com.smartgps.params.APICreateTravelParams;
+import com.smartgps.utils.APICalls;
 import com.smartgps.utils.GMapV2Direction;
 import com.smartgps.utils.ProjectConfig;
+import com.smartgps.utils.SessionManager;
 import com.smartgps.utils.Utilities;
 
 public class NavigationPreviewActivity extends BaseActivity implements
@@ -46,6 +55,8 @@ public class NavigationPreviewActivity extends BaseActivity implements
 	private BootstrapButton preview;
 	private LatLng currentLocation;
 	private LatLng destination;
+	private double distanceValue;
+	private double timeValue;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -117,11 +128,7 @@ public class NavigationPreviewActivity extends BaseActivity implements
 
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(NavigationPreviewActivity.this,
-						NavigationActivity.class);
-				intent.putExtra(NavigationActivity.DESTINATION, model);
-				startActivity(intent);
-				finish();
+				sendDataToServer(model);
 			}
 		});
 		
@@ -136,6 +143,57 @@ public class NavigationPreviewActivity extends BaseActivity implements
 		});
 	}
 
+	private void sendDataToServer(final SmartDestinationModel model){
+		APICreateTravelParams createTravelParams = new APICreateTravelParams();
+		createTravelParams.setCurrentLatitude(lastLocation.getLatitude());
+		createTravelParams.setCurrentLongitude(lastLocation.getLongitude());
+		createTravelParams.setDepartureAddress(startAddress.getText().toString());
+		createTravelParams.setDepartureLatitude(lastLocation.getLatitude());
+		createTravelParams.setDepartureLongitude(lastLocation.getLongitude());
+		createTravelParams.setDestinationAddress(endAddress.getText().toString());
+		createTravelParams.setDestinationLatitude(destination.latitude);
+		createTravelParams.setDestinationLongitude(destination.longitude);
+		createTravelParams.setDistance(distanceValue);
+		createTravelParams.setTime(timeValue);
+		createTravelParams.setUserId(user.get(SessionManager.KEY_SESSION_ID));
+		createTravelParams.setStatusId(TravelCategoriesDao.getByType(APITravelStatusCategories.ACTIVE).getStatusId());
+		url = APICalls.getNewTravelUrl();
+		
+		Log.d("CURRENT LATITUDE", lastLocation.getLatitude() + "");
+		Log.d("CURRENT LONGITUDE", lastLocation.getLongitude() + "");
+		Log.d("DEPARTURE LATITUDE", lastLocation.getLatitude() + "");
+		Log.d("DEPARTURE LONGITUDE", lastLocation.getLongitude() + "");
+		Log.d("DESTINATION LATITUDE", destination.latitude + "");
+		Log.d("DESTINATION LONGITUDE", destination.longitude + "");
+		
+		client.post(url, createTravelParams.getRequestParams() ,new JsonHttpResponseHandler(){
+			
+			@Override
+			public void onFailure(Throwable error, String content) {
+				Log.d("FAILURE", "FAILURE");
+				if(error.getCause() instanceof ConnectTimeoutException){
+					buildOkDialog(getString(R.string.connection_timeout_has_occured), false);
+				}
+			}
+
+			@Override
+			public void onSuccess(JSONObject json) {
+				reader = json.toString();
+				response = gson.fromJson(reader, APIJsonResponseModel.class);
+				String travelId = response.getMessage();
+				Log.d("TRAVEL ID", travelId);
+				Intent intent = new Intent(NavigationPreviewActivity.this,
+						NavigationActivity.class);
+				intent.putExtra(NavigationActivity.DESTINATION, model);
+				intent.putExtra(NavigationActivity.TRAVEL_ID, travelId);
+				startActivity(intent);
+				finish();
+		
+			}
+		});
+	}
+
+	
 	private void getData() {
 		model = (SmartDestinationModel) getIntent().getExtras()
 				.get(DESTINATION);
@@ -216,6 +274,9 @@ public class NavigationPreviewActivity extends BaseActivity implements
 						duration.setText(Utilities.formatDuration(mapDirection.getDurationValue(doc)));
 						distance.setText(Utilities.formatDistance(mapDirection.getDistanceValue(doc)));
 						modeTv.setText(Utilities.firstLetterUpercase(mode));
+						
+						distanceValue = mapDirection.getDistanceValue(doc);
+						timeValue = mapDirection.getDurationValue(doc);
 					}
 				});
 			}

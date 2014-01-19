@@ -2,23 +2,30 @@ package com.smartgps.activities;
 
 import java.util.HashMap;
 
-import android.app.Activity;
+import org.apache.http.conn.ConnectTimeoutException;
+import org.json.JSONObject;
+
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
 import com.smartgps.R;
 import com.smartgps.models.api.APIJsonResponseModel;
+import com.smartgps.params.APIUpdateGcmIdParams;
+import com.smartgps.utils.APICalls;
 import com.smartgps.utils.DialogBuilder;
 import com.smartgps.utils.ProjectConfig;
 import com.smartgps.utils.SessionManager;
@@ -35,11 +42,12 @@ public class BaseActivity extends SherlockFragmentActivity{
 	protected String reader;
 	protected APIJsonResponseModel response;
 	protected SessionManager sessionManager;
+	protected SharedPreferences sharedPrefs;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 		getSupportActionBar().setTitle(getString(R.string.app_name));
 		initVars();
 	}
@@ -54,6 +62,7 @@ public class BaseActivity extends SherlockFragmentActivity{
 		gson = gsonBuilder.create();
 		sessionManager = new SessionManager(BaseActivity.this);
 		user = sessionManager.getUserDetails();
+		sharedPrefs = PreferenceManager.getDefaultSharedPreferences(BaseActivity.this);
 	}
 	
 	@Override
@@ -62,11 +71,17 @@ public class BaseActivity extends SherlockFragmentActivity{
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			finish();
-
+			overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 			return true;
 		}
 
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 	}
 	
 	protected void setActionbarTitle(int resId) {
@@ -127,5 +142,24 @@ public class BaseActivity extends SherlockFragmentActivity{
 		TextView tv = (TextView) view.findViewById(R.id.tabsText);
 		tv.setText(string);
 		return view;
+	}
+	
+	protected void updateGcmId(String gcmId){
+		APIUpdateGcmIdParams updateGcmId = new APIUpdateGcmIdParams();
+		updateGcmId.setUserId(user.get(SessionManager.KEY_SESSION_ID));
+		updateGcmId.setGcmId(gcmId);
+		
+		client.post(APICalls.getUpdateGcmId(), updateGcmId.getRequestParams() ,new JsonHttpResponseHandler(){
+			
+			@Override
+			public void onFailure(Throwable error, String content) {
+				Log.d("GCM", "Gcm id not updated");
+			}
+
+			@Override
+			public void onSuccess(JSONObject json) {
+				Log.d("GCM", "Gcm id updated");
+			}
+		});
 	}
 }

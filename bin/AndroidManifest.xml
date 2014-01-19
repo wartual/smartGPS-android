@@ -19,11 +19,20 @@
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.smartgps.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.example.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
 
     <application
         android:name="com.smartgps.MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/smartGPSThemeNoHome" >
         <meta-data
@@ -31,7 +40,7 @@
             android:value="AIzaSyCEeBcJW12qngWZxfhF-Gg91NkHvX-jFm8" />
         <meta-data
             android:name="AA_DB_NAME"
-            android:value="smargGPS.db" />
+            android:value="smartGPS.db" />
         <meta-data
             android:name="AA_DB_VERSION"
             android:value="1" />
@@ -39,9 +48,9 @@
         <uses-library android:name="com.google.android.maps" />
 
         <activity
-            android:name="com.smartgps.activities.LoginActivity"
+            android:name="com.smartgps.activities.SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/smartGPSHomeTheme" >
+            android:theme="@style/smartGPS.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,7 +59,13 @@
         </activity>
         <activity
             android:name="com.smartgps.activities.MainActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSHomeTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSHomeTheme" >
         </activity>
         <activity
             android:name="com.smartgps.activities.navigation.SetupNavigationActivity"
@@ -77,7 +92,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
         </activity>
-          <activity
+        <activity
             android:name="com.smartgps.activities.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
@@ -87,6 +102,59 @@
             android:screenOrientation="portrait"
             android:theme="@style/smartGPSTheme" >
         </activity>
+        <activity
+            android:name="com.smartgps.activities.places.SearchPlacesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.places.PlacesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.places.PlaceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.events.SearchEventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.events.EventsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.events.EventActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.TravelsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+        <activity
+            android:name="com.smartgps.activities.TravelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/smartGPSTheme" >
+        </activity>
+
+        <receiver
+            android:name="com.smartgps.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.smartgps" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.smartgps.gcm.GcmIntentService" />
+        <service android:name="com.smartgps.services.UpdateLocationService" />
     </application>
 
 </manifest>

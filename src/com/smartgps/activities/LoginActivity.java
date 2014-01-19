@@ -90,7 +90,6 @@ public class LoginActivity extends BaseActivity{
 
 				@Override
 				public void onSuccess(JSONObject json) {
-					Log.d("ON SUCCESS", "ON SUCCESS");
 					reader = json.toString();
 					response = gson.fromJson(reader, APIJsonResponseModel.class);
 					if(response.getStatus().equalsIgnoreCase(SmartResponseTypes.RESPONSE_OK)){

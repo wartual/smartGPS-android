@@ -7,5 +7,12 @@
    <color name="settings_title">#e64d0e</color>
    <color name="hint">#878787</color>
    <color name="tab_inactive">#EEEEEE</color>
+   <color name="light_grey">#f4f4f4</color>
+   <color name="gray">#777777</color>
    <color name="divider">#f5f5f5</color>
+	<color name="step_pager_previous_tab_color">#e4eff1</color>
+    <color name="step_pager_selected_tab_color">#e94d00</color>
+    <color name="step_pager_selected_last_tab_color">#e94d00</color>
+    <color name="step_pager_next_tab_color">#e4eff1</color>
 </resources>
+

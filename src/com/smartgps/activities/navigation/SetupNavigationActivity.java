@@ -3,6 +3,9 @@ package com.smartgps.activities.navigation;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.conn.ConnectTimeoutException;
+import org.json.JSONObject;
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,10 +18,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.loopj.android.http.JsonHttpResponseHandler;
 import com.smartgps.R;
 import com.smartgps.activities.BaseActivity;
 import com.smartgps.interfaces.DialogTextCommunicator;
+import com.smartgps.models.APITravelModel;
 import com.smartgps.models.SmartDestinationModel;
+import com.smartgps.models.api.APIJsonResponseModel;
+import com.smartgps.models.dao.NotificationCategoriesDao;
+import com.smartgps.params.APICreateNotificationParams;
+import com.smartgps.params.APICreateTravelParams;
+import com.smartgps.utils.APICalls;
+import com.smartgps.utils.SessionManager;
 import com.smartgps.utils.Utilities;
 
 public class SetupNavigationActivity extends BaseActivity implements
@@ -98,7 +109,7 @@ public class SetupNavigationActivity extends BaseActivity implements
 			}
 		});
 	}
-
+	
 	private void startNavigation() {
 		Intent intent = new Intent(SetupNavigationActivity.this,
 				NavigationPreviewActivity.class);
