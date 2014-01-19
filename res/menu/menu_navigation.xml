@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mode_car"
+         android:icon="@drawable/car"
+        android:showAsAction="always"
+        android:title="@string/cancel"/>
+    
+    <item
+        android:id="@+id/mode_walking"
+         android:icon="@drawable/walking"
+        android:showAsAction="always"
+        android:title="@string/cancel"/>
+    
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/actionbar_settings"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/action_settings">
+        <menu>
+            <item
+                android:id="@+id/notification"
+                android:title="@string/notification"/>
+            <item
+                android:id="@+id/settings"
+                android:title="@string/settings"/>
+        </menu>
+    </item>
+
+</menu>

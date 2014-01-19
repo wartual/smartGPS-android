@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="repeat">Repeat</string>
+    <string name="continue_s">Continue</string>
+    <string name="finish">Finish</string>
+    <string name="last_known_location">Last known location</string>
+    <string name="status">Status</string>
+    <string name="date_created">Date created</string>
+    <string name="last_updated">Last updated</string>
+    <string name="travel">Travel</string>
+    <string name="departure">Departure</string>
+    <string name="close">Close</string>
+    <string name="deactivate">Deactivate</string>
+    <string name="notifications_could_not_be_loaded">User notifications could not be loaded!</string>
+    <string name="error">Error</string>
+    <string name="google_play_services_required">In order to show maps, the latest version of Google Play services is required. Download the latest version?</string>
+    <string name="google_play_services_are_neccesary">Google play services are neccesary for application!</string>
+    <string name="invalid_notification_length">Notification has to be shorter than 200 characters!</string>
+    <string name="choose_category">Choose category</string>
+    <string name="send">Send</string>
+    <string name="category">Category</string>
+    <string name="notification">Notification</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="type">Type</string>
@@ -43,7 +63,7 @@
     <string name="mode">Mode</string>
     <string name="no_internet_connection">Active internet connection is needed!</string>
     <string name="preview_on_map">Preview on map</string>
-    <string name="login_to_smartGps">Login to application using your smartGPS account</string>
+    <string name="login_to_smartGps">Login to application using your smartGPS account:</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
 	<string name="password">Password</string>
@@ -76,6 +96,7 @@
 	<string name="select_gender">Select gender</string>
 	<string name="incorrect_date_of_birth">Date of birth is not valid!</string>
 	<string name="no_events">No events were found on proposed location!</string>
+	<string name="no_travels">You have no previous travels!</string>
 	<string name="contact">Contact</string>
 	<string name="start_navigation_to">Start navigation to %s?</string>
 	<string-array name="genders">

@@ -11,6 +11,9 @@ public class ProjectConfig {
 	public static DecimalFormat decimalFormat;
 	public static int CLIENT_TIMEOUT = 10000;
 	public static int MAP_ZOOM_POI = 15;
+	public static final String FIRST_TIME = "first_time";
+	public static final String GCM_REGISTRATION_ID = "registrationId";
+	public static final String APPLICATION_ID = "680887826369"; 
 
 	public static Location getDefaultLocation() {
 		defaultLocation = new Location("");

@@ -9,13 +9,13 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Bitmap.Config;
+import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Address;
@@ -23,13 +23,19 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
+import android.preference.PreferenceManager;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.View;
+import android.view.View.OnClickListener;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.smartgps.R;
 import com.smartgps.activities.navigation.NavigationActivity;
-import com.smartgps.activities.places.PlaceActivity;
 import com.smartgps.models.SmartDestinationModel;
 import com.smartgps.models.api.foursquare.APILocationModel;
 
@@ -52,7 +58,6 @@ public class Utilities {
 				for (int i = 0; i < addresses.size(); i++) {
 					for (int j = 0; j < addresses.get(i)
 							.getMaxAddressLineIndex(); j++) {
-						Log.d("J", j + "");
 						geoAddress += addresses.get(i).getAddressLine(j);
 						if (j != addresses.get(i).getMaxAddressLineIndex() - 1)
 							geoAddress = geoAddress + ", ";
@@ -140,7 +145,7 @@ public class Utilities {
 	public static String formatDistance(double distance) {
 		String output = "";
 		DecimalFormat df = ProjectConfig.getDecimalFormat();
-		
+
 		if (distance > 1000) {
 			distance = distance / 1000;
 			output = df.format(distance) + " km";
@@ -196,10 +201,20 @@ public class Utilities {
 			return true;
 	}
 
-	public static String formatText(String text){
-		return text.replace("_", " ");
+	public static boolean checkInternetConnection(Context ctx) {
+		ConnectivityManager cm = (ConnectivityManager) ctx
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo ni = cm.getActiveNetworkInfo();
+		if (ni == null) {
+			return false;
+		} else
+			return true;
 	}
 	
+	public static String formatText(String text) {
+		return text.replace("_", " ");
+	}
+
 	public static String firstLetterUpercase(String input) {
 		input = input.toLowerCase();
 		String[] arr = input.split(" ");
@@ -219,26 +234,27 @@ public class Utilities {
 			return true;
 		}
 	}
-	
-	public static Bitmap drawableToBitmap (Drawable drawable) {
-	    if (drawable instanceof BitmapDrawable) {
-	        return ((BitmapDrawable)drawable).getBitmap();
-	    }
 
-	    Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Config.ARGB_8888);
-	    Canvas canvas = new Canvas(bitmap); 
-	    drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-	    drawable.draw(canvas);
+	public static Bitmap drawableToBitmap(Drawable drawable) {
+		if (drawable instanceof BitmapDrawable) {
+			return ((BitmapDrawable) drawable).getBitmap();
+		}
 
-	    return bitmap;
+		Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(),
+				drawable.getIntrinsicHeight(), Config.ARGB_8888);
+		Canvas canvas = new Canvas(bitmap);
+		drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+		drawable.draw(canvas);
+
+		return bitmap;
 	}
-	
-	public static Drawable resize(Bitmap d , Activity activity) {
+
+	public static Drawable resize(Bitmap d, Activity activity) {
 		Bitmap bitmapOrig = null;
 		DisplayMetrics metrics = new DisplayMetrics();
 		activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		int bound = 20;
-		
+
 		switch (metrics.densityDpi) {
 		case DisplayMetrics.DENSITY_LOW:
 			bitmapOrig = Bitmap.createScaledBitmap(d, 20, 20, true);
@@ -266,29 +282,29 @@ public class Utilities {
 		scaled.setBounds(-bound, -bound, bound, bound);
 		return scaled;
 	}
-	
-	public static String getAddress(APILocationModel location){
+
+	public static String getAddress(APILocationModel location) {
 		String address = "";
-		if(location.getAddress() != null){
+		if (location.getAddress() != null) {
 			address = address + location.getAddress();
 		}
-		
-		if(location.getCity() != null){
+
+		if (location.getCity() != null) {
 			address = address + ", " + location.getCity();
 		}
-		
-		if(location.getCountry() != null){
+
+		if (location.getCountry() != null) {
 			address = address + ", " + location.getCountry();
 		}
-		
+
 		return address;
 	}
-	
-	public static void buildStartNavigationDialog(final SmartDestinationModel m, String name, final Context ctx) {
+
+	public static void buildStartNavigationDialog(
+			final SmartDestinationModel m, String name, final Context ctx) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
 		String title = String.format(
-				ctx.getString(R.string.start_navigation_to),
-				name);
+				ctx.getString(R.string.start_navigation_to), name);
 
 		builder.setTitle(ctx.getString(R.string.app_name));
 		builder.setMessage(title);
@@ -308,4 +324,87 @@ public class Utilities {
 		builder.show();
 	}
 
+	public static boolean checkPlayServices(Activity activity) {
+		int resultCode = GooglePlayServicesUtil
+				.isGooglePlayServicesAvailable(activity);
+
+		if (resultCode == ConnectionResult.SUCCESS) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static void showGooglePlayServicesUnavailableDialog(
+			final Activity activity) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+		builder.setTitle(activity.getString(R.string.error));
+		builder.setMessage(activity
+				.getString(R.string.google_play_services_required));
+		builder.setCancelable(false);
+		builder.setPositiveButton(activity.getString(R.string.ok),
+				new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						try {
+							Intent intent = new Intent(
+									Intent.ACTION_VIEW,
+									Uri.parse("market://details?id=com.google.android.gms"));
+							activity.startActivity(intent);
+						} catch (ActivityNotFoundException e) {
+							Intent intent = new Intent(
+									Intent.ACTION_VIEW,
+									Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en"));
+							activity.startActivity(intent);
+						}
+
+						activity.finish();
+					}
+				});
+
+		builder.setNegativeButton(activity.getString(R.string.cancel),
+				new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// dialog.cancel();
+						googlePlayIsNeccesary(activity);
+					}
+				});
+
+		builder.create().show();
+
+	}
+
+	private static void googlePlayIsNeccesary(final Activity activity) {
+		final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+		builder.setTitle(activity.getString(R.string.error))
+				.setMessage(
+						activity.getString(R.string.google_play_services_are_neccesary))
+				.setCancelable(false)
+				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(final DialogInterface dialog,
+							final int id) {
+						dialog.cancel();
+						activity.finish();
+					}
+				});
+		final AlertDialog alert = builder.create();
+		alert.show();
+	}
+	
+	public static String getRegistrationId(Context ctx) {
+		String registrationId = PreferenceManager.getDefaultSharedPreferences(ctx).getString(ProjectConfig.GCM_REGISTRATION_ID, "");
+
+		if (TextUtils.isEmpty(registrationId)) {
+			Log.d("GCM", "Registration not found.");
+			return null;
+		}
+
+		return registrationId;
+	}
 }

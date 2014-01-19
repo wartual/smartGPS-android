@@ -39,7 +39,7 @@ public class APITipsModel  implements Serializable{
 	}
 
 	public long getCreatedAt() {
-		return createdAt;
+		return createdAt/1000;
 	}
 
 	public void setCreatedAt(long createdAt) {

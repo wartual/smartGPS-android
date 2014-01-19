@@ -55,7 +55,6 @@ public class EventsActivity extends BaseActivity{
 		
 		return super.onCreateOptionsMenu(menu);
 	}
-
 	
 	private void getData() {
 		model = (SmartDestinationModel) getIntent().getExtras().get(EVENT);

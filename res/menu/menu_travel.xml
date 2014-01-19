@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/actionbar_settings"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/action_settings">
+        <menu>
+            <item
+                android:id="@+id/option_continue"
+                android:title="@string/continue_s"/>
+            <item
+                android:id="@+id/option_finish"
+                android:title="@string/finish"/>
+            <item
+                android:id="@+id/option_repeat"
+                android:visible="false"
+                android:title="@string/repeat"/>
+        </menu>
+    </item>
+
+</menu>
