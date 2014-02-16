@@ -3,7 +3,7 @@ package com.smartgps.utils;
 
 public class APICalls {
 
-	private static String SERVER_URL = "http://smart-gps.somee.com/";
+	private static String SERVER_URL = "http://smartgps.somee.com/";
 	private static String LOGIN = "api/user/loginUser";
 	private static String REGISTER = "api/user/registerUser";
 	private static String GET_PROFILE = "api/user/getUser";
@@ -20,6 +20,7 @@ public class APICalls {
 	private static String GET_NOTIFICATIONS_NEAR_LOCATIONS = "api/notification/getNotificationsNearLocation";
 	private static String GET_TRAVELS_FOR_USER = "api/travel/getTravelsForUser";
 	private static String DEACTIVATE_NOTIFICATION = "api/notification/deactivateNotification";
+	private static String RATE_NOTIFICATION = "api/notification/rateNotification";
 	
 	public static String getLoginUrl(){
 		return SERVER_URL + LOGIN;
@@ -83,5 +84,9 @@ public class APICalls {
 	
 	public static String getDeactivateNotificationUrl(){
 		return SERVER_URL + DEACTIVATE_NOTIFICATION;
+	}
+	
+	public static String getRateNotification(){
+		return SERVER_URL + RATE_NOTIFICATION;
 	}
 }

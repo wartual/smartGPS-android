@@ -14,6 +14,7 @@ public class ProjectConfig {
 	public static final String FIRST_TIME = "first_time";
 	public static final String GCM_REGISTRATION_ID = "registrationId";
 	public static final String APPLICATION_ID = "680887826369"; 
+	public static final int NUMBER_OF_ITEMS_TO_LOAD = 10;
 
 	public static Location getDefaultLocation() {
 		defaultLocation = new Location("");

@@ -17,6 +17,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.smartgps.R;
 import com.smartgps.activities.MainActivity;
 import com.smartgps.activities.navigation.NavigationActivity;
+import com.smartgps.activities.navigation.SmartNavigationActivity;
 
 public class GcmIntentService extends IntentService {
 
@@ -39,11 +40,50 @@ public class GcmIntentService extends IntentService {
         // in your BroadcastReceiver.
         String messageType = gcm.getMessageType(intent);
 
-        if (!extras.isEmpty()) { // has effect of unparcelling Bundle
+        if(!extras.isEmpty() && extras.get("nodes") != null){
+        	showNodesNotification(extras);
+        }
+        else if(!extras.isEmpty()){
         	showNotification(extras);
         }
         // Release the wake lock provided by the WakefulBroadcastReceiver.
         GcmBroadcastReceiver.completeWakefulIntent(intent);
+    }
+    
+    private void showNodesNotification(Bundle extras){
+    	Log.d("nodes notification", extras.toString());
+    	
+    	NotificationCompat.Builder mBuilder =
+    	        new NotificationCompat.Builder(this)
+    	        .setSmallIcon(R.drawable.logo)
+    	        .setContentTitle(getString(R.string.app_name))
+    	        .setContentText("Travel directions obtained!")
+    	        .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+    	
+    	Intent intent = new Intent(GcmIntentService.this, SmartNavigationActivity.class);
+    	intent.putExtra(SmartNavigationActivity.NODES, extras.getString("nodes"));
+    	intent.putExtra(SmartNavigationActivity.TRAVEL_DATA, extras.getString("travelData"));
+    	
+    	
+    	intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+    	
+    	intent.putExtra(MainActivity.IS_NOTIFICATION, true);
+    	
+    	PendingIntent pendingIntent = PendingIntent.getActivity(
+    		      this, 
+    		      0, 
+    		      intent,  
+    		      Intent.FLAG_ACTIVITY_NEW_TASK);
+    	
+    	mBuilder.setContentIntent(pendingIntent);
+    	mBuilder.setAutoCancel(true);
+    
+    	NotificationManager mNotificationManager =
+    	    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+    	// mId allows you to update the notification later on.
+    	int mId = 001;
+    	mNotificationManager.notify(mId, mBuilder.build());
+    	
     }
     
     @SuppressLint("NewApi")

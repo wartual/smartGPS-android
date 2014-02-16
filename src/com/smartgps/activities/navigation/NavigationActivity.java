@@ -11,11 +11,14 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.w3c.dom.Document;
 
+import android.R.bool;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -44,6 +47,7 @@ import com.google.android.gms.maps.GoogleMap.OnMarkerDragListener;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationChangeListener;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
@@ -53,8 +57,11 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 import com.smartgps.R;
 import com.smartgps.activities.BaseActivity;
+import com.smartgps.activities.places.PlaceActivity;
 import com.smartgps.interfaces.DialogTextCommunicator;
 import com.smartgps.models.APINotificationCategories;
 import com.smartgps.models.APINotificationsModel;
@@ -62,10 +69,13 @@ import com.smartgps.models.APITravelStatusCategories;
 import com.smartgps.models.SmartDestinationModel;
 import com.smartgps.models.SmartResponseTypes;
 import com.smartgps.models.api.APIJsonResponseModel;
+import com.smartgps.models.api.foursquare.APIItemsModel;
+import com.smartgps.models.api.places.APIPlacesModel;
 import com.smartgps.models.dao.NotificationCategoriesDao;
 import com.smartgps.models.dao.TravelCategoriesDao;
 import com.smartgps.params.APICreateNotificationParams;
 import com.smartgps.params.APIDeactivateNotificationParams;
+import com.smartgps.params.APIRateNotification;
 import com.smartgps.params.APIUpdateTravelCurrentLocationParams;
 import com.smartgps.params.APIUpdateTravelStatusParams;
 import com.smartgps.utils.APICalls;
@@ -102,7 +112,17 @@ public class NavigationActivity extends BaseActivity implements
 	private MenuItem modeCar;
 	private String travelId;
 	private ArrayList<APINotificationsModel> notifications;
+	private ArrayList<APIItemsModel> events;
+	private ArrayList<APIPlacesModel> places;
 	private static HashMap<Marker, APINotificationsModel> notificationMarkers;
+	private static HashMap<Marker, APIItemsModel> eventMarkers;
+	private static HashMap<Marker, APIPlacesModel> placesMarkers;
+	private double distance;
+	private Location lastLoadedMarkers;
+	private APIPlacesModel place;
+	private APIItemsModel event;
+	private Dialog notificationDialog;
+	private TextView thumbsUp, thumbsDown;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -140,6 +160,8 @@ public class NavigationActivity extends BaseActivity implements
 		mode = GMapV2Direction.MODE_DRIVING;
 		mapDirection = new GMapV2Direction();
 		notificationMarkers = new HashMap<Marker, APINotificationsModel>();
+		eventMarkers = new HashMap<Marker, APIItemsModel>();
+		placesMarkers = new HashMap<Marker, APIPlacesModel>();
 	}
 
 	@Override
@@ -292,13 +314,23 @@ public class NavigationActivity extends BaseActivity implements
 				TextView title = (TextView) v.findViewById(R.id.title);
 				TextView subtitle = (TextView) v.findViewById(R.id.subtitle);
 
-				if (notificationMarkers.get(marker) == null) {
+				if (notificationMarkers.get(marker) == null && eventMarkers.get(marker) == null && placesMarkers.get(marker) == null) {
 					title.setText(model.getAddress());
 					subtitle.setText(model.getCountry());
-				} else {
+				} 
+				else if (notificationMarkers.get(marker) != null && eventMarkers.get(marker) != null && placesMarkers.get(marker) == null){
 					title.setText(notificationMarkers.get(marker).getText());
 					subtitle.setText(notificationMarkers.get(marker)
 							.getUsername());
+				}
+				else if (notificationMarkers.get(marker) == null && eventMarkers.get(marker) != null && placesMarkers.get(marker) == null){
+					title.setText(eventMarkers.get(marker).getVenue().getName());
+					subtitle.setText(Utilities.getAddress(eventMarkers.get(marker).getVenue().getLocation()));
+				}
+				else if (notificationMarkers.get(marker) == null && eventMarkers.get(marker) == null && placesMarkers.get(marker) != null){
+					title.setText(placesMarkers.get(marker).getName());
+					subtitle.setText(placesMarkers.get(marker)
+							.getVicinity());
 				}
 
 				// Returning the view containing InfoWindow contents
@@ -315,22 +347,34 @@ public class NavigationActivity extends BaseActivity implements
 	@Override
 	public boolean onMarkerClick(Marker marker) {
 		if (notificationMarkers.get(marker) != null) {
-			buildNotificationDetailsDialog(notificationMarkers.get(marker), marker);
+			buildNotificationDetailsDialog(notificationMarkers.get(marker),
+					marker);
 		}
 		return false;
 	}
 
 	@Override
 	public void onMyLocationChange(Location location) {
-		if (Utilities.getDistance(location, lastLocation) > 10) {
+		distance = Utilities.getDistance(location, lastLocation);
+		if (distance > 20) {
+			lastLocation = location;
 			currentLocation = new LatLng(location.getLatitude(),
 					location.getLongitude());
 
 			// TO DO
 			// 1. Some filter when to report new location to server
 			reportNewLocationToServer(location);
-
 			handleLocationChange();
+		}
+
+		// if distance is greater than 10 km, refresh events, places and
+		// notification
+		distance = Utilities.getDistance(lastLoadedMarkers, location);
+		if (distance > 10000) {
+			loadNotifications(true);
+			loadEvents(true);
+			loadPlaces(true);
+			lastLoadedMarkers = location;
 		}
 	}
 
@@ -378,9 +422,12 @@ public class NavigationActivity extends BaseActivity implements
 		} else {
 			lastLocation = locationClient.getLastLocation();
 		}
+		lastLoadedMarkers = lastLocation;
 		currentLocationSet = true;
 		setupMapCurrentLocation(true);
 		loadNotifications(false);
+		loadEvents(false);
+		loadPlaces(false);
 	}
 
 	@Override
@@ -483,7 +530,8 @@ public class NavigationActivity extends BaseActivity implements
 
 			@Override
 			public void onClick(View v) {
-				Dialog dialog = dialogBuilder.buildDialog(getCategories(),
+				Dialog dialog = dialogBuilder.buildDialog(
+						Utilities.getNotificationCategories(),
 						getString(R.string.choose_category), category);
 				dialog.show();
 			}
@@ -523,18 +571,6 @@ public class NavigationActivity extends BaseActivity implements
 						});
 		dialog = builder.create();
 		dialog.show();
-	}
-
-	private ArrayList<String> getCategories() {
-		ArrayList<String> categoires = new ArrayList<String>();
-		List<APINotificationCategories> notificationCategories = NotificationCategoriesDao
-				.getAll();
-
-		for (APINotificationCategories category : notificationCategories) {
-			categoires.add(category.getType());
-		}
-
-		return categoires;
 	}
 
 	private void sendNotification(String category, String text,
@@ -630,9 +666,159 @@ public class NavigationActivity extends BaseActivity implements
 		});
 	}
 
+	private void loadEvents(final boolean clearMap) {
+		url = APICalls.getEventsUrl(user.get(SessionManager.KEY_SESSION_ID),
+				lastLocation.getLatitude(), lastLocation.getLongitude(),
+				ProjectConfig.NUMBER_OF_ITEMS_TO_LOAD);
+		Log.d("LOADAM EVENTE", url);
+		client.get(url, new JsonHttpResponseHandler() {
+
+			@Override
+			public void onFailure(Throwable error, String content) {
+				if (error.getCause() instanceof ConnectTimeoutException) {
+					buildOkDialog(
+							getString(R.string.connection_timeout_has_occured),
+							false);
+					hideLoadingOverlay();
+
+				}
+			}
+
+			@Override
+			public void onSuccess(JSONArray json) {
+				reader = json.toString();
+				events = new ArrayList<APIItemsModel>(Arrays.asList(gson
+						.fromJson(reader, APIItemsModel[].class)));
+				if (events != null && events.size() != 0)
+					renderEventsOnMap(clearMap);
+			}
+		});
+	}
+
+	private void loadPlaces(final boolean clearMap) {
+		url = APICalls.getPlacesUrl(user.get(SessionManager.KEY_SESSION_ID),
+				lastLocation.getLatitude(), lastLocation.getLongitude(),
+				ProjectConfig.NUMBER_OF_ITEMS_TO_LOAD);
+		Log.d("LOADAM PLACES", url);
+		client.get(url, new JsonHttpResponseHandler() {
+
+			@Override
+			public void onFailure(Throwable error, String content) {
+				if (error.getCause() instanceof ConnectTimeoutException) {
+					buildOkDialog(
+							getString(R.string.connection_timeout_has_occured),
+							false);
+					hideLoadingOverlay();
+
+				}
+			}
+
+			@Override
+			public void onSuccess(JSONArray json) {
+				reader = json.toString();
+				places = new ArrayList<APIPlacesModel>(Arrays.asList(gson
+						.fromJson(reader, APIPlacesModel[].class)));
+				if (places != null && places.size() != 0)
+					renderPlacesOnMap(clearMap);
+			}
+		});
+	}
+
+	private void renderPlacesOnMap(boolean clearMap) {
+		if (clearMap)
+			mMap.clear();
+		
+		if (clearMap)
+			mMap.clear();
+
+		for (APIPlacesModel model : places) {
+			LatLng location = new LatLng(model.getGeometry().getLocation()
+					.getLatitude(), model.getGeometry().getLocation()
+					.getLongitude());
+			Marker marker = mMap.addMarker(new MarkerOptions()
+					.position(location));
+
+			if (placesMarkers.get(marker) == null) {
+				placesMarkers.put(marker, model);
+			}
+		}
+		
+//		for (int i = 0; i< places.size(); i++) {
+//			place = places.get(i);
+//			ImageLoader.getInstance().loadImage(place.getIcon(),
+//					new SimpleImageLoadingListener() {
+//
+//						@Override
+//						public void onLoadingComplete(String imageUri,
+//								View view, Bitmap loadedImage) {
+//							super.onLoadingComplete(imageUri, view, loadedImage);
+//							Drawable image = Utilities.resize(loadedImage,
+//									NavigationActivity.this);
+//							Log.d("LOCATION", place.getGeometry().getLocation().getLatitude() + ", " + place.getGeometry().getLocation().getLongitude());
+//							LatLng location = new LatLng(place.getGeometry().getLocation().getLatitude(), place.getGeometry().getLocation().getLongitude());
+//							Log.d("LAT LNG", location.toString());
+//							Marker marker = mMap.addMarker(new MarkerOptions()
+//									.position(location)
+//									.icon(BitmapDescriptorFactory
+//											.fromBitmap(Utilities
+//													.drawableToBitmap(image)))
+//									.title(place.getName()));
+//
+//							if (eventMarkers.get(marker) == null) {
+//								eventMarkers.put(marker, event);
+//							}
+//						}
+//					});
+//		}
+	}
+
+	private void renderEventsOnMap(boolean clearMap) {
+		if (clearMap)
+			mMap.clear();
+
+		for (APIItemsModel model : events) {
+			LatLng location = new LatLng(model.getVenue().getLocation()
+					.getLatitude(), model.getVenue().getLocation()
+					.getLongitude());
+			Marker marker = mMap.addMarker(new MarkerOptions()
+					.position(location).title(model.getVenue().getName()));
+
+			if (eventMarkers.get(marker) == null) {
+				eventMarkers.put(marker, model);
+			}
+		}
+		
+//		for (int i = 0; i< events.size(); i++) {
+//			event = events.get(i);
+//			String iconUrl = event.getVenue().getCategories().get(0).getIcon().getPrefix() + "bg_32.png";
+//			ImageLoader.getInstance().loadImage(iconUrl,
+//					new SimpleImageLoadingListener() {
+//
+//						@Override
+//						public void onLoadingComplete(String imageUri,
+//								View view, Bitmap loadedImage) {
+//							super.onLoadingComplete(imageUri, view, loadedImage);
+//							Drawable image = Utilities.resize(loadedImage,
+//									NavigationActivity.this);
+//							Log.d("LOCATION", event.getVenue().getLocation().getLatitude() + ", " + event.getVenue().getLocation().getLongitude());
+//							LatLng location = new LatLng(event.getVenue().getLocation().getLatitude(), event.getVenue().getLocation().getLongitude());
+//							Log.d("LAT LNG", location.toString());
+//							Marker marker = mMap.addMarker(new MarkerOptions()
+//									.position(location)
+//									.icon(BitmapDescriptorFactory
+//											.fromBitmap(Utilities
+//													.drawableToBitmap(image)))
+//									.title(event.getVenue().getName()));
+//
+//							if (placesMarkers.get(marker) == null) {
+//								placesMarkers.put(marker, place);
+//							}
+//						}
+//					});
+//		}
+	}
+
 	private void renderNotificationsOnMap(boolean clearMap) {
-		Log.d("RENDERIRAM NOTIFIKACIJE NA MAPU",
-				"IMA IH:" + notifications.size());
 		if (clearMap)
 			mMap.clear();
 
@@ -640,7 +826,7 @@ public class NavigationActivity extends BaseActivity implements
 			LatLng location = new LatLng(model.getLatitude(),
 					model.getLongitude());
 			Marker marker = mMap.addMarker(new MarkerOptions()
-					.position(location));
+					.position(location).title(model.getText()));
 
 			if (notificationMarkers.get(marker) == null) {
 				notificationMarkers.put(marker, model);
@@ -660,50 +846,78 @@ public class NavigationActivity extends BaseActivity implements
 		buildNotificationDialog(location);
 	}
 
-	public void buildNotificationDetailsDialog(final APINotificationsModel model, final Marker marker) {
-		Dialog dialog = new Dialog(NavigationActivity.this);
+	public void buildNotificationDetailsDialog(
+			final APINotificationsModel model, final Marker marker) {
+		notificationDialog = new Dialog(NavigationActivity.this);
 		AlertDialog.Builder builder = new AlertDialog.Builder(
 				NavigationActivity.this);
 		LayoutInflater inflater = NavigationActivity.this.getLayoutInflater();
 		final LinearLayout customLayout = (LinearLayout) inflater.inflate(
-				R.layout.dialog_notification, null);
+				R.layout.dialog_notification_details, null);
 		builder.setInverseBackgroundForced(true);
 
 		TextView text = (TextView) customLayout.findViewById(R.id.notification);
 		TextView address = (TextView) customLayout.findViewById(R.id.address);
 		TextView date = (TextView) customLayout.findViewById(R.id.date);
-
+		TextView user = (TextView) customLayout.findViewById(R.id.user);
+		thumbsUp = (TextView) customLayout.findViewById(R.id.thumps_up_num);
+		thumbsDown = (TextView) customLayout.findViewById(R.id.thumps_down_num);
+		LinearLayout thumbsUpPlaceholder = (LinearLayout) customLayout.findViewById(R.id.thumbs_up_placeholder);
+		LinearLayout thumbsDownPlaceholder = (LinearLayout) customLayout.findViewById(R.id.thumbs_down_placeholder);
+		
+		thumbsUp.setText(model.getThumbsUp() + "");
+		thumbsDown.setText(model.getThumbsDown() + "");
 		text.setText(model.getText());
 		address.setText(model.getAddress());
 		date.setText(new Date(model.getDateCreated()).toLocaleString());
+		user.setText(model.getUsername());
 
 		builder.setView(customLayout)
-
 				.setPositiveButton(getResources().getString(R.string.close),
 						new DialogInterface.OnClickListener() {
 							@Override
 							public void onClick(DialogInterface dialog, int id) {
 								dialog.cancel();
 							}
-						})
-				.setNegativeButton(
-						getResources().getString(R.string.deactivate),
-						new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int id) {
-								dialog.cancel();
-								deactivateNotification(model, marker);
-							}
 						});
-		dialog = builder.create();
-		dialog.show();
+		
+		thumbsUpPlaceholder.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				long current = Long.parseLong(thumbsUp.getText().toString());
+				rateNotification(true, model, thumbsUp, current + 1);
+			}
+		});
+		
+		thumbsDownPlaceholder.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				long current = Long.parseLong(thumbsDown.getText().toString());
+				rateNotification(true, model, thumbsDown, current + 1);
+			}
+		});
+		
+		notificationDialog = builder.create();
+		notificationDialog.show();
 	}
-
-	private void deactivateNotification(APINotificationsModel model, final Marker marker) {
-		APIDeactivateNotificationParams params = new APIDeactivateNotificationParams();
-		params.setUserId(user.get(SessionManager.KEY_SESSION_ID));
+	
+	private void rateNotification(Boolean thumbsUp, APINotificationsModel model, final TextView text, final long value){
+		APIRateNotification params = new APIRateNotification();
 		params.setNotificationId(model.getNotificationId());
-
-		client.put(APICalls.getDeactivateNotificationUrl(),
+		params.setUserId(user.get(SessionManager.KEY_SESSION_ID));
+		
+		if(thumbsUp){
+			params.setThumbsDown(false);
+			params.setThumbsUp(true);
+		}
+		else{
+			params.setThumbsDown(true);
+			params.setThumbsUp(false);
+		}
+		
+		client.put(APICalls.getRateNotification(),
 				params.getRequestParams(), new JsonHttpResponseHandler() {
 
 					@Override
@@ -720,12 +934,8 @@ public class NavigationActivity extends BaseActivity implements
 						reader = json.toString();
 						response = gson.fromJson(reader,
 								APIJsonResponseModel.class);
-						if (response.getStatus().equalsIgnoreCase(
-								SmartResponseTypes.RESPONSE_OK)){
-							notificationMarkers.clear();
-							loadNotifications(true);
-						}
-						
+						Log.d("RESPONSE", response.getMessage());
+						text.setText(value + "");
 						buildOkDialog(response.getMessage(), false);
 					}
 				});

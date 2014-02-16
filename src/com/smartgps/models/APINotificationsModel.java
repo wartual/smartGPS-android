@@ -31,6 +31,11 @@ public class APINotificationsModel {
 	@SerializedName("address")
 	private String address;
 	
+	@SerializedName("thumbsUp")
+	private long thumbsUp;
+	
+	@SerializedName("thumbsDown")
+	private long thumbsDown;
 	
 	public APINotificationsModel(){
 		
@@ -93,7 +98,7 @@ public class APINotificationsModel {
 	}
 
 	public String getAddress() {
-		return address;
+		return address.replace("+", " ");
 	}
 
 	public void setAddress(String address) {
@@ -106,5 +111,21 @@ public class APINotificationsModel {
 
 	public void setNotificationId(String notificationId) {
 		this.notificationId = notificationId;
+	}
+
+	public long getThumbsUp() {
+		return thumbsUp;
+	}
+
+	public void setThumbsUp(long thumbsUp) {
+		this.thumbsUp = thumbsUp;
+	}
+
+	public long getThumbsDown() {
+		return thumbsDown;
+	}
+
+	public void setThumbsDown(long thumbsDown) {
+		this.thumbsDown = thumbsDown;
 	}
 }

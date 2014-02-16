@@ -36,8 +36,10 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.smartgps.R;
 import com.smartgps.activities.navigation.NavigationActivity;
+import com.smartgps.models.APINotificationCategories;
 import com.smartgps.models.SmartDestinationModel;
 import com.smartgps.models.api.foursquare.APILocationModel;
+import com.smartgps.models.dao.NotificationCategoriesDao;
 
 public class Utilities {
 
@@ -333,6 +335,18 @@ public class Utilities {
 		} else {
 			return false;
 		}
+	}
+	
+	public static ArrayList<String> getNotificationCategories() {
+		ArrayList<String> categoires = new ArrayList<String>();
+		List<APINotificationCategories> notificationCategories = NotificationCategoriesDao
+				.getAll();
+
+		for (APINotificationCategories category : notificationCategories) {
+			categoires.add(category.getType());
+		}
+
+		return categoires;
 	}
 
 	public static void showGooglePlayServicesUnavailableDialog(

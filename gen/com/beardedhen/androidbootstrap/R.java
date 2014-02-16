@@ -83,28 +83,28 @@ public final class R {
 		public static final int bbuton_success_rounded = 0x7f020063;
 		public static final int bbuton_warning = 0x7f020064;
 		public static final int bbuton_warning_rounded = 0x7f020065;
-		public static final int edittext_background = 0x7f020080;
-		public static final int edittext_background_rounded = 0x7f020081;
-		public static final int ic_launcher = 0x7f020084;
+		public static final int edittext_background = 0x7f020082;
+		public static final int edittext_background_rounded = 0x7f020083;
+		public static final int ic_launcher = 0x7f020086;
 	}
 	public static final class id {
-		public static final int action_settings = 0x7f05007c;
-		public static final int layout = 0x7f050061;
-		public static final int lblColA = 0x7f050078;
-		public static final int lblColB = 0x7f050079;
-		public static final int lblLeft = 0x7f050062;
-		public static final int lblMiddle = 0x7f050063;
-		public static final int lblRight = 0x7f050064;
-		public static final int lblSubTitle = 0x7f050077;
-		public static final int lblText = 0x7f05006c;
-		public static final int lblTitle = 0x7f050076;
+		public static final int action_settings = 0x7f050089;
+		public static final int layout = 0x7f050067;
+		public static final int lblColA = 0x7f050085;
+		public static final int lblColB = 0x7f050086;
+		public static final int lblLeft = 0x7f050068;
+		public static final int lblMiddle = 0x7f050069;
+		public static final int lblRight = 0x7f05006a;
+		public static final int lblSubTitle = 0x7f050084;
+		public static final int lblText = 0x7f050079;
+		public static final int lblTitle = 0x7f050083;
 	}
 	public static final class layout {
-		public static final int bootstrap_button = 0x7f030025;
-		public static final int font_awesome_text = 0x7f03002b;
-		public static final int row_title = 0x7f03003b;
-		public static final int row_title_and_subtitle = 0x7f03003c;
-		public static final int row_two_columns = 0x7f03003e;
+		public static final int bootstrap_button = 0x7f030027;
+		public static final int font_awesome_text = 0x7f03002d;
+		public static final int row_title = 0x7f03003d;
+		public static final int row_title_and_subtitle = 0x7f03003e;
+		public static final int row_two_columns = 0x7f030040;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0d0000;

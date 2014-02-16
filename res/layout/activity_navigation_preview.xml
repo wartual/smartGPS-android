@@ -138,6 +138,7 @@
                 app:bb_type="success" />
 
             <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/smart_navigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"

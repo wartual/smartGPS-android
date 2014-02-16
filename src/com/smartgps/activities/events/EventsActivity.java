@@ -22,6 +22,7 @@ import com.smartgps.adapters.EventsAdapter;
 import com.smartgps.models.SmartDestinationModel;
 import com.smartgps.models.api.foursquare.APIItemsModel;
 import com.smartgps.utils.APICalls;
+import com.smartgps.utils.ProjectConfig;
 import com.smartgps.utils.SessionManager;
 
 public class EventsActivity extends BaseActivity{
@@ -30,7 +31,6 @@ public class EventsActivity extends BaseActivity{
 	public static final String LOCATION = "location";
 	private ListView list;
 	private SmartDestinationModel model;
-	private int num = 10;
 	private ArrayList<APIItemsModel> events;
 	private EventsAdapter adapter;
 	private Location location;
@@ -60,7 +60,7 @@ public class EventsActivity extends BaseActivity{
 		model = (SmartDestinationModel) getIntent().getExtras().get(EVENT);
 		location = (Location) getIntent().getExtras().get(LOCATION);
 		url = APICalls.getEventsUrl(user.get(SessionManager.KEY_SESSION_ID),
-				model.getLatitude(), model.getLongitude(), num);
+				model.getLatitude(), model.getLongitude(), ProjectConfig.NUMBER_OF_ITEMS_TO_LOAD);
 		showLoadingOverlay();
 		Log.d("URL", url);
 		client.get(url, new JsonHttpResponseHandler() {

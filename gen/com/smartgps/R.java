@@ -1393,54 +1393,60 @@ containing a value of this type.
         public static final int bbuton_success_rounded=0x7f020063;
         public static final int bbuton_warning=0x7f020064;
         public static final int bbuton_warning_rounded=0x7f020065;
-        public static final int car=0x7f020066;
-        public static final int checkbox_selector=0x7f020067;
-        public static final int common_signin_btn_icon_dark=0x7f020068;
-        public static final int common_signin_btn_icon_disabled_dark=0x7f020069;
-        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f02006a;
-        public static final int common_signin_btn_icon_disabled_focus_light=0x7f02006b;
-        public static final int common_signin_btn_icon_disabled_light=0x7f02006c;
-        public static final int common_signin_btn_icon_focus_dark=0x7f02006d;
-        public static final int common_signin_btn_icon_focus_light=0x7f02006e;
-        public static final int common_signin_btn_icon_light=0x7f02006f;
-        public static final int common_signin_btn_icon_normal_dark=0x7f020070;
-        public static final int common_signin_btn_icon_normal_light=0x7f020071;
-        public static final int common_signin_btn_icon_pressed_dark=0x7f020072;
-        public static final int common_signin_btn_icon_pressed_light=0x7f020073;
-        public static final int common_signin_btn_text_dark=0x7f020074;
-        public static final int common_signin_btn_text_disabled_dark=0x7f020075;
-        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020076;
-        public static final int common_signin_btn_text_disabled_focus_light=0x7f020077;
-        public static final int common_signin_btn_text_disabled_light=0x7f020078;
-        public static final int common_signin_btn_text_focus_dark=0x7f020079;
-        public static final int common_signin_btn_text_focus_light=0x7f02007a;
-        public static final int common_signin_btn_text_light=0x7f02007b;
-        public static final int common_signin_btn_text_normal_dark=0x7f02007c;
-        public static final int common_signin_btn_text_normal_light=0x7f02007d;
-        public static final int common_signin_btn_text_pressed_dark=0x7f02007e;
-        public static final int common_signin_btn_text_pressed_light=0x7f02007f;
-        public static final int edittext_background=0x7f020080;
-        public static final int edittext_background_rounded=0x7f020081;
-        public static final int events_icon=0x7f020082;
-        public static final int history_icon=0x7f020083;
-        public static final int ic_launcher=0x7f020084;
-        public static final int icon_foursquare=0x7f020085;
-        public static final int icon_logout=0x7f020086;
-        public static final int icon_profile=0x7f020087;
-        public static final int logo=0x7f020088;
-        public static final int map_icon=0x7f020089;
-        public static final int row_selector=0x7f02008a;
-        public static final int splash_icon=0x7f02008b;
-        public static final int tab_active=0x7f02008c;
-        public static final int tab_bg_selector=0x7f02008d;
-        public static final int vpi__tab_indicator=0x7f02008e;
-        public static final int vpi__tab_selected_focused_holo=0x7f02008f;
-        public static final int vpi__tab_selected_holo=0x7f020090;
-        public static final int vpi__tab_selected_pressed_holo=0x7f020091;
-        public static final int vpi__tab_unselected_focused_holo=0x7f020092;
-        public static final int vpi__tab_unselected_holo=0x7f020093;
-        public static final int vpi__tab_unselected_pressed_holo=0x7f020094;
-        public static final int walking=0x7f020095;
+        public static final int bonuspack_bubble=0x7f020066;
+        public static final int btn_moreinfo=0x7f020067;
+        public static final int car=0x7f020068;
+        public static final int checkbox_selector=0x7f020069;
+        public static final int common_signin_btn_icon_dark=0x7f02006a;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f02006b;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f02006c;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f02006d;
+        public static final int common_signin_btn_icon_disabled_light=0x7f02006e;
+        public static final int common_signin_btn_icon_focus_dark=0x7f02006f;
+        public static final int common_signin_btn_icon_focus_light=0x7f020070;
+        public static final int common_signin_btn_icon_light=0x7f020071;
+        public static final int common_signin_btn_icon_normal_dark=0x7f020072;
+        public static final int common_signin_btn_icon_normal_light=0x7f020073;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f020074;
+        public static final int common_signin_btn_icon_pressed_light=0x7f020075;
+        public static final int common_signin_btn_text_dark=0x7f020076;
+        public static final int common_signin_btn_text_disabled_dark=0x7f020077;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020078;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f020079;
+        public static final int common_signin_btn_text_disabled_light=0x7f02007a;
+        public static final int common_signin_btn_text_focus_dark=0x7f02007b;
+        public static final int common_signin_btn_text_focus_light=0x7f02007c;
+        public static final int common_signin_btn_text_light=0x7f02007d;
+        public static final int common_signin_btn_text_normal_dark=0x7f02007e;
+        public static final int common_signin_btn_text_normal_light=0x7f02007f;
+        public static final int common_signin_btn_text_pressed_dark=0x7f020080;
+        public static final int common_signin_btn_text_pressed_light=0x7f020081;
+        public static final int edittext_background=0x7f020082;
+        public static final int edittext_background_rounded=0x7f020083;
+        public static final int events_icon=0x7f020084;
+        public static final int history_icon=0x7f020085;
+        public static final int ic_launcher=0x7f020086;
+        public static final int icon_foursquare=0x7f020087;
+        public static final int icon_logout=0x7f020088;
+        public static final int icon_profile=0x7f020089;
+        public static final int icon_thumbs_down=0x7f02008a;
+        public static final int icon_thumbs_up=0x7f02008b;
+        public static final int logo=0x7f02008c;
+        public static final int map_icon=0x7f02008d;
+        public static final int moreinfo_arrow=0x7f02008e;
+        public static final int moreinfo_arrow_pressed=0x7f02008f;
+        public static final int row_selector=0x7f020090;
+        public static final int splash_icon=0x7f020091;
+        public static final int tab_active=0x7f020092;
+        public static final int tab_bg_selector=0x7f020093;
+        public static final int vpi__tab_indicator=0x7f020094;
+        public static final int vpi__tab_selected_focused_holo=0x7f020095;
+        public static final int vpi__tab_selected_holo=0x7f020096;
+        public static final int vpi__tab_selected_pressed_holo=0x7f020097;
+        public static final int vpi__tab_unselected_focused_holo=0x7f020098;
+        public static final int vpi__tab_unselected_holo=0x7f020099;
+        public static final int vpi__tab_unselected_pressed_holo=0x7f02009a;
+        public static final int walking=0x7f02009b;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f05002a;
@@ -1472,108 +1478,121 @@ containing a value of this type.
         public static final int abs__title=0x7f050023;
         public static final int abs__titleDivider=0x7f050024;
         public static final int abs__up=0x7f050013;
-        public static final int action_settings=0x7f05007c;
-        public static final int address=0x7f05004c;
-        public static final int address_tab=0x7f05004b;
-        public static final int basic_tab=0x7f050044;
+        public static final int action_settings=0x7f050089;
+        public static final int address=0x7f05004d;
+        public static final int address_tab=0x7f05004c;
+        public static final int basic_tab=0x7f050045;
         public static final int bottom=0x7f050003;
-        public static final int category=0x7f050069;
-        public static final int confirm_password=0x7f05004f;
-        public static final int contact_tab=0x7f050048;
-        public static final int continue_button=0x7f050058;
-        public static final int country=0x7f05004e;
-        public static final int date=0x7f05006a;
-        public static final int date_created=0x7f05005e;
-        public static final int date_of_birth=0x7f050047;
-        public static final int date_updated=0x7f05005f;
-        public static final int departure=0x7f05005d;
-        public static final int description=0x7f050074;
-        public static final int destination=0x7f050057;
-        public static final int destination_title=0x7f050056;
-        public static final int dialog_listview=0x7f050067;
+        public static final int bubble_description=0x7f050065;
+        public static final int bubble_image=0x7f050062;
+        public static final int bubble_moreinfo=0x7f050064;
+        public static final int bubble_subdescription=0x7f050066;
+        public static final int bubble_title=0x7f050063;
+        public static final int category=0x7f05006f;
+        public static final int confirm_password=0x7f050050;
+        public static final int contact_tab=0x7f050049;
+        public static final int continue_button=0x7f050059;
+        public static final int country=0x7f05004f;
+        public static final int date=0x7f050071;
+        public static final int date_created=0x7f05005f;
+        public static final int date_of_birth=0x7f050048;
+        public static final int date_updated=0x7f050060;
+        public static final int departure=0x7f05005e;
+        public static final int description=0x7f050081;
+        public static final int destination=0x7f050058;
+        public static final int destination_title=0x7f050057;
+        public static final int dialog_listview=0x7f05006d;
         public static final int disableHome=0x7f050011;
         public static final int distance=0x7f05003c;
         public static final int duration=0x7f05003d;
-        public static final int email=0x7f050049;
+        public static final int email=0x7f05004a;
         public static final int end_address=0x7f05003b;
         public static final int end_address_title=0x7f05003a;
-        public static final int find_navigation=0x7f050055;
-        public static final int gender=0x7f050046;
-        public static final int gps_layout=0x7f050052;
+        public static final int find_navigation=0x7f050056;
+        public static final int gender=0x7f050047;
+        public static final int gps_layout=0x7f050053;
         public static final int homeAsUp=0x7f05000e;
         public static final int hybrid=0x7f050008;
-        public static final int input_navigation_type_title=0x7f050050;
-        public static final int item=0x7f05006b;
-        public static final int latitude=0x7f050053;
-        public static final int layout=0x7f050061;
-        public static final int lblColA=0x7f050078;
-        public static final int lblColB=0x7f050079;
-        public static final int lblLeft=0x7f050062;
-        public static final int lblMiddle=0x7f050063;
-        public static final int lblRight=0x7f050064;
-        public static final int lblSubTitle=0x7f050077;
-        public static final int lblText=0x7f05006c;
-        public static final int lblTitle=0x7f050076;
+        public static final int input_navigation_type_title=0x7f050051;
+        public static final int item=0x7f050078;
+        public static final int latitude=0x7f050054;
+        public static final int layout=0x7f050067;
+        public static final int lblColA=0x7f050085;
+        public static final int lblColB=0x7f050086;
+        public static final int lblLeft=0x7f050068;
+        public static final int lblMiddle=0x7f050069;
+        public static final int lblRight=0x7f05006a;
+        public static final int lblSubTitle=0x7f050084;
+        public static final int lblText=0x7f050079;
+        public static final int lblTitle=0x7f050083;
         public static final int list=0x7f050031;
         public static final int listMode=0x7f05000a;
         public static final int login=0x7f050034;
-        public static final int logout_layout=0x7f05005a;
-        public static final int longitude=0x7f050054;
+        public static final int logout_layout=0x7f05005b;
+        public static final int longitude=0x7f050055;
         public static final int main_pager=0x7f050036;
         public static final int mapview=0x7f050037;
         public static final int mode=0x7f05003e;
-        public static final int mode_car=0x7f05007f;
-        public static final int mode_walking=0x7f050080;
-        public static final int name=0x7f050041;
-        public static final int navigation_type=0x7f050051;
+        public static final int mode_car=0x7f05008c;
+        public static final int mode_walking=0x7f05008d;
+        public static final int name=0x7f050042;
+        public static final int navigation_type=0x7f050052;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050005;
-        public static final int notification=0x7f050068;
-        public static final int option_continue=0x7f050081;
-        public static final int option_finish=0x7f050082;
-        public static final int option_repeat=0x7f050083;
+        public static final int notification=0x7f05006e;
+        public static final int option_continue=0x7f05008e;
+        public static final int option_finish=0x7f05008f;
+        public static final int option_repeat=0x7f050090;
         public static final int pager=0x7f050030;
         public static final int password=0x7f050033;
-        public static final int phone=0x7f05004a;
-        public static final int postal_office=0x7f05004d;
+        public static final int phone=0x7f05004b;
+        public static final int postal_office=0x7f05004e;
         public static final int preview_on_map=0x7f05003f;
-        public static final int profile_layout=0x7f050059;
-        public static final int refresh=0x7f05007d;
+        public static final int profile_layout=0x7f05005a;
+        public static final int refresh=0x7f05008a;
         public static final int register=0x7f050035;
         public static final int regular_navigation=0x7f050040;
-        public static final int root_view=0x7f05005b;
+        public static final int root_view=0x7f05005c;
         public static final int satellite=0x7f050006;
-        public static final int search_events=0x7f050072;
-        public static final int settings=0x7f05007e;
+        public static final int search_events=0x7f05007f;
+        public static final int settings=0x7f05008b;
         public static final int showCustom=0x7f050010;
         public static final int showHome=0x7f05000d;
         public static final int showTitle=0x7f05000f;
-        public static final int specials_header=0x7f05006d;
-        public static final int splash_id=0x7f05005c;
+        public static final int smart_navigation=0x7f050041;
+        public static final int specials_header=0x7f05007a;
+        public static final int splash_id=0x7f05005d;
         public static final int start_address=0x7f050039;
         public static final int start_address_title=0x7f050038;
-        public static final int start_history=0x7f050073;
-        public static final int start_navigation=0x7f050071;
-        public static final int status=0x7f050060;
+        public static final int start_history=0x7f050080;
+        public static final int start_navigation=0x7f05007e;
+        public static final int status=0x7f050061;
         public static final int strip=0x7f05002f;
-        public static final int subtitle=0x7f050070;
-        public static final int surname=0x7f050045;
+        public static final int subtitle=0x7f05007d;
+        public static final int surname=0x7f050046;
         public static final int tabMode=0x7f05000b;
-        public static final int tabsLayout=0x7f05007a;
-        public static final int tabsText=0x7f05007b;
+        public static final int tabsLayout=0x7f050087;
+        public static final int tabsText=0x7f050088;
         public static final int terrain=0x7f050007;
-        public static final int tip=0x7f050075;
-        public static final int tips_header=0x7f05006e;
-        public static final int title=0x7f05006f;
-        public static final int title_layout=0x7f050065;
+        public static final int thumbs_down=0x7f050076;
+        public static final int thumbs_down_placeholder=0x7f050075;
+        public static final int thumbs_up=0x7f050073;
+        public static final int thumbs_up_placeholder=0x7f050072;
+        public static final int thumps_down_num=0x7f050077;
+        public static final int thumps_up_num=0x7f050074;
+        public static final int tip=0x7f050082;
+        public static final int tips_header=0x7f05007b;
+        public static final int title=0x7f05007c;
+        public static final int title_layout=0x7f05006b;
         public static final int top=0x7f050004;
         public static final int triangle=0x7f050001;
-        public static final int tv_title=0x7f050066;
-        public static final int type=0x7f050043;
+        public static final int tv_title=0x7f05006c;
+        public static final int type=0x7f050044;
         public static final int underline=0x7f050002;
         public static final int useLogo=0x7f05000c;
+        public static final int user=0x7f050070;
         public static final int username=0x7f050032;
-        public static final int vicinity=0x7f050042;
+        public static final int vicinity=0x7f050043;
         public static final int wrap_content=0x7f050009;
     }
     public static final class integer {
@@ -1619,38 +1638,40 @@ containing a value of this type.
         public static final int activity_search_places=0x7f03001f;
         public static final int activity_settings=0x7f030020;
         public static final int activity_setup_navigation=0x7f030021;
-        public static final int activity_splash=0x7f030022;
-        public static final int activity_travel=0x7f030023;
-        public static final int activity_travels=0x7f030024;
-        public static final int bootstrap_button=0x7f030025;
-        public static final int dialog_header=0x7f030026;
-        public static final int dialog_list=0x7f030027;
-        public static final int dialog_notification=0x7f030028;
-        public static final int dialog_notification_details=0x7f030029;
-        public static final int dialog_row=0x7f03002a;
-        public static final int font_awesome_text=0x7f03002b;
-        public static final int fragment_event_map=0x7f03002c;
-        public static final int fragment_event_specials=0x7f03002d;
-        public static final int fragment_event_tips=0x7f03002e;
-        public static final int fragment_travels=0x7f03002f;
-        public static final int info_window=0x7f030030;
-        public static final int main_first_page=0x7f030031;
-        public static final int main_fourh_page=0x7f030032;
-        public static final int main_second_page=0x7f030033;
-        public static final int main_third_page=0x7f030034;
-        public static final int profile_pager_first_page=0x7f030035;
-        public static final int profile_pager_second_page=0x7f030036;
-        public static final int profile_pager_third_page=0x7f030037;
-        public static final int row_event_specials=0x7f030038;
-        public static final int row_event_tips=0x7f030039;
-        public static final int row_places=0x7f03003a;
-        public static final int row_title=0x7f03003b;
-        public static final int row_title_and_subtitle=0x7f03003c;
-        public static final int row_travels=0x7f03003d;
-        public static final int row_two_columns=0x7f03003e;
-        public static final int sherlock_spinner_dropdown_item=0x7f03003f;
-        public static final int sherlock_spinner_item=0x7f030040;
-        public static final int tabs_bg=0x7f030041;
+        public static final int activity_smart_navigation=0x7f030022;
+        public static final int activity_splash=0x7f030023;
+        public static final int activity_travel=0x7f030024;
+        public static final int activity_travels=0x7f030025;
+        public static final int bonuspack_bubble=0x7f030026;
+        public static final int bootstrap_button=0x7f030027;
+        public static final int dialog_header=0x7f030028;
+        public static final int dialog_list=0x7f030029;
+        public static final int dialog_notification=0x7f03002a;
+        public static final int dialog_notification_details=0x7f03002b;
+        public static final int dialog_row=0x7f03002c;
+        public static final int font_awesome_text=0x7f03002d;
+        public static final int fragment_event_map=0x7f03002e;
+        public static final int fragment_event_specials=0x7f03002f;
+        public static final int fragment_event_tips=0x7f030030;
+        public static final int fragment_travels=0x7f030031;
+        public static final int info_window=0x7f030032;
+        public static final int main_first_page=0x7f030033;
+        public static final int main_fourh_page=0x7f030034;
+        public static final int main_second_page=0x7f030035;
+        public static final int main_third_page=0x7f030036;
+        public static final int profile_pager_first_page=0x7f030037;
+        public static final int profile_pager_second_page=0x7f030038;
+        public static final int profile_pager_third_page=0x7f030039;
+        public static final int row_event_specials=0x7f03003a;
+        public static final int row_event_tips=0x7f03003b;
+        public static final int row_places=0x7f03003c;
+        public static final int row_title=0x7f03003d;
+        public static final int row_title_and_subtitle=0x7f03003e;
+        public static final int row_travels=0x7f03003f;
+        public static final int row_two_columns=0x7f030040;
+        public static final int sherlock_spinner_dropdown_item=0x7f030041;
+        public static final int sherlock_spinner_item=0x7f030042;
+        public static final int tabs_bg=0x7f030043;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
@@ -1690,7 +1711,7 @@ containing a value of this type.
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f0b0021;
         public static final int action_settings=0x7f0b0001;
-        public static final int address=0x7f0b0043;
+        public static final int address=0x7f0b0044;
         public static final int app_name=0x7f0b0000;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
@@ -1715,11 +1736,11 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f0b0012;
-        public static final int basic=0x7f0b0078;
-        public static final int cancel=0x7f0b004d;
-        public static final int category=0x7f0b0034;
-        public static final int choose_category=0x7f0b0032;
-        public static final int close=0x7f0b002b;
+        public static final int basic=0x7f0b0079;
+        public static final int cancel=0x7f0b004e;
+        public static final int category=0x7f0b0035;
+        public static final int choose_category=0x7f0b0033;
+        public static final int close=0x7f0b002c;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -1775,97 +1796,98 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f0b0011;
-        public static final int confirm_password=0x7f0b0076;
-        public static final int connection_timeout_has_occured=0x7f0b006c;
-        public static final int contact=0x7f0b007d;
-        public static final int continue_s=0x7f0b0023;
-        public static final int country=0x7f0b0070;
-        public static final int date_created=0x7f0b0027;
-        public static final int date_of_birth=0x7f0b0072;
-        public static final int deactivate=0x7f0b002c;
-        public static final int departure=0x7f0b002a;
-        public static final int destination=0x7f0b004b;
-        public static final int destination_cannot_be_obtained=0x7f0b004f;
-        public static final int distance=0x7f0b0059;
-        public static final int driving=0x7f0b0054;
-        public static final int duration=0x7f0b005a;
-        public static final int email=0x7f0b0071;
-        public static final int end_address=0x7f0b0058;
-        public static final int error=0x7f0b002e;
-        public static final int events=0x7f0b003f;
-        public static final int find_destination=0x7f0b004a;
-        public static final int finish=0x7f0b0024;
-        public static final int gender=0x7f0b0073;
-        public static final int google_play_services_are_neccesary=0x7f0b0030;
-        public static final int google_play_services_required=0x7f0b002f;
-        public static final int gps_coordinates=0x7f0b0044;
-        public static final int gps_not_active=0x7f0b0055;
+        public static final int confirm_password=0x7f0b0077;
+        public static final int connection_timeout_has_occured=0x7f0b006d;
+        public static final int contact=0x7f0b007e;
+        public static final int continue_s=0x7f0b0024;
+        public static final int country=0x7f0b0071;
+        public static final int date_created=0x7f0b0028;
+        public static final int date_of_birth=0x7f0b0073;
+        public static final int deactivate=0x7f0b002d;
+        public static final int departure=0x7f0b002b;
+        public static final int destination=0x7f0b004c;
+        public static final int destination_cannot_be_obtained=0x7f0b0050;
+        public static final int distance=0x7f0b005a;
+        public static final int driving=0x7f0b0055;
+        public static final int duration=0x7f0b005b;
+        public static final int email=0x7f0b0072;
+        public static final int end_address=0x7f0b0059;
+        public static final int error=0x7f0b002f;
+        public static final int events=0x7f0b0040;
+        public static final int find_destination=0x7f0b004b;
+        public static final int finish=0x7f0b0025;
+        public static final int gender=0x7f0b0074;
+        public static final int google_play_services_are_neccesary=0x7f0b0031;
+        public static final int google_play_services_required=0x7f0b0030;
+        public static final int gps_coordinates=0x7f0b0045;
+        public static final int gps_not_active=0x7f0b0056;
         public static final int hello_world=0x7f0b0002;
-        public static final int history=0x7f0b003b;
-        public static final int incorrect_date_of_birth=0x7f0b007a;
-        public static final int input_destination=0x7f0b0040;
-        public static final int input_destination_events=0x7f0b0041;
-        public static final int input_destination_places=0x7f0b0042;
-        public static final int invalid_notification_length=0x7f0b0031;
-        public static final int last_known_location=0x7f0b0025;
-        public static final int last_updated=0x7f0b0028;
-        public static final int latitude=0x7f0b0046;
-        public static final int login=0x7f0b005f;
-        public static final int login_to_smartGps=0x7f0b005e;
-        public static final int logout=0x7f0b0064;
-        public static final int logout_hint=0x7f0b0065;
-        public static final int logout_question=0x7f0b0066;
-        public static final int longitude=0x7f0b0047;
-        public static final int missing_input_data=0x7f0b0062;
-        public static final int mode=0x7f0b005b;
-        public static final int my_profile=0x7f0b006d;
-        public static final int my_profile_hint=0x7f0b006e;
-        public static final int name=0x7f0b0068;
-        public static final int navigation=0x7f0b0052;
-        public static final int navigation_preview=0x7f0b0056;
-        public static final int navigation_type=0x7f0b0045;
-        public static final int no=0x7f0b0036;
-        public static final int no_events=0x7f0b007b;
-        public static final int no_internet_connection=0x7f0b005c;
-        public static final int no_travels=0x7f0b007c;
-        public static final int notification=0x7f0b0035;
-        public static final int notifications_could_not_be_loaded=0x7f0b002d;
-        public static final int ok=0x7f0b004c;
-        public static final int password=0x7f0b0061;
-        public static final int password_validation_message=0x7f0b006b;
-        public static final int passwords_dont_match=0x7f0b0077;
-        public static final int phone=0x7f0b0074;
-        public static final int places=0x7f0b0039;
-        public static final int please_wait=0x7f0b0051;
-        public static final int postal_office=0x7f0b006f;
-        public static final int preview_on_map=0x7f0b005d;
-        public static final int processing=0x7f0b0050;
-        public static final int refresh=0x7f0b0081;
-        public static final int register=0x7f0b0067;
-        public static final int register_new_user=0x7f0b006a;
-        public static final int regular_navigation=0x7f0b0048;
+        public static final int history=0x7f0b003c;
+        public static final int incorrect_date_of_birth=0x7f0b007b;
+        public static final int input_destination=0x7f0b0041;
+        public static final int input_destination_events=0x7f0b0042;
+        public static final int input_destination_places=0x7f0b0043;
+        public static final int invalid_notification_length=0x7f0b0032;
+        public static final int last_known_location=0x7f0b0026;
+        public static final int last_updated=0x7f0b0029;
+        public static final int latitude=0x7f0b0047;
+        public static final int login=0x7f0b0060;
+        public static final int login_to_smartGps=0x7f0b005f;
+        public static final int logout=0x7f0b0065;
+        public static final int logout_hint=0x7f0b0066;
+        public static final int logout_question=0x7f0b0067;
+        public static final int longitude=0x7f0b0048;
+        public static final int missing_input_data=0x7f0b0063;
+        public static final int mode=0x7f0b005c;
+        public static final int my_profile=0x7f0b006e;
+        public static final int my_profile_hint=0x7f0b006f;
+        public static final int name=0x7f0b0069;
+        public static final int navigation=0x7f0b0053;
+        public static final int navigation_preview=0x7f0b0057;
+        public static final int navigation_type=0x7f0b0046;
+        public static final int no=0x7f0b0037;
+        public static final int no_events=0x7f0b007c;
+        public static final int no_internet_connection=0x7f0b005d;
+        public static final int no_travels=0x7f0b007d;
+        public static final int notification=0x7f0b0036;
+        public static final int notifications_could_not_be_loaded=0x7f0b002e;
+        public static final int ok=0x7f0b004d;
+        public static final int password=0x7f0b0062;
+        public static final int password_validation_message=0x7f0b006c;
+        public static final int passwords_dont_match=0x7f0b0078;
+        public static final int phone=0x7f0b0075;
+        public static final int places=0x7f0b003a;
+        public static final int please_wait=0x7f0b0052;
+        public static final int postal_office=0x7f0b0070;
+        public static final int preview_on_map=0x7f0b005e;
+        public static final int processing=0x7f0b0051;
+        public static final int refresh=0x7f0b0082;
+        public static final int register=0x7f0b0068;
+        public static final int register_new_user=0x7f0b006b;
+        public static final int regular_navigation=0x7f0b0049;
         public static final int repeat=0x7f0b0022;
-        public static final int s_continue=0x7f0b004e;
-        public static final int save_changes=0x7f0b0075;
-        public static final int search_events=0x7f0b003c;
-        public static final int search_places=0x7f0b003d;
-        public static final int select_gender=0x7f0b0079;
-        public static final int send=0x7f0b0033;
-        public static final int settings=0x7f0b0063;
-        public static final int setup_navigation=0x7f0b003e;
-        public static final int smartgps_navigation=0x7f0b0049;
-        public static final int specials=0x7f0b0080;
-        public static final int start_address=0x7f0b0057;
-        public static final int start_navigation=0x7f0b003a;
-        public static final int start_navigation_to=0x7f0b007e;
-        public static final int status=0x7f0b0026;
-        public static final int surname=0x7f0b0069;
-        public static final int tips=0x7f0b007f;
-        public static final int travel=0x7f0b0029;
-        public static final int type=0x7f0b0038;
-        public static final int username=0x7f0b0060;
-        public static final int walking=0x7f0b0053;
-        public static final int yes=0x7f0b0037;
+        public static final int s_continue=0x7f0b004f;
+        public static final int save_changes=0x7f0b0076;
+        public static final int search_events=0x7f0b003d;
+        public static final int search_places=0x7f0b003e;
+        public static final int select_gender=0x7f0b007a;
+        public static final int send=0x7f0b0034;
+        public static final int settings=0x7f0b0064;
+        public static final int setup_navigation=0x7f0b003f;
+        public static final int smart_navigation=0x7f0b0023;
+        public static final int smartgps_navigation=0x7f0b004a;
+        public static final int specials=0x7f0b0081;
+        public static final int start_address=0x7f0b0058;
+        public static final int start_navigation=0x7f0b003b;
+        public static final int start_navigation_to=0x7f0b007f;
+        public static final int status=0x7f0b0027;
+        public static final int surname=0x7f0b006a;
+        public static final int tips=0x7f0b0080;
+        public static final int travel=0x7f0b002a;
+        public static final int type=0x7f0b0039;
+        public static final int username=0x7f0b0061;
+        public static final int walking=0x7f0b0054;
+        public static final int yes=0x7f0b0038;
     }
     public static final class style {
         public static final int ActionBarText=0x7f0a0064;
@@ -2015,9 +2037,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #BootstrapButton_android_enabled com.smartgps:android_enabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #BootstrapButton_android_text com.smartgps:android_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #BootstrapButton_android_textSize com.smartgps:android_textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_android_enabled android:enabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_android_text android:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #BootstrapButton_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #BootstrapButton_bb_icon_left com.smartgps:bb_icon_left}</code></td><td></td></tr>
            <tr><td><code>{@link #BootstrapButton_bb_icon_right com.smartgps:bb_icon_right}</code></td><td></td></tr>
            <tr><td><code>{@link #BootstrapButton_bb_roundedCorners com.smartgps:bb_roundedCorners}</code></td><td></td></tr>
@@ -2041,21 +2063,21 @@ containing a value of this type.
             0x7f010024
         };
         /**
-          <p>This symbol is the offset where the {@link com.smartgps.R.attr#android_enabled}
+          <p>This symbol is the offset where the {@link android.R.attr#enabled}
           attribute's value can be found in the {@link #BootstrapButton} array.
-          @attr name android:android_enabled
+          @attr name android:enabled
         */
         public static final int BootstrapButton_android_enabled = 0;
         /**
-          <p>This symbol is the offset where the {@link com.smartgps.R.attr#android_text}
+          <p>This symbol is the offset where the {@link android.R.attr#text}
           attribute's value can be found in the {@link #BootstrapButton} array.
-          @attr name android:android_text
+          @attr name android:text
         */
         public static final int BootstrapButton_android_text = 2;
         /**
-          <p>This symbol is the offset where the {@link com.smartgps.R.attr#android_textSize}
+          <p>This symbol is the offset where the {@link android.R.attr#textSize}
           attribute's value can be found in the {@link #BootstrapButton} array.
-          @attr name android:android_textSize
+          @attr name android:textSize
         */
         public static final int BootstrapButton_android_textSize = 1;
         /**
@@ -2069,7 +2091,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:bb_icon_left
+          @attr name com.smartgps:bb_icon_left
         */
         public static final int BootstrapButton_bb_icon_left = 4;
         /**
@@ -2083,7 +2105,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:bb_icon_right
+          @attr name com.smartgps:bb_icon_right
         */
         public static final int BootstrapButton_bb_icon_right = 5;
         /**
@@ -2097,7 +2119,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:bb_roundedCorners
+          @attr name com.smartgps:bb_roundedCorners
         */
         public static final int BootstrapButton_bb_roundedCorners = 6;
         /**
@@ -2111,7 +2133,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:bb_size
+          @attr name com.smartgps:bb_size
         */
         public static final int BootstrapButton_bb_size = 8;
         /**
@@ -2125,7 +2147,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:bb_text_alignment
+          @attr name com.smartgps:bb_text_alignment
         */
         public static final int BootstrapButton_bb_text_alignment = 7;
         /**
@@ -2139,7 +2161,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:bb_type
+          @attr name com.smartgps:bb_type
         */
         public static final int BootstrapButton_bb_type = 3;
         /** Attributes that can be used with a CirclePageIndicator.
@@ -2148,8 +2170,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CirclePageIndicator_android_background com.smartgps:android_background}</code></td><td> View background </td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_android_orientation com.smartgps:android_orientation}</code></td><td> Orientation of the indicator.</td></tr>
+           <tr><td><code>{@link #CirclePageIndicator_android_background android:background}</code></td><td> View background </td></tr>
+           <tr><td><code>{@link #CirclePageIndicator_android_orientation android:orientation}</code></td><td> Orientation of the indicator.</td></tr>
            <tr><td><code>{@link #CirclePageIndicator_centered com.smartgps:centered}</code></td><td> Whether or not the indicators should be centered.</td></tr>
            <tr><td><code>{@link #CirclePageIndicator_fillColor com.smartgps:fillColor}</code></td><td> Color of the filled circle that represents the current page.</td></tr>
            <tr><td><code>{@link #CirclePageIndicator_pageColor com.smartgps:pageColor}</code></td><td> Color of the filled circles that represents pages.</td></tr>
@@ -2177,16 +2199,18 @@ containing a value of this type.
           <p>
           @attr description
            View background 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_background}.
-          @attr name android:android_background
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#background}.
+          @attr name android:background
         */
         public static final int CirclePageIndicator_android_background = 1;
         /**
           <p>
           @attr description
            Orientation of the indicator. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_orientation}.
-          @attr name android:android_orientation
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#orientation}.
+          @attr name android:orientation
         */
         public static final int CirclePageIndicator_android_orientation = 0;
         /**
@@ -2202,7 +2226,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:centered
+          @attr name com.smartgps:centered
         */
         public static final int CirclePageIndicator_centered = 2;
         /**
@@ -2219,7 +2243,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:fillColor
+          @attr name com.smartgps:fillColor
         */
         public static final int CirclePageIndicator_fillColor = 4;
         /**
@@ -2236,7 +2260,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:pageColor
+          @attr name com.smartgps:pageColor
         */
         public static final int CirclePageIndicator_pageColor = 5;
         /**
@@ -2254,7 +2278,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:radius
+          @attr name com.smartgps:radius
         */
         public static final int CirclePageIndicator_radius = 6;
         /**
@@ -2270,7 +2294,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:snap
+          @attr name com.smartgps:snap
         */
         public static final int CirclePageIndicator_snap = 7;
         /**
@@ -2287,7 +2311,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:strokeColor
+          @attr name com.smartgps:strokeColor
         */
         public static final int CirclePageIndicator_strokeColor = 8;
         /**
@@ -2305,7 +2329,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:strokeWidth
+          @attr name com.smartgps:strokeWidth
         */
         public static final int CirclePageIndicator_strokeWidth = 3;
         /** Attributes that can be used with a FontAwesomeText.
@@ -2314,8 +2338,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FontAwesomeText_android_textColor com.smartgps:android_textColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FontAwesomeText_android_textSize com.smartgps:android_textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontAwesomeText_android_textColor android:textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FontAwesomeText_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #FontAwesomeText_fa_icon com.smartgps:fa_icon}</code></td><td></td></tr>
            </table>
            @see #FontAwesomeText_android_textColor
@@ -2326,15 +2350,15 @@ containing a value of this type.
             0x01010095, 0x01010098, 0x7f010025
         };
         /**
-          <p>This symbol is the offset where the {@link com.smartgps.R.attr#android_textColor}
+          <p>This symbol is the offset where the {@link android.R.attr#textColor}
           attribute's value can be found in the {@link #FontAwesomeText} array.
-          @attr name android:android_textColor
+          @attr name android:textColor
         */
         public static final int FontAwesomeText_android_textColor = 1;
         /**
-          <p>This symbol is the offset where the {@link com.smartgps.R.attr#android_textSize}
+          <p>This symbol is the offset where the {@link android.R.attr#textSize}
           attribute's value can be found in the {@link #FontAwesomeText} array.
-          @attr name android:android_textSize
+          @attr name android:textSize
         */
         public static final int FontAwesomeText_android_textSize = 0;
         /**
@@ -2348,7 +2372,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:fa_icon
+          @attr name com.smartgps:fa_icon
         */
         public static final int FontAwesomeText_fa_icon = 2;
         /** Attributes that can be used with a LinePageIndicator.
@@ -2357,7 +2381,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LinePageIndicator_android_background com.smartgps:android_background}</code></td><td> View background </td></tr>
+           <tr><td><code>{@link #LinePageIndicator_android_background android:background}</code></td><td> View background </td></tr>
            <tr><td><code>{@link #LinePageIndicator_centered com.smartgps:centered}</code></td><td> Whether or not the indicators should be centered.</td></tr>
            <tr><td><code>{@link #LinePageIndicator_gapWidth com.smartgps:gapWidth}</code></td><td> Width of the gap between each indicator line.</td></tr>
            <tr><td><code>{@link #LinePageIndicator_lineWidth com.smartgps:lineWidth}</code></td><td> Width of each indicator line.</td></tr>
@@ -2381,8 +2405,9 @@ containing a value of this type.
           <p>
           @attr description
            View background 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_background}.
-          @attr name android:android_background
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#background}.
+          @attr name android:background
         */
         public static final int LinePageIndicator_android_background = 0;
         /**
@@ -2398,7 +2423,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:centered
+          @attr name com.smartgps:centered
         */
         public static final int LinePageIndicator_centered = 1;
         /**
@@ -2416,7 +2441,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:gapWidth
+          @attr name com.smartgps:gapWidth
         */
         public static final int LinePageIndicator_gapWidth = 6;
         /**
@@ -2434,7 +2459,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:lineWidth
+          @attr name com.smartgps:lineWidth
         */
         public static final int LinePageIndicator_lineWidth = 5;
         /**
@@ -2451,7 +2476,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:selectedColor
+          @attr name com.smartgps:selectedColor
         */
         public static final int LinePageIndicator_selectedColor = 2;
         /**
@@ -2469,7 +2494,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:strokeWidth
+          @attr name com.smartgps:strokeWidth
         */
         public static final int LinePageIndicator_strokeWidth = 3;
         /**
@@ -2486,7 +2511,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:unselectedColor
+          @attr name com.smartgps:unselectedColor
         */
         public static final int LinePageIndicator_unselectedColor = 4;
         /** Attributes that can be used with a MapAttrs.
@@ -2542,7 +2567,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:cameraBearing
+          @attr name com.smartgps:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
@@ -2556,7 +2581,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:cameraTargetLat
+          @attr name com.smartgps:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
@@ -2570,7 +2595,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:cameraTargetLng
+          @attr name com.smartgps:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
@@ -2584,7 +2609,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:cameraTilt
+          @attr name com.smartgps:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
@@ -2598,7 +2623,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:cameraZoom
+          @attr name com.smartgps:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
@@ -2618,7 +2643,7 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name android:mapType
+          @attr name com.smartgps:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
@@ -2632,7 +2657,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:uiCompass
+          @attr name com.smartgps:uiCompass
         */
         public static final int MapAttrs_uiCompass = 6;
         /**
@@ -2646,7 +2671,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:uiRotateGestures
+          @attr name com.smartgps:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 7;
         /**
@@ -2660,7 +2685,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:uiScrollGestures
+          @attr name com.smartgps:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 8;
         /**
@@ -2674,7 +2699,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:uiTiltGestures
+          @attr name com.smartgps:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 9;
         /**
@@ -2688,7 +2713,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:uiZoomControls
+          @attr name com.smartgps:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 10;
         /**
@@ -2702,7 +2727,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:uiZoomGestures
+          @attr name com.smartgps:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 11;
         /**
@@ -2716,7 +2741,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:useViewLifecycle
+          @attr name com.smartgps:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 12;
         /**
@@ -2730,7 +2755,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:zOrderOnTop
+          @attr name com.smartgps:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 13;
         /**  Attributes used to style the Action Bar. 
@@ -2798,7 +2823,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:background
+          @attr name com.smartgps:background
         */
         public static final int SherlockActionBar_background = 2;
         /**
@@ -2812,7 +2837,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:backgroundSplit
+          @attr name com.smartgps:backgroundSplit
         */
         public static final int SherlockActionBar_backgroundSplit = 3;
         /**
@@ -2826,7 +2851,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:backgroundStacked
+          @attr name com.smartgps:backgroundStacked
         */
         public static final int SherlockActionBar_backgroundStacked = 12;
         /**
@@ -2842,7 +2867,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:barSubtitle
+          @attr name com.smartgps:barSubtitle
         */
         public static final int SherlockActionBar_barSubtitle = 9;
         /**
@@ -2858,7 +2883,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:barTitle
+          @attr name com.smartgps:barTitle
         */
         public static final int SherlockActionBar_barTitle = 8;
         /**
@@ -2870,7 +2895,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:customNavigationLayout
+          @attr name com.smartgps:customNavigationLayout
         */
         public static final int SherlockActionBar_customNavigationLayout = 13;
         /**
@@ -2893,7 +2918,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name android:displayOptions
+          @attr name com.smartgps:displayOptions
         */
         public static final int SherlockActionBar_displayOptions = 7;
         /**
@@ -2905,7 +2930,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:divider
+          @attr name com.smartgps:divider
         */
         public static final int SherlockActionBar_divider = 5;
         /**
@@ -2923,7 +2948,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:height
+          @attr name com.smartgps:height
         */
         public static final int SherlockActionBar_height = 4;
         /**
@@ -2935,7 +2960,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:homeLayout
+          @attr name com.smartgps:homeLayout
         */
         public static final int SherlockActionBar_homeLayout = 14;
         /**
@@ -2947,7 +2972,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:icon
+          @attr name com.smartgps:icon
         */
         public static final int SherlockActionBar_icon = 10;
         /**
@@ -2959,7 +2984,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:indeterminateProgressStyle
+          @attr name com.smartgps:indeterminateProgressStyle
         */
         public static final int SherlockActionBar_indeterminateProgressStyle = 16;
         /**
@@ -2978,7 +3003,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:itemPadding
+          @attr name com.smartgps:itemPadding
         */
         public static final int SherlockActionBar_itemPadding = 18;
         /**
@@ -2990,7 +3015,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:logo
+          @attr name com.smartgps:logo
         */
         public static final int SherlockActionBar_logo = 11;
         /**
@@ -3010,7 +3035,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>tabMode</code></td><td>2</td><td> The action bar will use a series of horizontal tabs for navigation. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name android:navigationMode
+          @attr name com.smartgps:navigationMode
         */
         public static final int SherlockActionBar_navigationMode = 6;
         /**
@@ -3028,7 +3053,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:progressBarPadding
+          @attr name com.smartgps:progressBarPadding
         */
         public static final int SherlockActionBar_progressBarPadding = 17;
         /**
@@ -3040,7 +3065,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:progressBarStyle
+          @attr name com.smartgps:progressBarStyle
         */
         public static final int SherlockActionBar_progressBarStyle = 15;
         /**
@@ -3052,7 +3077,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:subtitleTextStyle
+          @attr name com.smartgps:subtitleTextStyle
         */
         public static final int SherlockActionBar_subtitleTextStyle = 1;
         /**
@@ -3064,7 +3089,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:titleTextStyle
+          @attr name com.smartgps:titleTextStyle
         */
         public static final int SherlockActionBar_titleTextStyle = 0;
         /** Attributes that can be used with a SherlockActionMenuItemView.
@@ -3073,7 +3098,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SherlockActionMenuItemView_android_minWidth com.smartgps:android_minWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockActionMenuItemView_android_minWidth android:minWidth}</code></td><td></td></tr>
            </table>
            @see #SherlockActionMenuItemView_android_minWidth
          */
@@ -3081,9 +3106,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x0101013f
         };
         /**
-          <p>This symbol is the offset where the {@link com.smartgps.R.attr#android_minWidth}
+          <p>This symbol is the offset where the {@link android.R.attr#minWidth}
           attribute's value can be found in the {@link #SherlockActionMenuItemView} array.
-          @attr name android:android_minWidth
+          @attr name android:minWidth
         */
         public static final int SherlockActionMenuItemView_android_minWidth = 0;
         /** Attributes that can be used with a SherlockActionMode.
@@ -3119,7 +3144,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:background
+          @attr name com.smartgps:background
         */
         public static final int SherlockActionMode_background = 2;
         /**
@@ -3133,7 +3158,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:backgroundSplit
+          @attr name com.smartgps:backgroundSplit
         */
         public static final int SherlockActionMode_backgroundSplit = 3;
         /**
@@ -3151,7 +3176,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:height
+          @attr name com.smartgps:height
         */
         public static final int SherlockActionMode_height = 4;
         /**
@@ -3163,7 +3188,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:subtitleTextStyle
+          @attr name com.smartgps:subtitleTextStyle
         */
         public static final int SherlockActionMode_subtitleTextStyle = 1;
         /**
@@ -3175,7 +3200,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:titleTextStyle
+          @attr name com.smartgps:titleTextStyle
         */
         public static final int SherlockActionMode_titleTextStyle = 0;
         /** Attributes that can be used with a SherlockActivityChooserView.
@@ -3184,7 +3209,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SherlockActivityChooserView_android_background com.smartgps:android_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockActivityChooserView_android_background android:background}</code></td><td></td></tr>
            <tr><td><code>{@link #SherlockActivityChooserView_expandActivityOverflowButtonDrawable com.smartgps:expandActivityOverflowButtonDrawable}</code></td><td> The drawable to show in the button for expanding the activities overflow popup.</td></tr>
            <tr><td><code>{@link #SherlockActivityChooserView_initialActivityCount com.smartgps:initialActivityCount}</code></td><td> The maximal number of items initially shown in the activity list.</td></tr>
            </table>
@@ -3196,9 +3221,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x010100d4, 0x7f010083, 0x7f010084
         };
         /**
-          <p>This symbol is the offset where the {@link com.smartgps.R.attr#android_background}
+          <p>This symbol is the offset where the {@link android.R.attr#background}
           attribute's value can be found in the {@link #SherlockActivityChooserView} array.
-          @attr name android:android_background
+          @attr name android:background
         */
         public static final int SherlockActivityChooserView_android_background = 0;
         /**
@@ -3215,7 +3240,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:expandActivityOverflowButtonDrawable
+          @attr name com.smartgps:expandActivityOverflowButtonDrawable
         */
         public static final int SherlockActivityChooserView_expandActivityOverflowButtonDrawable = 2;
         /**
@@ -3231,7 +3256,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:initialActivityCount
+          @attr name com.smartgps:initialActivityCount
         */
         public static final int SherlockActivityChooserView_initialActivityCount = 1;
         /**  Base attributes that are available to all groups. 
@@ -3240,12 +3265,12 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SherlockMenuGroup_android_checkableBehavior com.smartgps:android_checkableBehavior}</code></td><td> Whether the items are capable of displaying a check mark.</td></tr>
-           <tr><td><code>{@link #SherlockMenuGroup_android_enabled com.smartgps:android_enabled}</code></td><td> Whether the items are enabled.</td></tr>
-           <tr><td><code>{@link #SherlockMenuGroup_android_id com.smartgps:android_id}</code></td><td> The ID of the group.</td></tr>
-           <tr><td><code>{@link #SherlockMenuGroup_android_menuCategory com.smartgps:android_menuCategory}</code></td><td> The category applied to all items within this group.</td></tr>
-           <tr><td><code>{@link #SherlockMenuGroup_android_orderInCategory com.smartgps:android_orderInCategory}</code></td><td> The order within the category applied to all items within this group.</td></tr>
-           <tr><td><code>{@link #SherlockMenuGroup_android_visible com.smartgps:android_visible}</code></td><td> Whether the items are shown/visible.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_checkableBehavior android:checkableBehavior}</code></td><td> Whether the items are capable of displaying a check mark.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_enabled android:enabled}</code></td><td> Whether the items are enabled.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_id android:id}</code></td><td> The ID of the group.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_menuCategory android:menuCategory}</code></td><td> The category applied to all items within this group.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_orderInCategory android:orderInCategory}</code></td><td> The order within the category applied to all items within this group.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_visible android:visible}</code></td><td> Whether the items are shown/visible.</td></tr>
            </table>
            @see #SherlockMenuGroup_android_checkableBehavior
            @see #SherlockMenuGroup_android_enabled
@@ -3262,24 +3287,27 @@ containing a value of this type.
           <p>
           @attr description
            Whether the items are capable of displaying a check mark. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_checkableBehavior}.
-          @attr name android:android_checkableBehavior
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#checkableBehavior}.
+          @attr name android:checkableBehavior
         */
         public static final int SherlockMenuGroup_android_checkableBehavior = 5;
         /**
           <p>
           @attr description
            Whether the items are enabled. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_enabled}.
-          @attr name android:android_enabled
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#enabled}.
+          @attr name android:enabled
         */
         public static final int SherlockMenuGroup_android_enabled = 0;
         /**
           <p>
           @attr description
            The ID of the group. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_id}.
-          @attr name android:android_id
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#id}.
+          @attr name android:id
         */
         public static final int SherlockMenuGroup_android_id = 1;
         /**
@@ -3287,8 +3315,9 @@ containing a value of this type.
           @attr description
            The category applied to all items within this group.
              (This will be or'ed with the orderInCategory attribute.) 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_menuCategory}.
-          @attr name android:android_menuCategory
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#menuCategory}.
+          @attr name android:menuCategory
         */
         public static final int SherlockMenuGroup_android_menuCategory = 3;
         /**
@@ -3296,16 +3325,18 @@ containing a value of this type.
           @attr description
            The order within the category applied to all items within this group.
              (This will be or'ed with the category attribute.) 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_orderInCategory}.
-          @attr name android:android_orderInCategory
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#orderInCategory}.
+          @attr name android:orderInCategory
         */
         public static final int SherlockMenuGroup_android_orderInCategory = 4;
         /**
           <p>
           @attr description
            Whether the items are shown/visible. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_visible}.
-          @attr name android:android_visible
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#visible}.
+          @attr name android:visible
         */
         public static final int SherlockMenuGroup_android_visible = 2;
         /**  Base attributes that are available to all Item objects. 
@@ -3314,26 +3345,26 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_actionLayout com.smartgps:android_actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_actionProviderClass com.smartgps:android_actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
+           <tr><td><code>{@link #SherlockMenuItem_android_actionLayout android:actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_actionProviderClass android:actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
              and perform operations such as default action for that menu item.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_actionViewClass com.smartgps:android_actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
+           <tr><td><code>{@link #SherlockMenuItem_android_actionViewClass android:actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
              action view.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_alphabeticShortcut com.smartgps:android_alphabeticShortcut}</code></td><td> The alphabetic shortcut key.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_checkable com.smartgps:android_checkable}</code></td><td> Whether the item is capable of displaying a check mark.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_checked com.smartgps:android_checked}</code></td><td> Whether the item is checked.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_enabled com.smartgps:android_enabled}</code></td><td> Whether the item is enabled.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_icon com.smartgps:android_icon}</code></td><td> The icon associated with this item.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_id com.smartgps:android_id}</code></td><td> The ID of the item.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_menuCategory com.smartgps:android_menuCategory}</code></td><td> The category applied to the item.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_numericShortcut com.smartgps:android_numericShortcut}</code></td><td> The numeric shortcut key.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_onClick com.smartgps:android_onClick}</code></td><td> Name of a method on the Context used to inflate the menu that will be
+           <tr><td><code>{@link #SherlockMenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td> The alphabetic shortcut key.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_checkable android:checkable}</code></td><td> Whether the item is capable of displaying a check mark.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_checked android:checked}</code></td><td> Whether the item is checked.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_enabled android:enabled}</code></td><td> Whether the item is enabled.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_icon android:icon}</code></td><td> The icon associated with this item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_id android:id}</code></td><td> The ID of the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_menuCategory android:menuCategory}</code></td><td> The category applied to the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_numericShortcut android:numericShortcut}</code></td><td> The numeric shortcut key.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_onClick android:onClick}</code></td><td> Name of a method on the Context used to inflate the menu that will be
              called when the item is clicked.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_orderInCategory com.smartgps:android_orderInCategory}</code></td><td> The order within the category applied to the item.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_showAsAction com.smartgps:android_showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_title com.smartgps:android_title}</code></td><td> The title associated with the item.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_titleCondensed com.smartgps:android_titleCondensed}</code></td><td> The condensed title associated with the item.</td></tr>
-           <tr><td><code>{@link #SherlockMenuItem_android_visible com.smartgps:android_visible}</code></td><td> Whether the item is shown/visible.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_orderInCategory android:orderInCategory}</code></td><td> The order within the category applied to the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_showAsAction android:showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_title android:title}</code></td><td> The title associated with the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_titleCondensed android:titleCondensed}</code></td><td> The condensed title associated with the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_visible android:visible}</code></td><td> Whether the item is shown/visible.</td></tr>
            </table>
            @see #SherlockMenuItem_android_actionLayout
            @see #SherlockMenuItem_android_actionProviderClass
@@ -3366,8 +3397,9 @@ containing a value of this type.
            An optional layout to be used as an action view.
              See {@link android.view.MenuItem#setActionView(android.view.View)}
              for more info. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_actionLayout}.
-          @attr name android:android_actionLayout
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#actionLayout}.
+          @attr name android:actionLayout
         */
         public static final int SherlockMenuItem_android_actionLayout = 14;
         /**
@@ -3377,8 +3409,9 @@ containing a value of this type.
              and perform operations such as default action for that menu item.
              See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
              for more info. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_actionProviderClass}.
-          @attr name android:android_actionProviderClass
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#actionProviderClass}.
+          @attr name android:actionProviderClass
         */
         public static final int SherlockMenuItem_android_actionProviderClass = 16;
         /**
@@ -3387,8 +3420,9 @@ containing a value of this type.
            The name of an optional View class to instantiate and use as an
              action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
              for more info. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_actionViewClass}.
-          @attr name android:android_actionViewClass
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#actionViewClass}.
+          @attr name android:actionViewClass
         */
         public static final int SherlockMenuItem_android_actionViewClass = 15;
         /**
@@ -3396,16 +3430,18 @@ containing a value of this type.
           @attr description
            The alphabetic shortcut key.  This is the shortcut when using a keyboard
              with alphabetic keys. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_alphabeticShortcut}.
-          @attr name android:android_alphabeticShortcut
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#alphabeticShortcut}.
+          @attr name android:alphabeticShortcut
         */
         public static final int SherlockMenuItem_android_alphabeticShortcut = 9;
         /**
           <p>
           @attr description
            Whether the item is capable of displaying a check mark. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_checkable}.
-          @attr name android:android_checkable
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#checkable}.
+          @attr name android:checkable
         */
         public static final int SherlockMenuItem_android_checkable = 11;
         /**
@@ -3413,16 +3449,18 @@ containing a value of this type.
           @attr description
            Whether the item is checked.  Note that you must first have enabled checking with
              the checkable attribute or else the check mark will not appear. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_checked}.
-          @attr name android:android_checked
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#checked}.
+          @attr name android:checked
         */
         public static final int SherlockMenuItem_android_checked = 3;
         /**
           <p>
           @attr description
            Whether the item is enabled. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_enabled}.
-          @attr name android:android_enabled
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#enabled}.
+          @attr name android:enabled
         */
         public static final int SherlockMenuItem_android_enabled = 1;
         /**
@@ -3430,16 +3468,18 @@ containing a value of this type.
           @attr description
            The icon associated with this item.  This icon will not always be shown, so
              the title should be sufficient in describing this item. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_icon}.
-          @attr name android:android_icon
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#icon}.
+          @attr name android:icon
         */
         public static final int SherlockMenuItem_android_icon = 0;
         /**
           <p>
           @attr description
            The ID of the item. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_id}.
-          @attr name android:android_id
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#id}.
+          @attr name android:id
         */
         public static final int SherlockMenuItem_android_id = 2;
         /**
@@ -3447,8 +3487,9 @@ containing a value of this type.
           @attr description
            The category applied to the item.
              (This will be or'ed with the orderInCategory attribute.) 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_menuCategory}.
-          @attr name android:android_menuCategory
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#menuCategory}.
+          @attr name android:menuCategory
         */
         public static final int SherlockMenuItem_android_menuCategory = 5;
         /**
@@ -3456,8 +3497,9 @@ containing a value of this type.
           @attr description
            The numeric shortcut key.  This is the shortcut when using a numeric (e.g., 12-key)
              keyboard. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_numericShortcut}.
-          @attr name android:android_numericShortcut
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#numericShortcut}.
+          @attr name android:numericShortcut
         */
         public static final int SherlockMenuItem_android_numericShortcut = 10;
         /**
@@ -3465,8 +3507,9 @@ containing a value of this type.
           @attr description
            Name of a method on the Context used to inflate the menu that will be
              called when the item is clicked. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_onClick}.
-          @attr name android:android_onClick
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#onClick}.
+          @attr name android:onClick
         */
         public static final int SherlockMenuItem_android_onClick = 12;
         /**
@@ -3474,24 +3517,27 @@ containing a value of this type.
           @attr description
            The order within the category applied to the item.
              (This will be or'ed with the category attribute.) 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_orderInCategory}.
-          @attr name android:android_orderInCategory
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#orderInCategory}.
+          @attr name android:orderInCategory
         */
         public static final int SherlockMenuItem_android_orderInCategory = 6;
         /**
           <p>
           @attr description
            How this item should display in the Action Bar, if present. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_showAsAction}.
-          @attr name android:android_showAsAction
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#showAsAction}.
+          @attr name android:showAsAction
         */
         public static final int SherlockMenuItem_android_showAsAction = 13;
         /**
           <p>
           @attr description
            The title associated with the item. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_title}.
-          @attr name android:android_title
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#title}.
+          @attr name android:title
         */
         public static final int SherlockMenuItem_android_title = 7;
         /**
@@ -3499,16 +3545,18 @@ containing a value of this type.
           @attr description
            The condensed title associated with the item.  This is used in situations where the
              normal title may be too long to be displayed. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_titleCondensed}.
-          @attr name android:android_titleCondensed
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#titleCondensed}.
+          @attr name android:titleCondensed
         */
         public static final int SherlockMenuItem_android_titleCondensed = 8;
         /**
           <p>
           @attr description
            Whether the item is shown/visible. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_visible}.
-          @attr name android:android_visible
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#visible}.
+          @attr name android:visible
         */
         public static final int SherlockMenuItem_android_visible = 4;
         /** Attributes that can be used with a SherlockMenuView.
@@ -3550,7 +3598,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:headerBackground
+          @attr name com.smartgps:headerBackground
         */
         public static final int SherlockMenuView_headerBackground = 3;
         /**
@@ -3562,7 +3610,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:horizontalDivider
+          @attr name com.smartgps:horizontalDivider
         */
         public static final int SherlockMenuView_horizontalDivider = 1;
         /**
@@ -3576,7 +3624,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:itemBackground
+          @attr name com.smartgps:itemBackground
         */
         public static final int SherlockMenuView_itemBackground = 4;
         /**
@@ -3592,7 +3640,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:itemIconDisabledAlpha
+          @attr name com.smartgps:itemIconDisabledAlpha
         */
         public static final int SherlockMenuView_itemIconDisabledAlpha = 6;
         /**
@@ -3604,7 +3652,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:itemTextAppearance
+          @attr name com.smartgps:itemTextAppearance
         */
         public static final int SherlockMenuView_itemTextAppearance = 0;
         /**
@@ -3620,7 +3668,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:preserveIconSpacing
+          @attr name com.smartgps:preserveIconSpacing
         */
         public static final int SherlockMenuView_preserveIconSpacing = 7;
         /**
@@ -3632,7 +3680,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:verticalDivider
+          @attr name com.smartgps:verticalDivider
         */
         public static final int SherlockMenuView_verticalDivider = 2;
         /**
@@ -3644,7 +3692,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:windowAnimationStyle
+          @attr name com.smartgps:windowAnimationStyle
         */
         public static final int SherlockMenuView_windowAnimationStyle = 5;
         /** Attributes that can be used with a SherlockSpinner.
@@ -3653,17 +3701,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SherlockSpinner_android_dropDownHorizontalOffset com.smartgps:android_dropDownHorizontalOffset}</code></td><td> Horizontal offset from the spinner widget for positioning the dropdown
+           <tr><td><code>{@link #SherlockSpinner_android_dropDownHorizontalOffset android:dropDownHorizontalOffset}</code></td><td> Horizontal offset from the spinner widget for positioning the dropdown
              in spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #SherlockSpinner_android_dropDownSelector com.smartgps:android_dropDownSelector}</code></td><td> List selector to use for spinnerMode="dropdown" display.</td></tr>
-           <tr><td><code>{@link #SherlockSpinner_android_dropDownVerticalOffset com.smartgps:android_dropDownVerticalOffset}</code></td><td> Vertical offset from the spinner widget for positioning the dropdown in
+           <tr><td><code>{@link #SherlockSpinner_android_dropDownSelector android:dropDownSelector}</code></td><td> List selector to use for spinnerMode="dropdown" display.</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_dropDownVerticalOffset android:dropDownVerticalOffset}</code></td><td> Vertical offset from the spinner widget for positioning the dropdown in
              spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #SherlockSpinner_android_dropDownWidth com.smartgps:android_dropDownWidth}</code></td><td> Width of the dropdown in spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #SherlockSpinner_android_gravity com.smartgps:android_gravity}</code></td><td> Gravity setting for positioning the currently selected item.</td></tr>
-           <tr><td><code>{@link #SherlockSpinner_android_popupBackground com.smartgps:android_popupBackground}</code></td><td> Background drawable to use for the dropdown in spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #SherlockSpinner_android_popupPromptView com.smartgps:android_popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
+           <tr><td><code>{@link #SherlockSpinner_android_dropDownWidth android:dropDownWidth}</code></td><td> Width of the dropdown in spinnerMode="dropdown".</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_gravity android:gravity}</code></td><td> Gravity setting for positioning the currently selected item.</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_popupBackground android:popupBackground}</code></td><td> Background drawable to use for the dropdown in spinnerMode="dropdown".</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_popupPromptView android:popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
              spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #SherlockSpinner_android_prompt com.smartgps:android_prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_prompt android:prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
            </table>
            @see #SherlockSpinner_android_dropDownHorizontalOffset
            @see #SherlockSpinner_android_dropDownSelector
@@ -3683,16 +3731,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr description
            Horizontal offset from the spinner widget for positioning the dropdown
              in spinnerMode="dropdown". 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_dropDownHorizontalOffset}.
-          @attr name android:android_dropDownHorizontalOffset
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#dropDownHorizontalOffset}.
+          @attr name android:dropDownHorizontalOffset
         */
         public static final int SherlockSpinner_android_dropDownHorizontalOffset = 5;
         /**
           <p>
           @attr description
            List selector to use for spinnerMode="dropdown" display. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_dropDownSelector}.
-          @attr name android:android_dropDownSelector
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#dropDownSelector}.
+          @attr name android:dropDownSelector
         */
         public static final int SherlockSpinner_android_dropDownSelector = 1;
         /**
@@ -3700,32 +3750,36 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr description
            Vertical offset from the spinner widget for positioning the dropdown in
              spinnerMode="dropdown". 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_dropDownVerticalOffset}.
-          @attr name android:android_dropDownVerticalOffset
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#dropDownVerticalOffset}.
+          @attr name android:dropDownVerticalOffset
         */
         public static final int SherlockSpinner_android_dropDownVerticalOffset = 6;
         /**
           <p>
           @attr description
            Width of the dropdown in spinnerMode="dropdown". 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_dropDownWidth}.
-          @attr name android:android_dropDownWidth
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#dropDownWidth}.
+          @attr name android:dropDownWidth
         */
         public static final int SherlockSpinner_android_dropDownWidth = 4;
         /**
           <p>
           @attr description
            Gravity setting for positioning the currently selected item. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_gravity}.
-          @attr name android:android_gravity
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#gravity}.
+          @attr name android:gravity
         */
         public static final int SherlockSpinner_android_gravity = 0;
         /**
           <p>
           @attr description
            Background drawable to use for the dropdown in spinnerMode="dropdown". 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_popupBackground}.
-          @attr name android:android_popupBackground
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#popupBackground}.
+          @attr name android:popupBackground
         */
         public static final int SherlockSpinner_android_popupBackground = 2;
         /**
@@ -3735,15 +3789,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
              spinnerMode="dropdown". This layout must contain a TextView with the id
              @android:id/text1 to be populated with the prompt text. 
           <p>This is a private symbol.
-          @attr name android:android_popupPromptView
+          @attr name android:popupPromptView
         */
         public static final int SherlockSpinner_android_popupPromptView = 7;
         /**
           <p>
           @attr description
            The prompt to display when the spinner's dialog is shown. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_prompt}.
-          @attr name android:android_prompt
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#prompt}.
+          @attr name android:prompt
         */
         public static final int SherlockSpinner_android_prompt = 3;
         /** Attributes that can be used with a SherlockTheme.
@@ -3780,7 +3835,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SherlockTheme_actionSpinnerItemStyle com.smartgps:actionSpinnerItemStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #SherlockTheme_activatedBackgroundIndicator com.smartgps:activatedBackgroundIndicator}</code></td><td> Drawable used as a background for activated items.</td></tr>
            <tr><td><code>{@link #SherlockTheme_activityChooserViewStyle com.smartgps:activityChooserViewStyle}</code></td><td> Default ActivityChooserView style.</td></tr>
-           <tr><td><code>{@link #SherlockTheme_android_windowIsFloating com.smartgps:android_windowIsFloating}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
            <tr><td><code>{@link #SherlockTheme_buttonStyleSmall com.smartgps:buttonStyleSmall}</code></td><td> Small Button style.</td></tr>
            <tr><td><code>{@link #SherlockTheme_dividerVertical com.smartgps:dividerVertical}</code></td><td> Drawable to use for generic vertical dividers.</td></tr>
            <tr><td><code>{@link #SherlockTheme_dropDownListViewStyle com.smartgps:dropDownListViewStyle}</code></td><td></td></tr>
@@ -3893,7 +3948,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:absForceOverflow
+          @attr name com.smartgps:absForceOverflow
         */
         public static final int SherlockTheme_absForceOverflow = 52;
         /**
@@ -3905,7 +3960,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionBarDivider
+          @attr name com.smartgps:actionBarDivider
         */
         public static final int SherlockTheme_actionBarDivider = 9;
         /**
@@ -3917,7 +3972,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionBarItemBackground
+          @attr name com.smartgps:actionBarItemBackground
         */
         public static final int SherlockTheme_actionBarItemBackground = 10;
         /**
@@ -3944,7 +3999,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name android:actionBarSize
+          @attr name com.smartgps:actionBarSize
         */
         public static final int SherlockTheme_actionBarSize = 8;
         /**
@@ -3959,7 +4014,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionBarSplitStyle
+          @attr name com.smartgps:actionBarSplitStyle
         */
         public static final int SherlockTheme_actionBarSplitStyle = 6;
         /**
@@ -3971,7 +4026,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionBarStyle
+          @attr name com.smartgps:actionBarStyle
         */
         public static final int SherlockTheme_actionBarStyle = 5;
         /**
@@ -3981,7 +4036,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionBarTabBarStyle
+          @attr name com.smartgps:actionBarTabBarStyle
         */
         public static final int SherlockTheme_actionBarTabBarStyle = 2;
         /**
@@ -3993,7 +4048,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionBarTabStyle
+          @attr name com.smartgps:actionBarTabStyle
         */
         public static final int SherlockTheme_actionBarTabStyle = 1;
         /**
@@ -4003,7 +4058,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionBarTabTextStyle
+          @attr name com.smartgps:actionBarTabTextStyle
         */
         public static final int SherlockTheme_actionBarTabTextStyle = 3;
         /**
@@ -4021,7 +4076,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionBarWidgetTheme
+          @attr name com.smartgps:actionBarWidgetTheme
         */
         public static final int SherlockTheme_actionBarWidgetTheme = 7;
         /**
@@ -4031,7 +4086,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionButtonStyle
+          @attr name com.smartgps:actionButtonStyle
         */
         public static final int SherlockTheme_actionButtonStyle = 38;
         /**
@@ -4041,7 +4096,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionDropDownStyle
+          @attr name com.smartgps:actionDropDownStyle
         */
         public static final int SherlockTheme_actionDropDownStyle = 37;
         /**
@@ -4054,7 +4109,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionMenuTextAppearance
+          @attr name com.smartgps:actionMenuTextAppearance
         */
         public static final int SherlockTheme_actionMenuTextAppearance = 11;
         /**
@@ -4068,7 +4123,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionMenuTextColor
+          @attr name com.smartgps:actionMenuTextColor
         */
         public static final int SherlockTheme_actionMenuTextColor = 12;
         /**
@@ -4080,7 +4135,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionModeBackground
+          @attr name com.smartgps:actionModeBackground
         */
         public static final int SherlockTheme_actionModeBackground = 15;
         /**
@@ -4090,7 +4145,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionModeCloseButtonStyle
+          @attr name com.smartgps:actionModeCloseButtonStyle
         */
         public static final int SherlockTheme_actionModeCloseButtonStyle = 14;
         /**
@@ -4102,7 +4157,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionModeCloseDrawable
+          @attr name com.smartgps:actionModeCloseDrawable
         */
         public static final int SherlockTheme_actionModeCloseDrawable = 17;
         /**
@@ -4114,7 +4169,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionModePopupWindowStyle
+          @attr name com.smartgps:actionModePopupWindowStyle
         */
         public static final int SherlockTheme_actionModePopupWindowStyle = 19;
         /**
@@ -4126,7 +4181,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionModeShareDrawable
+          @attr name com.smartgps:actionModeShareDrawable
         */
         public static final int SherlockTheme_actionModeShareDrawable = 18;
         /**
@@ -4138,7 +4193,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:actionModeSplitBackground
+          @attr name com.smartgps:actionModeSplitBackground
         */
         public static final int SherlockTheme_actionModeSplitBackground = 16;
         /**
@@ -4148,7 +4203,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionModeStyle
+          @attr name com.smartgps:actionModeStyle
         */
         public static final int SherlockTheme_actionModeStyle = 13;
         /**
@@ -4158,7 +4213,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionOverflowButtonStyle
+          @attr name com.smartgps:actionOverflowButtonStyle
         */
         public static final int SherlockTheme_actionOverflowButtonStyle = 4;
         /**
@@ -4168,7 +4223,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionSpinnerItemStyle
+          @attr name com.smartgps:actionSpinnerItemStyle
         */
         public static final int SherlockTheme_actionSpinnerItemStyle = 43;
         /**
@@ -4180,7 +4235,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:activatedBackgroundIndicator
+          @attr name com.smartgps:activatedBackgroundIndicator
         */
         public static final int SherlockTheme_activatedBackgroundIndicator = 51;
         /**
@@ -4192,13 +4247,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:activityChooserViewStyle
+          @attr name com.smartgps:activityChooserViewStyle
         */
         public static final int SherlockTheme_activityChooserViewStyle = 50;
         /**
-          <p>This symbol is the offset where the {@link com.smartgps.R.attr#android_windowIsFloating}
+          <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
           attribute's value can be found in the {@link #SherlockTheme} array.
-          @attr name android:android_windowIsFloating
+          @attr name android:windowIsFloating
         */
         public static final int SherlockTheme_android_windowIsFloating = 0;
         /**
@@ -4210,7 +4265,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:buttonStyleSmall
+          @attr name com.smartgps:buttonStyleSmall
         */
         public static final int SherlockTheme_buttonStyleSmall = 20;
         /**
@@ -4222,7 +4277,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:dividerVertical
+          @attr name com.smartgps:dividerVertical
         */
         public static final int SherlockTheme_dividerVertical = 36;
         /**
@@ -4232,7 +4287,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:dropDownListViewStyle
+          @attr name com.smartgps:dropDownListViewStyle
         */
         public static final int SherlockTheme_dropDownListViewStyle = 40;
         /**
@@ -4248,7 +4303,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:dropdownListPreferredItemHeight
+          @attr name com.smartgps:dropdownListPreferredItemHeight
         */
         public static final int SherlockTheme_dropdownListPreferredItemHeight = 42;
         /**
@@ -4258,7 +4313,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:homeAsUpIndicator
+          @attr name com.smartgps:homeAsUpIndicator
         */
         public static final int SherlockTheme_homeAsUpIndicator = 39;
         /**
@@ -4268,7 +4323,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:listPopupWindowStyle
+          @attr name com.smartgps:listPopupWindowStyle
         */
         public static final int SherlockTheme_listPopupWindowStyle = 49;
         /**
@@ -4286,7 +4341,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:listPreferredItemHeightSmall
+          @attr name com.smartgps:listPreferredItemHeightSmall
         */
         public static final int SherlockTheme_listPreferredItemHeightSmall = 30;
         /**
@@ -4304,7 +4359,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:listPreferredItemPaddingLeft
+          @attr name com.smartgps:listPreferredItemPaddingLeft
         */
         public static final int SherlockTheme_listPreferredItemPaddingLeft = 31;
         /**
@@ -4322,7 +4377,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:listPreferredItemPaddingRight
+          @attr name com.smartgps:listPreferredItemPaddingRight
         */
         public static final int SherlockTheme_listPreferredItemPaddingRight = 32;
         /**
@@ -4332,7 +4387,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:popupMenuStyle
+          @attr name com.smartgps:popupMenuStyle
         */
         public static final int SherlockTheme_popupMenuStyle = 41;
         /**
@@ -4342,7 +4397,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:spinnerDropDownItemStyle
+          @attr name com.smartgps:spinnerDropDownItemStyle
         */
         public static final int SherlockTheme_spinnerDropDownItemStyle = 29;
         /**
@@ -4352,7 +4407,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:spinnerItemStyle
+          @attr name com.smartgps:spinnerItemStyle
         */
         public static final int SherlockTheme_spinnerItemStyle = 28;
         /**
@@ -4364,7 +4419,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:textAppearanceLargePopupMenu
+          @attr name com.smartgps:textAppearanceLargePopupMenu
         */
         public static final int SherlockTheme_textAppearanceLargePopupMenu = 22;
         /**
@@ -4376,7 +4431,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:textAppearanceListItemSmall
+          @attr name com.smartgps:textAppearanceListItemSmall
         */
         public static final int SherlockTheme_textAppearanceListItemSmall = 33;
         /**
@@ -4388,7 +4443,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:textAppearanceSmall
+          @attr name com.smartgps:textAppearanceSmall
         */
         public static final int SherlockTheme_textAppearanceSmall = 24;
         /**
@@ -4400,7 +4455,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:textAppearanceSmallPopupMenu
+          @attr name com.smartgps:textAppearanceSmallPopupMenu
         */
         public static final int SherlockTheme_textAppearanceSmallPopupMenu = 23;
         /**
@@ -4415,7 +4470,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textColorPrimary
+          @attr name com.smartgps:textColorPrimary
         */
         public static final int SherlockTheme_textColorPrimary = 25;
         /**
@@ -4430,7 +4485,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textColorPrimaryDisableOnly
+          @attr name com.smartgps:textColorPrimaryDisableOnly
         */
         public static final int SherlockTheme_textColorPrimaryDisableOnly = 26;
         /**
@@ -4445,7 +4500,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textColorPrimaryInverse
+          @attr name com.smartgps:textColorPrimaryInverse
         */
         public static final int SherlockTheme_textColorPrimaryInverse = 27;
         /**
@@ -4459,7 +4514,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:windowActionBar
+          @attr name com.smartgps:windowActionBar
         */
         public static final int SherlockTheme_windowActionBar = 45;
         /**
@@ -4473,7 +4528,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:windowActionBarOverlay
+          @attr name com.smartgps:windowActionBarOverlay
         */
         public static final int SherlockTheme_windowActionBarOverlay = 46;
         /**
@@ -4487,7 +4542,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:windowActionModeOverlay
+          @attr name com.smartgps:windowActionModeOverlay
         */
         public static final int SherlockTheme_windowActionModeOverlay = 47;
         /**
@@ -4500,7 +4555,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:windowContentOverlay
+          @attr name com.smartgps:windowContentOverlay
         */
         public static final int SherlockTheme_windowContentOverlay = 21;
         /**
@@ -4516,7 +4571,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:windowMinWidthMajor
+          @attr name com.smartgps:windowMinWidthMajor
         */
         public static final int SherlockTheme_windowMinWidthMajor = 34;
         /**
@@ -4532,7 +4587,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:windowMinWidthMinor
+          @attr name com.smartgps:windowMinWidthMinor
         */
         public static final int SherlockTheme_windowMinWidthMinor = 35;
         /**
@@ -4546,7 +4601,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:windowNoTitle
+          @attr name com.smartgps:windowNoTitle
         */
         public static final int SherlockTheme_windowNoTitle = 44;
         /**
@@ -4560,7 +4615,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:windowSplitActionBar
+          @attr name com.smartgps:windowSplitActionBar
         */
         public static final int SherlockTheme_windowSplitActionBar = 48;
         /** Attributes that can be used with a TitlePageIndicator.
@@ -4569,9 +4624,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #TitlePageIndicator_android_background com.smartgps:android_background}</code></td><td> View background </td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_android_textColor com.smartgps:android_textColor}</code></td><td> Color of regular titles.</td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_android_textSize com.smartgps:android_textSize}</code></td><td> Size of title text.</td></tr>
+           <tr><td><code>{@link #TitlePageIndicator_android_background android:background}</code></td><td> View background </td></tr>
+           <tr><td><code>{@link #TitlePageIndicator_android_textColor android:textColor}</code></td><td> Color of regular titles.</td></tr>
+           <tr><td><code>{@link #TitlePageIndicator_android_textSize android:textSize}</code></td><td> Size of title text.</td></tr>
            <tr><td><code>{@link #TitlePageIndicator_clipPadding com.smartgps:clipPadding}</code></td><td> Screen edge padding.</td></tr>
            <tr><td><code>{@link #TitlePageIndicator_footerColor com.smartgps:footerColor}</code></td><td> Color of the footer line and indicator.</td></tr>
            <tr><td><code>{@link #TitlePageIndicator_footerIndicatorHeight com.smartgps:footerIndicatorHeight}</code></td><td> Height of the indicator above the footer line.</td></tr>
@@ -4611,24 +4666,27 @@ containing a value of this type.
           <p>
           @attr description
            View background 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_background}.
-          @attr name android:android_background
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#background}.
+          @attr name android:background
         */
         public static final int TitlePageIndicator_android_background = 2;
         /**
           <p>
           @attr description
            Color of regular titles. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_textColor}.
-          @attr name android:android_textColor
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#textColor}.
+          @attr name android:textColor
         */
         public static final int TitlePageIndicator_android_textColor = 1;
         /**
           <p>
           @attr description
            Size of title text. 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_textSize}.
-          @attr name android:android_textSize
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#textSize}.
+          @attr name android:textSize
         */
         public static final int TitlePageIndicator_android_textSize = 0;
         /**
@@ -4646,7 +4704,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:clipPadding
+          @attr name com.smartgps:clipPadding
         */
         public static final int TitlePageIndicator_clipPadding = 4;
         /**
@@ -4663,7 +4721,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:footerColor
+          @attr name com.smartgps:footerColor
         */
         public static final int TitlePageIndicator_footerColor = 5;
         /**
@@ -4681,7 +4739,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:footerIndicatorHeight
+          @attr name com.smartgps:footerIndicatorHeight
         */
         public static final int TitlePageIndicator_footerIndicatorHeight = 8;
         /**
@@ -4701,7 +4759,7 @@ containing a value of this type.
 <tr><td><code>underline</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name android:footerIndicatorStyle
+          @attr name com.smartgps:footerIndicatorStyle
         */
         public static final int TitlePageIndicator_footerIndicatorStyle = 7;
         /**
@@ -4719,7 +4777,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:footerIndicatorUnderlinePadding
+          @attr name com.smartgps:footerIndicatorUnderlinePadding
         */
         public static final int TitlePageIndicator_footerIndicatorUnderlinePadding = 9;
         /**
@@ -4737,7 +4795,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:footerLineHeight
+          @attr name com.smartgps:footerLineHeight
         */
         public static final int TitlePageIndicator_footerLineHeight = 6;
         /**
@@ -4755,7 +4813,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:footerPadding
+          @attr name com.smartgps:footerPadding
         */
         public static final int TitlePageIndicator_footerPadding = 10;
         /**
@@ -4774,7 +4832,7 @@ containing a value of this type.
 <tr><td><code>top</code></td><td>1</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name android:linePosition
+          @attr name com.smartgps:linePosition
         */
         public static final int TitlePageIndicator_linePosition = 11;
         /**
@@ -4790,7 +4848,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:selectedBold
+          @attr name com.smartgps:selectedBold
         */
         public static final int TitlePageIndicator_selectedBold = 12;
         /**
@@ -4807,7 +4865,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:selectedColor
+          @attr name com.smartgps:selectedColor
         */
         public static final int TitlePageIndicator_selectedColor = 3;
         /**
@@ -4825,7 +4883,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:titlePadding
+          @attr name com.smartgps:titlePadding
         */
         public static final int TitlePageIndicator_titlePadding = 13;
         /**
@@ -4843,7 +4901,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:topPadding
+          @attr name com.smartgps:topPadding
         */
         public static final int TitlePageIndicator_topPadding = 14;
         /** Attributes that can be used with a UnderlinePageIndicator.
@@ -4852,7 +4910,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #UnderlinePageIndicator_android_background com.smartgps:android_background}</code></td><td> View background </td></tr>
+           <tr><td><code>{@link #UnderlinePageIndicator_android_background android:background}</code></td><td> View background </td></tr>
            <tr><td><code>{@link #UnderlinePageIndicator_fadeDelay com.smartgps:fadeDelay}</code></td><td> Length of the delay to fade the indicator.</td></tr>
            <tr><td><code>{@link #UnderlinePageIndicator_fadeLength com.smartgps:fadeLength}</code></td><td> Length of the indicator fade to transparent.</td></tr>
            <tr><td><code>{@link #UnderlinePageIndicator_fades com.smartgps:fades}</code></td><td> Whether or not the selected indicator fades.</td></tr>
@@ -4872,8 +4930,9 @@ containing a value of this type.
           <p>
           @attr description
            View background 
-          <p>This corresponds to the global attribute          resource symbol {@link com.smartgps.R.attr#android_background}.
-          @attr name android:android_background
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#background}.
+          @attr name android:background
         */
         public static final int UnderlinePageIndicator_android_background = 0;
         /**
@@ -4889,7 +4948,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:fadeDelay
+          @attr name com.smartgps:fadeDelay
         */
         public static final int UnderlinePageIndicator_fadeDelay = 3;
         /**
@@ -4905,7 +4964,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:fadeLength
+          @attr name com.smartgps:fadeLength
         */
         public static final int UnderlinePageIndicator_fadeLength = 4;
         /**
@@ -4921,7 +4980,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:fades
+          @attr name com.smartgps:fades
         */
         public static final int UnderlinePageIndicator_fades = 2;
         /**
@@ -4938,7 +4997,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:selectedColor
+          @attr name com.smartgps:selectedColor
         */
         public static final int UnderlinePageIndicator_selectedColor = 1;
         /** Attributes that can be used with a ViewPagerIndicator.
@@ -4974,7 +5033,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:vpiCirclePageIndicatorStyle
+          @attr name com.smartgps:vpiCirclePageIndicatorStyle
         */
         public static final int ViewPagerIndicator_vpiCirclePageIndicatorStyle = 0;
         /**
@@ -4986,7 +5045,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:vpiIconPageIndicatorStyle
+          @attr name com.smartgps:vpiIconPageIndicatorStyle
         */
         public static final int ViewPagerIndicator_vpiIconPageIndicatorStyle = 1;
         /**
@@ -4998,7 +5057,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:vpiLinePageIndicatorStyle
+          @attr name com.smartgps:vpiLinePageIndicatorStyle
         */
         public static final int ViewPagerIndicator_vpiLinePageIndicatorStyle = 2;
         /**
@@ -5010,7 +5069,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:vpiTabPageIndicatorStyle
+          @attr name com.smartgps:vpiTabPageIndicatorStyle
         */
         public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle = 4;
         /**
@@ -5022,7 +5081,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:vpiTitlePageIndicatorStyle
+          @attr name com.smartgps:vpiTitlePageIndicatorStyle
         */
         public static final int ViewPagerIndicator_vpiTitlePageIndicatorStyle = 3;
         /**
@@ -5034,7 +5093,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:vpiUnderlinePageIndicatorStyle
+          @attr name com.smartgps:vpiUnderlinePageIndicatorStyle
         */
         public static final int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle = 5;
     };

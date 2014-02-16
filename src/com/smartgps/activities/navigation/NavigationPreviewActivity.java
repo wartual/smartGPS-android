@@ -52,6 +52,7 @@ public class NavigationPreviewActivity extends BaseActivity implements
 	private TextView distance;
 	private SmartDestinationModel model;
 	private BootstrapButton regularNavigation;
+	private BootstrapButton smartNavigation;
 	private BootstrapButton preview;
 	private LatLng currentLocation;
 	private LatLng destination;
@@ -122,6 +123,7 @@ public class NavigationPreviewActivity extends BaseActivity implements
 		distance = (TextView) findViewById(R.id.distance);
 		modeTv = (TextView) findViewById(R.id.mode);
 		regularNavigation = (BootstrapButton) findViewById(R.id.regular_navigation);
+		smartNavigation = (BootstrapButton) findViewById(R.id.smart_navigation);
 		preview = (BootstrapButton) findViewById(R.id.preview_on_map);
 			
 		regularNavigation.setOnClickListener(new OnClickListener() {
@@ -129,6 +131,16 @@ public class NavigationPreviewActivity extends BaseActivity implements
 			@Override
 			public void onClick(View v) {
 				sendDataToServer(model);
+			}
+		});
+		
+		smartNavigation.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(NavigationPreviewActivity.this, SmartNavigationActivity.class);
+				startActivity(intent);
+				finish();
 			}
 		});
 		
@@ -188,13 +200,13 @@ public class NavigationPreviewActivity extends BaseActivity implements
 				intent.putExtra(NavigationActivity.TRAVEL_ID, travelId);
 				startActivity(intent);
 				finish();
-		
 			}
 		});
 	}
 
 	
 	private void getData() {
+		showLoadingOverlay();
 		model = (SmartDestinationModel) getIntent().getExtras()
 				.get(DESTINATION);
 		lastLocation = ProjectConfig.getDefaultLocation();
@@ -277,6 +289,8 @@ public class NavigationPreviewActivity extends BaseActivity implements
 						
 						distanceValue = mapDirection.getDistanceValue(doc);
 						timeValue = mapDirection.getDurationValue(doc);
+						
+						hideLoadingOverlay();
 					}
 				});
 			}

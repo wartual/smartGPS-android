@@ -24,6 +24,7 @@ import com.smartgps.models.SmartDestinationModel;
 import com.smartgps.models.api.places.APILocationModel;
 import com.smartgps.models.api.places.APIPlacesModel;
 import com.smartgps.utils.APICalls;
+import com.smartgps.utils.ProjectConfig;
 import com.smartgps.utils.SessionManager;
 
 public class PlacesActivity extends BaseActivity {
@@ -32,7 +33,6 @@ public class PlacesActivity extends BaseActivity {
 	public static final String LOCATION = "location";
 	private ListView list;
 	private SmartDestinationModel model;
-	private int num = 10;
 	private ArrayList<APIPlacesModel> places;
 	private PlacesAdapter adapter;
 	private Location location;
@@ -55,7 +55,7 @@ public class PlacesActivity extends BaseActivity {
 		model = (SmartDestinationModel) getIntent().getExtras().get(PLACE);
 		location = (Location) getIntent().getExtras().get(LOCATION);
 		url = APICalls.getPlacesUrl(user.get(SessionManager.KEY_SESSION_ID),
-				model.getLatitude(), model.getLongitude(), num);
+				model.getLatitude(), model.getLongitude(), ProjectConfig.NUMBER_OF_ITEMS_TO_LOAD);
 		showLoadingOverlay();
 		Log.d("URL", url);
 		client.get(url, new JsonHttpResponseHandler() {
