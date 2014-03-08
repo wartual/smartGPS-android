@@ -14,5 +14,6 @@
     <color name="step_pager_selected_tab_color">#e94d00</color>
     <color name="step_pager_selected_last_tab_color">#e94d00</color>
     <color name="step_pager_next_tab_color">#e4eff1</color>
+    <color name="route_color">#E84E10</color>
 </resources>
 

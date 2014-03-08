@@ -75,6 +75,10 @@ public class APITravelModel extends Model implements Serializable{
 	@Column(name="DateUpdated")
 	private long dateUpdated;
 	
+	@SerializedName("directions")
+	@Column(name="Directions")
+	private String directions;
+	
 	public APITravelModel(){
 		super();
 	}
@@ -198,4 +202,14 @@ public class APITravelModel extends Model implements Serializable{
 	public void setDateUpdated(long dateUpdated) {
 		this.dateUpdated = dateUpdated;
 	}
+
+	public String getDirections() {
+		return directions;
+	}
+
+	public void setDirections(String directions) {
+		this.directions = directions;
+	}
+	
+	
 }

@@ -40,7 +40,7 @@ public class GcmIntentService extends IntentService {
         // in your BroadcastReceiver.
         String messageType = gcm.getMessageType(intent);
 
-        if(!extras.isEmpty() && extras.get("nodes") != null){
+        if(!extras.isEmpty() && extras.get("travelId") != null){
         	showNodesNotification(extras);
         }
         else if(!extras.isEmpty()){
@@ -61,7 +61,7 @@ public class GcmIntentService extends IntentService {
     	        .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
     	
     	Intent intent = new Intent(GcmIntentService.this, SmartNavigationActivity.class);
-    	intent.putExtra(SmartNavigationActivity.NODES, extras.getString("nodes"));
+    	intent.putExtra(SmartNavigationActivity.TRAVEL_ID, extras.getString("travelId"));
     	intent.putExtra(SmartNavigationActivity.TRAVEL_DATA, extras.getString("travelData"));
     	
     	

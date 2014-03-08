@@ -16,11 +16,13 @@ public class APICalls {
 	private static String GET_TRAVEL_STATUS_CATEGORIES = "api/travel/getTravelStatusCategories";
 	private static String NEW_TRAVEL = "api/travel/newTravel";
 	private static String UPDATE_TRAVEL_CURRENT_LOCATION = "api/travel/updateTravelsCurrentLocation";
+	private static String SMART_UPDATE_TRAVEL_CURRENT_LOCATION = "api/travel/smartUpdateTravelsCurrentLocation";
 	private static String UPDATE_TRAVEL_STATUS = "api/travel/updateTravelStatus";
 	private static String GET_NOTIFICATIONS_NEAR_LOCATIONS = "api/notification/getNotificationsNearLocation";
 	private static String GET_TRAVELS_FOR_USER = "api/travel/getTravelsForUser";
 	private static String DEACTIVATE_NOTIFICATION = "api/notification/deactivateNotification";
 	private static String RATE_NOTIFICATION = "api/notification/rateNotification";
+	private static String GET_TRAVEL = "api/travel/getTravelById";
 	
 	public static String getLoginUrl(){
 		return SERVER_URL + LOGIN;
@@ -70,6 +72,10 @@ public class APICalls {
 		return SERVER_URL + UPDATE_TRAVEL_CURRENT_LOCATION;
 	}
 	
+	public static String getSmartUpdateTravelCurrentLocationUrl(){
+		return SERVER_URL + SMART_UPDATE_TRAVEL_CURRENT_LOCATION;
+	}
+	
 	public static String getUpdateTravelStatusUrl(){
 		return SERVER_URL + UPDATE_TRAVEL_STATUS;
 	}
@@ -88,5 +94,9 @@ public class APICalls {
 	
 	public static String getRateNotification(){
 		return SERVER_URL + RATE_NOTIFICATION;
+	}
+	
+	public static String getTravelByIdUrl(String userId, String travelId){
+		return SERVER_URL + GET_TRAVEL + "?userId=" + userId + "&travelId=" + travelId;
 	}
 }

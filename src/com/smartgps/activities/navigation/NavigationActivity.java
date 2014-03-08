@@ -356,7 +356,7 @@ public class NavigationActivity extends BaseActivity implements
 	@Override
 	public void onMyLocationChange(Location location) {
 		distance = Utilities.getDistance(location, lastLocation);
-		if (distance > 20) {
+		if (distance > ProjectConfig.LOCATION_CHANGE) {
 			lastLocation = location;
 			currentLocation = new LatLng(location.getLatitude(),
 					location.getLongitude());
