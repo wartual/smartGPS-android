@@ -155,7 +155,9 @@ public class SmartNavigationActivity extends BaseActivity implements
 		//travelId = getIntent().getStringExtra(TRAVEL_ID);
 		
 		// MOCK TRAVEL
-		travelId = "2e0d0ca3-b77f-414c-90cf-2bdc44d5ef2a"; 
+		
+		//id = 9f47c16f-501e-4f14-b162-1622271d1e2c
+		travelId = "9f47c16f-501e-4f14-b162-1622271d1e2c"; 
 		user.put(SessionManager.KEY_SESSION_ID, "4c1fe061-b0ba-424f-939a-045e0b25e8f0");
 		client.get(APICalls.getTravelByIdUrl(user.get(SessionManager.KEY_SESSION_ID), travelId), new JsonHttpResponseHandler(){
 			
@@ -552,14 +554,16 @@ public class SmartNavigationActivity extends BaseActivity implements
 	}
 
 	private void setMarkersOnInterestingPlaces(){
+		int i = 1;
 		for(APINode node : nodes){
 			if(node.getType().equalsIgnoreCase(APINode.FOURSQUARE)){
 				iconGenerator.setStyle(MarkerIconGenerator.STYLE_BLUE);
-				Bitmap icon = iconGenerator.makeIcon(node.getTitle());
+				Bitmap icon = iconGenerator.makeIcon(i + ": " + node.getTitle());
 				
 				Marker marker = mMap.addMarker(new MarkerOptions().position(new LatLng(node.getLatitude(), node.getLongitude()))
-						.title(node.getTitle() + "," + node.getCategory()).icon(BitmapDescriptorFactory.fromBitmap(icon)));
+						.title(i + ": " + node.getTitle() + "," + node.getCategory()).icon(BitmapDescriptorFactory.fromBitmap(icon)));
 				nodesMarkers.put(marker, node);
+				i++;
 			}
 		}
 	}
