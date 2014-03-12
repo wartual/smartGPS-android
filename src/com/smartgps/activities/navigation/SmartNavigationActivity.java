@@ -388,7 +388,7 @@ public class SmartNavigationActivity extends BaseActivity implements
 
 	@Override
 	public boolean onMarkerClick(Marker marker) {
-		if(travelMarkers.get(marker) != null)
+		if(travelMarkers.get(marker) != null || nodesMarkers.get(marker) != null)
 			return true;
 		
 		if (notificationMarkers.get(marker) != null) {
@@ -477,7 +477,6 @@ public class SmartNavigationActivity extends BaseActivity implements
 			public void run() {
 				if (nodes != null) {
 					setupMapCurrentLocation(true);
-					setMarkersOnInterestingPlaces();
 					return;
 				} else {
 					handler.postDelayed(this, 100);
@@ -513,8 +512,31 @@ public class SmartNavigationActivity extends BaseActivity implements
 						rectLine = new PolylineOptions().width(10).color(getResources().getColor(R.color.route_color));
 
 						// connect points with line
+						int k = 1;
 						for (int i = 0; i < nodes.size(); i++) {
 							rectLine.add(new LatLng(nodes.get(i).getLatitude(), nodes.get(i).getLongitude()));
+							
+							if(nodes.get(i).getType().equalsIgnoreCase(APINode.FOURSQUARE)){
+									iconGenerator.setStyle(MarkerIconGenerator.STYLE_BLUE);
+									Bitmap icon = iconGenerator.makeIcon(k + ": " + nodes.get(i).getTitle());
+									
+									Marker marker = mMap.addMarker(new MarkerOptions().position(new LatLng(nodes.get(i).getLatitude(), nodes.get(i).getLongitude()))
+											.title(k + ": " + nodes.get(i).getTitle() + "," + nodes.get(i).getCategory()).icon(BitmapDescriptorFactory.fromBitmap(icon)));
+									nodesMarkers.put(marker, nodes.get(i));
+									k++;
+									icon.recycle();
+									continue;
+							}
+							
+							if(i % 6 == 0){
+								iconGenerator.setStyle(MarkerIconGenerator.STYLE_WHITE);
+								Bitmap icon = iconGenerator.makeIcon(k + ".");
+								Marker marker = mMap.addMarker(new MarkerOptions().position(new LatLng(nodes.get(i).getLatitude(), nodes.get(i).getLongitude()))
+										.title(k + ".").icon(BitmapDescriptorFactory.fromBitmap(icon)));
+								nodesMarkers.put(marker, nodes.get(i));
+								icon.recycle();
+								k++;
+							}
 						}
 
 						if (polylin != null) {
@@ -551,21 +573,6 @@ public class SmartNavigationActivity extends BaseActivity implements
 				});
 			}
 		}.start();
-	}
-
-	private void setMarkersOnInterestingPlaces(){
-		int i = 1;
-		for(APINode node : nodes){
-			if(node.getType().equalsIgnoreCase(APINode.FOURSQUARE)){
-				iconGenerator.setStyle(MarkerIconGenerator.STYLE_BLUE);
-				Bitmap icon = iconGenerator.makeIcon(i + ": " + node.getTitle());
-				
-				Marker marker = mMap.addMarker(new MarkerOptions().position(new LatLng(node.getLatitude(), node.getLongitude()))
-						.title(i + ": " + node.getTitle() + "," + node.getCategory()).icon(BitmapDescriptorFactory.fromBitmap(icon)));
-				nodesMarkers.put(marker, node);
-				i++;
-			}
-		}
 	}
 	
 	/*
