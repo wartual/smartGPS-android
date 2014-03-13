@@ -182,15 +182,14 @@ public class EventMapFragment extends SherlockFragment implements OnMarkerClickL
 					public void onLoadingComplete(String imageUri, View view,
 							Bitmap loadedImage) {
 						super.onLoadingComplete(imageUri, view, loadedImage);
-						Drawable image = Utilities.resize(loadedImage,
-								getActivity());
-
+						
 						mMap.addMarker(new MarkerOptions()
 								.position(destination)
+								.title(model.getVenue().getName())
 								.icon(BitmapDescriptorFactory
-										.fromBitmap(Utilities
-												.drawableToBitmap(image)))
-								.title(model.getVenue().getName()));
+										.fromBitmap(Utilities.resize(loadedImage,
+												getActivity()))));
+						loadedImage.recycle();
 					}
 				});
 	}

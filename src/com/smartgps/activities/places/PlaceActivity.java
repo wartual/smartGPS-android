@@ -182,15 +182,14 @@ public class PlaceActivity extends BaseActivity implements OnMarkerClickListener
 					public void onLoadingComplete(String imageUri, View view,
 							Bitmap loadedImage) {
 						super.onLoadingComplete(imageUri, view, loadedImage);
-						Drawable image = Utilities.resize(loadedImage,
-								PlaceActivity.this);
-
+						
 						mMap.addMarker(new MarkerOptions()
 								.position(destination)
 								.icon(BitmapDescriptorFactory
-										.fromBitmap(Utilities
-												.drawableToBitmap(image)))
+										.fromBitmap(Utilities.resize(loadedImage,
+												PlaceActivity.this)))
 								.title(model.getName()));
+						loadedImage.recycle();
 					}
 				});
 	}

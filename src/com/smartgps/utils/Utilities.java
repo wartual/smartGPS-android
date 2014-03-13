@@ -212,7 +212,7 @@ public class Utilities {
 		} else
 			return true;
 	}
-	
+
 	public static String formatText(String text) {
 		return text.replace("_", " ");
 	}
@@ -251,38 +251,29 @@ public class Utilities {
 		return bitmap;
 	}
 
-	public static Drawable resize(Bitmap d, Activity activity) {
+	public static Bitmap resize(Bitmap d, Activity activity) {
 		Bitmap bitmapOrig = null;
 		DisplayMetrics metrics = new DisplayMetrics();
 		activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
-		int bound = 20;
-
+		
 		switch (metrics.densityDpi) {
-		case DisplayMetrics.DENSITY_LOW:
-			bitmapOrig = Bitmap.createScaledBitmap(d, 20, 20, true);
-			bound = 20;
-			break;
-		case DisplayMetrics.DENSITY_MEDIUM:
-			bitmapOrig = Bitmap.createScaledBitmap(d, 40, 40, true);
-			bound = 25;
-			break;
-		case DisplayMetrics.DENSITY_HIGH:
-			bitmapOrig = Bitmap.createScaledBitmap(d, 60, 60, true);
-			bound = 30;
-			break;
-		case 320:
-			bitmapOrig = Bitmap.createScaledBitmap(d, 100, 100, true);
-			bound = 35;
-			break;
-		default:
-			bitmapOrig = Bitmap.createScaledBitmap(d, 40, 40, true);
-			bound = 25;
-			break;
-
+			case DisplayMetrics.DENSITY_LOW:
+				bitmapOrig = Bitmap.createScaledBitmap(d, 20, 20, true);
+				break;
+			case DisplayMetrics.DENSITY_MEDIUM:
+				bitmapOrig = Bitmap.createScaledBitmap(d, 40, 40, true);
+				break;
+			case DisplayMetrics.DENSITY_HIGH:
+				bitmapOrig = Bitmap.createScaledBitmap(d, 60, 60, true);
+				break;
+			case 320:
+				bitmapOrig = Bitmap.createScaledBitmap(d, 100, 100, true);
+				break;
+			default:
+				bitmapOrig = Bitmap.createScaledBitmap(d, 40, 40, true);
+				break;
 		}
-		Drawable scaled = new BitmapDrawable(bitmapOrig);
-		scaled.setBounds(-bound, -bound, bound, bound);
-		return scaled;
+		return bitmapOrig;
 	}
 
 	public static String getAddress(APILocationModel location) {
@@ -336,7 +327,7 @@ public class Utilities {
 			return false;
 		}
 	}
-	
+
 	public static ArrayList<String> getNotificationCategories() {
 		ArrayList<String> categoires = new ArrayList<String>();
 		List<APINotificationCategories> notificationCategories = NotificationCategoriesDao
@@ -410,9 +401,10 @@ public class Utilities {
 		final AlertDialog alert = builder.create();
 		alert.show();
 	}
-	
+
 	public static String getRegistrationId(Context ctx) {
-		String registrationId = PreferenceManager.getDefaultSharedPreferences(ctx).getString(ProjectConfig.GCM_REGISTRATION_ID, "");
+		String registrationId = PreferenceManager.getDefaultSharedPreferences(
+				ctx).getString(ProjectConfig.GCM_REGISTRATION_ID, "");
 
 		if (TextUtils.isEmpty(registrationId)) {
 			Log.d("GCM", "Registration not found.");
@@ -421,9 +413,10 @@ public class Utilities {
 
 		return registrationId;
 	}
-	
-	public static int generateRandomColor(){
-		Random rnd = new Random(); 
-		return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256)); 
+
+	public static int generateRandomColor() {
+		Random rnd = new Random();
+		return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256),
+				rnd.nextInt(256));
 	}
 }

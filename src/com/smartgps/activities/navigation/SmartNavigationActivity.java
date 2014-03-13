@@ -16,6 +16,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -53,6 +54,8 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 import com.smartgps.R;
 import com.smartgps.activities.BaseActivity;
 import com.smartgps.custom.MarkerIconGenerator;
@@ -777,8 +780,9 @@ public class SmartNavigationActivity extends BaseActivity implements
 				reader = json.toString();
 				events = new ArrayList<APIItemsModel>(Arrays.asList(gson
 						.fromJson(reader, APIItemsModel[].class)));
-				if (events != null && events.size() != 0)
-					renderEventsOnMap(clearMap);
+				if (events != null && events.size() != 0){
+					renderEventsOnMap(0);
+				}
 			}
 		});
 	}
@@ -807,111 +811,66 @@ public class SmartNavigationActivity extends BaseActivity implements
 				places = new ArrayList<APIPlacesModel>(Arrays.asList(gson
 						.fromJson(reader, APIPlacesModel[].class)));
 				if (places != null && places.size() != 0)
-					renderPlacesOnMap(clearMap);
+					renderPlacesOnMap(0);
 			}
 		});
 	}
-
-	private void renderPlacesOnMap(boolean clearMap) {
-		if (clearMap)
-			mMap.clear();
-
-		if (clearMap)
-			mMap.clear();
-
-		for (APIPlacesModel model : places) {
-			LatLng location = new LatLng(model.getGeometry().getLocation()
-					.getLatitude(), model.getGeometry().getLocation()
-					.getLongitude());
-			Marker marker = mMap.addMarker(new MarkerOptions()
-					.position(location));
-
-			if (placesMarkers.get(marker) == null) {
-				placesMarkers.put(marker, model);
-			}
+	
+	private void renderPlacesOnMap(final int position){
+		if(position == places.size()){
+			return;
 		}
+		
+		ImageLoader.getInstance().loadImage(places.get(position).getIcon(),
+				new SimpleImageLoadingListener() {
 
-		// for (int i = 0; i< places.size(); i++) {
-		// place = places.get(i);
-		// ImageLoader.getInstance().loadImage(place.getIcon(),
-		// new SimpleImageLoadingListener() {
-		//
-		// @Override
-		// public void onLoadingComplete(String imageUri,
-		// View view, Bitmap loadedImage) {
-		// super.onLoadingComplete(imageUri, view, loadedImage);
-		// Drawable image = Utilities.resize(loadedImage,
-		// SmartNavigationActivity.this);
-		// Log.d("LOCATION", place.getGeometry().getLocation().getLatitude() +
-		// ", " + place.getGeometry().getLocation().getLongitude());
-		// LatLng location = new
-		// LatLng(place.getGeometry().getLocation().getLatitude(),
-		// place.getGeometry().getLocation().getLongitude());
-		// Log.d("LAT LNG", location.toString());
-		// Marker marker = mMap.addMarker(new MarkerOptions()
-		// .position(location)
-		// .icon(BitmapDescriptorFactory
-		// .fromBitmap(Utilities
-		// .drawableToBitmap(image)))
-		// .title(place.getName()));
-		//
-		// if (eventMarkers.get(marker) == null) {
-		// eventMarkers.put(marker, event);
-		// }
-		// }
-		// });
-		// }
+					@Override
+					public void onLoadingComplete(String imageUri, View view,
+							Bitmap loadedImage) {
+						super.onLoadingComplete(imageUri, view, loadedImage);
+						LatLng location = new LatLng(places.get(position).getGeometry().getLocation()
+								.getLatitude(), places.get(position).getGeometry().getLocation()
+								.getLongitude());
+						Marker marker = mMap.addMarker(new MarkerOptions()
+								.position(location).icon(BitmapDescriptorFactory
+										.fromBitmap(Utilities.resize(loadedImage,
+												SmartNavigationActivity.this))));
+
+						if (placesMarkers.get(marker) == null) {
+							placesMarkers.put(marker, places.get(position));
+						}
+						loadedImage.recycle();
+						renderPlacesOnMap(position+1);
+					}
+				});
 	}
 
-	private void renderEventsOnMap(boolean clearMap) {
-		if (clearMap)
-			mMap.clear();
-
-		for (APIItemsModel model : events) {
-			LatLng location = new LatLng(model.getVenue().getLocation()
-					.getLatitude(), model.getVenue().getLocation()
-					.getLongitude());
-			Marker marker = mMap.addMarker(new MarkerOptions().position(
-					location).title(model.getVenue().getName()));
-
-			if (eventMarkers.get(marker) == null) {
-				eventMarkers.put(marker, model);
-			}
+	private void renderEventsOnMap(final int position){
+		if(position == events.size()){
+			return;
 		}
+		
+		String iconUrl = events.get(position).getVenue().getCategories().get(0).getIcon().getPrefix() + "bg_32.png";
+		ImageLoader.getInstance().loadImage(iconUrl,
+				new SimpleImageLoadingListener() {
 
-		// for (int i = 0; i< events.size(); i++) {
-		// event = events.get(i);
-		// String iconUrl =
-		// event.getVenue().getCategories().get(0).getIcon().getPrefix() +
-		// "bg_32.png";
-		// ImageLoader.getInstance().loadImage(iconUrl,
-		// new SimpleImageLoadingListener() {
-		//
-		// @Override
-		// public void onLoadingComplete(String imageUri,
-		// View view, Bitmap loadedImage) {
-		// super.onLoadingComplete(imageUri, view, loadedImage);
-		// Drawable image = Utilities.resize(loadedImage,
-		// SmartNavigationActivity.this);
-		// Log.d("LOCATION", event.getVenue().getLocation().getLatitude() + ", "
-		// + event.getVenue().getLocation().getLongitude());
-		// LatLng location = new
-		// LatLng(event.getVenue().getLocation().getLatitude(),
-		// event.getVenue().getLocation().getLongitude());
-		// Log.d("LAT LNG", location.toString());
-		// Marker marker = mMap.addMarker(new MarkerOptions()
-		// .position(location)
-		// .icon(BitmapDescriptorFactory
-		// .fromBitmap(Utilities
-		// .drawableToBitmap(image)))
-		// .title(event.getVenue().getName()));
-		//
-		// if (placesMarkers.get(marker) == null) {
-		// placesMarkers.put(marker, place);
-		// }
-		// }
-		// });
-		// }
+					@Override
+					public void onLoadingComplete(String imageUri, View view,
+							Bitmap loadedImage) {
+						super.onLoadingComplete(imageUri, view, loadedImage);
+						Marker marker = mMap.addMarker(new MarkerOptions()
+								.position(new LatLng(events.get(position).getVenue().getLocation().getLatitude(), events.get(position).getVenue().getLocation().getLongitude()))
+								.icon(BitmapDescriptorFactory
+										.fromBitmap(Utilities.resize(loadedImage,
+												SmartNavigationActivity.this)))
+								.title(events.get(position).getVenue().getName()));
+						if (eventMarkers.get(marker) == null) {
+							eventMarkers.put(marker, events.get(position));
+						}
+						loadedImage.recycle();
+						renderEventsOnMap(position+1);
+					}
+				});
 	}
 
 	private void renderNotificationsOnMap(boolean clearMap) {
