@@ -17,7 +17,9 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.smartgps.R;
 import com.smartgps.activities.MainActivity;
 import com.smartgps.activities.navigation.NavigationActivity;
+import com.smartgps.activities.navigation.NavigationPreviewActivity;
 import com.smartgps.activities.navigation.SmartNavigationActivity;
+import com.smartgps.models.SmartDestinationModel;
 
 public class GcmIntentService extends IntentService {
 
@@ -40,7 +42,10 @@ public class GcmIntentService extends IntentService {
         // in your BroadcastReceiver.
         String messageType = gcm.getMessageType(intent);
 
-        if(!extras.isEmpty() && extras.get("travelId") != null){
+        if(!extras.isEmpty() && extras.getString("proposedTravel") != null){
+        	showPreviewTravelNavigation(extras);
+        }
+        else if(!extras.isEmpty() && extras.get("travelId") != null){
         	showNodesNotification(extras);
         }
         else if(!extras.isEmpty()){
@@ -49,6 +54,48 @@ public class GcmIntentService extends IntentService {
         // Release the wake lock provided by the WakefulBroadcastReceiver.
         GcmBroadcastReceiver.completeWakefulIntent(intent);
     }
+    
+    private void showPreviewTravelNavigation(Bundle extras){
+    	Log.d("preview travel notification", extras.toString());
+    	
+    	NotificationCompat.Builder mBuilder =
+    	        new NotificationCompat.Builder(this)
+    	        .setSmallIcon(R.drawable.logo)
+    	        .setContentTitle(getString(R.string.app_name))
+    	        .setContentText("Travel directions obtained!")
+    	        .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+    	
+    	Intent intent = new Intent(GcmIntentService.this, NavigationPreviewActivity.class);
+    	SmartDestinationModel model = new SmartDestinationModel();
+    	model.setAddress(extras.getString("departureAddress"));
+    	model.setCountry(null);
+    	model.setAddress(extras.getString("destinationAddress"));
+    	model.setDestinationLatitude(Double.parseDouble(extras.getString("destinationLatitude")));
+    	model.setDestinationLongitude(Double.parseDouble(extras.getString("destinationLongitude")));
+    	model.setLatitude(Double.parseDouble(extras.getString("departureLatitude")));
+    	model.setLongitude(Double.parseDouble(extras.getString("departureLongitude")));
+    	
+    	intent.putExtra(NavigationPreviewActivity.DESTINATION, model);
+    	intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+    	
+    	intent.putExtra(MainActivity.IS_NOTIFICATION, true);
+    	
+    	PendingIntent pendingIntent = PendingIntent.getActivity(
+    		      this, 
+    		      0, 
+    		      intent,  
+    		      Intent.FLAG_ACTIVITY_NEW_TASK);
+    	
+    	mBuilder.setContentIntent(pendingIntent);
+    	mBuilder.setAutoCancel(true);
+    
+    	NotificationManager mNotificationManager =
+    	    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+    	// mId allows you to update the notification later on.
+    	int mId = 001;
+    	mNotificationManager.notify(mId, mBuilder.build());
+    }
+    	
     
     private void showNodesNotification(Bundle extras){
     	Log.d("nodes notification", extras.toString());

@@ -107,7 +107,7 @@ public class PreviewMapActivity extends BaseActivity implements
 	private void getData() {
 		model = (SmartDestinationModel) getIntent().getExtras()
 				.get(DESTINATION);
-		destination = new LatLng(model.getLatitude(), model.getLongitude());
+		destination = new LatLng(model.getDestinationLatitude(), model.getDestinationLongitude());
 		mapDirection = new GMapV2Direction();
 		mode = GMapV2Direction.MODE_DRIVING;
 	}
@@ -120,8 +120,8 @@ public class PreviewMapActivity extends BaseActivity implements
 
 	private void setupMapCurrentLocation() {
 		// current location in LatLng
-		currentLocation = new LatLng(lastLocation.getLatitude(),
-				lastLocation.getLongitude());
+		currentLocation = new LatLng(model.getLatitude(),
+				model.getLongitude());
 
 		new Thread() {
 			public void run() {

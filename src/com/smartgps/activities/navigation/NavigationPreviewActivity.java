@@ -54,7 +54,7 @@ public class NavigationPreviewActivity extends BaseActivity implements
 	private BootstrapButton regularNavigation;
 	private BootstrapButton smartNavigation;
 	private BootstrapButton preview;
-	private LatLng currentLocation;
+	private LatLng departureLocaion;
 	private LatLng destination;
 	private double distanceValue;
 	private double timeValue;
@@ -160,8 +160,8 @@ public class NavigationPreviewActivity extends BaseActivity implements
 		createTravelParams.setCurrentLatitude(lastLocation.getLatitude());
 		createTravelParams.setCurrentLongitude(lastLocation.getLongitude());
 		createTravelParams.setDepartureAddress(startAddress.getText().toString());
-		createTravelParams.setDepartureLatitude(lastLocation.getLatitude());
-		createTravelParams.setDepartureLongitude(lastLocation.getLongitude());
+		createTravelParams.setDepartureLatitude(departureLocaion.latitude);
+		createTravelParams.setDepartureLongitude(departureLocaion.longitude);
 		createTravelParams.setDestinationAddress(endAddress.getText().toString());
 		createTravelParams.setDestinationLatitude(destination.latitude);
 		createTravelParams.setDestinationLongitude(destination.longitude);
@@ -210,7 +210,7 @@ public class NavigationPreviewActivity extends BaseActivity implements
 		model = (SmartDestinationModel) getIntent().getExtras()
 				.get(DESTINATION);
 		lastLocation = ProjectConfig.getDefaultLocation();
-		destination = new LatLng(model.getLatitude(), model.getLongitude());
+		destination = new LatLng(model.getDestinationLatitude(), model.getDestinationLongitude());
 		mapDirection = new GMapV2Direction();
 		mode = GMapV2Direction.MODE_DRIVING;
 	}
@@ -266,15 +266,23 @@ public class NavigationPreviewActivity extends BaseActivity implements
 
 	private void refreshData() {
 		// current location in LatLng
-		currentLocation = new LatLng(lastLocation.getLatitude(),
-				lastLocation.getLongitude());
-
+		if(model.getDestinationLatitude() == 0 && model.getDestinationLongitude() == 0){
+			departureLocaion = new LatLng(lastLocation.getLatitude(),
+					lastLocation.getLongitude());
+			
+			destination = new LatLng(model.getLatitude(), model.getLongitude());
+		}
+		else{
+			departureLocaion = new LatLng(model.getLatitude(),
+					model.getLongitude());	
+		}
+		
 		// mMap.clear();
 		new Thread() {
 			public void run() {
 
 				// obtain xml document with directions from google maps
-				final Document doc = mapDirection.getDocument(currentLocation,
+				final Document doc = mapDirection.getDocument(departureLocaion,
 						destination, mode);
 
 				runOnUiThread(new Runnable() {

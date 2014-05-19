@@ -160,7 +160,7 @@ public class SmartNavigationActivity extends BaseActivity implements
 		// MOCK TRAVEL
 		
 		//id = 9f47c16f-501e-4f14-b162-1622271d1e2c
-		travelId = "9f47c16f-501e-4f14-b162-1622271d1e2c"; 
+		travelId = "90e38d11-2e13-4541-9f34-9965609a20e3"; 
 		user.put(SessionManager.KEY_SESSION_ID, "4c1fe061-b0ba-424f-939a-045e0b25e8f0");
 		client.get(APICalls.getTravelByIdUrl(user.get(SessionManager.KEY_SESSION_ID), travelId), new JsonHttpResponseHandler(){
 			
@@ -513,10 +513,10 @@ public class SmartNavigationActivity extends BaseActivity implements
 					@Override
 					public void run() {
 						rectLine = new PolylineOptions().width(10).color(getResources().getColor(R.color.route_color));
-
+							
 						// connect points with line
-						int k = 1;
-						for (int i = 0; i < nodes.size(); i++) {
+						int k = 2;
+						for (int i = 1; i < nodes.size() - 1; i++) {
 							rectLine.add(new LatLng(nodes.get(i).getLatitude(), nodes.get(i).getLongitude()));
 							
 							if(nodes.get(i).getType().equalsIgnoreCase(APINode.FOURSQUARE)){
@@ -549,7 +549,7 @@ public class SmartNavigationActivity extends BaseActivity implements
 
 						if (addMarker) {
 							iconGenerator.setStyle(MarkerIconGenerator.STYLE_GREEN);
-							Bitmap destinationIcon = iconGenerator.makeIcon("Destination: " + travel.getDestinationAddress());
+							Bitmap destinationIcon = iconGenerator.makeIcon(k + ". Destination: " + travel.getDestinationAddress());
 							
 							Marker marker = mMap.addMarker(new MarkerOptions().position(
 									destination).icon(BitmapDescriptorFactory.fromBitmap(destinationIcon)));
@@ -557,7 +557,7 @@ public class SmartNavigationActivity extends BaseActivity implements
 							travelMarkers.put(marker, new LatLng(travel.getDestinationLatitude(), travel.getDestinationLongitude()));
 							
 							iconGenerator.setStyle(MarkerIconGenerator.STYLE_RED);
-							Bitmap departureIcon = iconGenerator.makeIcon("Departure: " + travel.getDepartureAddress());
+							Bitmap departureIcon = iconGenerator.makeIcon("1. Departure: " + travel.getDepartureAddress());
 							
 							marker = mMap.addMarker(new MarkerOptions().position(departure).
 											icon(BitmapDescriptorFactory.fromBitmap(departureIcon)));
